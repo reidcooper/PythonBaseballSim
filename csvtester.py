@@ -1,12 +1,13 @@
 import csv
 
 def printTeam(team):
-    with open('Batting_Standard_2014_AllLeagues.csv') as csvfile:
+    with open('FanGraphs/FanGraphsPitching/2014_pitching_master.csv', 'rU') as csvfile:
         reader = csv.DictReader(csvfile)
 
         for row in reader:
-            if (row['Team'] == team):
-                print(row['Team'], row['IBB'], row['1B'])
+            if (row["Team"] == team):
+                print(row["Team"], row["Name"], row["HR"])
 
-printTeam('Royals')
-printTeam('Phillies')
+printTeam("Mets")
+printTeam("Giants")
+printTeam("Red Sox")
