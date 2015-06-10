@@ -10,11 +10,10 @@ def printTeam(team):
         for row in reader:
             if (row["Team"] == team):
                 # print(row["Name"], row["H"], row["IPR"])
-                players.append((row["Name"], row["H"], row["IPR"]))
+                players.append((row["Name"], int(row["H"]), float(row["IPR"])))
 
-    def getKey(item):
-        return item[1]
-    new_players = sorted(players, key=getKey)
+
+    new_players = sorted(players, key=lambda x: x[1], reverse=True)
 
     for x in new_players:
         print x
