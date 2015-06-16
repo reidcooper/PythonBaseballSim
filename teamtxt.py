@@ -9,7 +9,7 @@ pitching_output = []
 
 
 def printBatting(team):
-    with open('FanGraphs/FanGraphsBatting/2014_batting_master.csv', 'rU') as csvfile:
+    with open('FanGraphs/FanGraphsBatting/2014_batting_master_withoutPercentage.csv', 'rU') as csvfile:
         reader = csv.DictReader(csvfile)
         
         team_text = open("team.txt", "w")
@@ -17,7 +17,7 @@ def printBatting(team):
         for row in reader:
             if (row["Team"] == team):
                 # print(row["Name"], row["H"], row["IPR"])
-                batting_players.append(([row["Name"], float(row["H"]), float(row["IPR"])]))
+                batting_players.append(([row["Name"], float(row["H"]), float(row["IPR"]), float(row["O-Swing%"]), float(row["Z-Swing%"]), float(row["O-Contact%"]), float(row["Z-Contact%"]), , float(row["1B"])]))
 
 
     batting_output = sorted(batting_players, key=lambda x: x[1], reverse=True)
@@ -25,7 +25,7 @@ def printBatting(team):
 
     for x in batting_output:
         print x
-        team_text.write("{} {} {} \n".format(x[0],x[1],x[2])) 
+        team_text.write("{} {} {} {} {} {} {}\n".format(x[0],x[1],x[2],x[3],x[4],x[5],x[6])) 
     team_text.close
 	
 
