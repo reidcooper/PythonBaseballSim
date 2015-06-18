@@ -18,7 +18,7 @@ def printBatting(team):
         for row in reader:
             if (row["Team"] == team):
                 # print(row["Name"], row["H"], row["IPR"])
-                batting_players.append(([row["Name"].replace(" ", ""), row["Position"], float(row["H"]), float(row["IPR"]), float(row["O-Swing%"]), float(row["Z-Swing%"]), float(row["O-Contact%"]), float(row["Z-Contact%"]), float(row["1B%"]), float(row["2B%"]), float(row["3B%"]), float(row["HR%"]), float(row["FP"])]))
+                batting_players.append(([row["Name"].replace(" ", ""), row["Position"], row["H"], float(row["IPR"]), float(row["O-Swing%"]), float(row["Z-Swing%"]), float(row["O-Contact%"]), float(row["Z-Contact%"]), float(row["1B%"]), float(row["2B%"]), float(row["3B%"]), float(row["HR%"]), float(row["FP"])]))
 
 
     batting_output = sorted(batting_players, key=lambda x: x[2], reverse=True)
@@ -40,7 +40,7 @@ def printPitching(team):
         for row in reader:
             if (row["Team"] == team):
                 # print(row["Name"], row["H"], row["IPR"])
-                pitching_players.append((row["Name"].replace(" ", ""), float(row["G"]), "P", (float(row["Zone%"])), (float(row["FB%"])), (float(row["FBv"])), (float(row["SL%"])), (float(row["SLv"])), (float(row["CT%"])), (float(row["CTv"])), (float(row["CB%"])), (float(row["CBv"])), (float(row["CH%"])), (float(row["CHv"])), (float(row["SF%"])), (float(row["SFv"])), (float(row["KN%"])), (float(row["KNv"]))))
+                pitching_players.append((row["Name"].replace(" ", ""), row["G"], "P", (float(row["Zone%"])), (float(row["FB%"])), (float(row["FBv"])), (float(row["SL%"])), (float(row["SLv"])), (float(row["CT%"])), (float(row["CTv"])), (float(row["CB%"])), (float(row["CBv"])), (float(row["CH%"])), (float(row["CHv"])), (float(row["SF%"])), (float(row["SFv"])), (float(row["KN%"])), (float(row["KNv"]))))
 
     pitching_output = sorted(pitching_players, key=lambda x: x[1], reverse=True)
 
