@@ -21,7 +21,6 @@ class Current_Batting(object):
     def add_Foul(self):
         self.fouls = self.fouls + 1
 
-
     def get_Strikes(self):
         return self.strikes
 
@@ -40,13 +39,11 @@ class Current_Batting(object):
     def set_Fouls(self, fouls):
         self.fouls = fouls
 
-
     def get_Player(self):
         return self.player
 
     def getPitcher(self):
         return self.pitcher
-
 
     def getHomerunOrWalk(self):
         return self.homerunOrWalk
