@@ -1,8 +1,10 @@
-# teamPackage
+# package teamPackage
 from random import randint
 
-def Pitcher(Player):
+class Pitcher(Player):
+
     pos = "P"
+
     def __init__(self, playerData, pitcherData):
         super(Pitcher, self).__init__(playerData)
         self.name = pitcherData[0]
@@ -25,17 +27,17 @@ def Pitcher(Player):
 
     def getPitchType(self):
         temp = randint(0, 99)
-        if(temp < self.fb):
+        if temp < self.fb:
             return self.fbV
-        elif(temp < self.fb + self.sl):
+        elif temp < self.fb + self.sl:
             return self.slV
-        elif(temp < self.fb + self.sl + self.ct):
+        elif temp < self.fb + self.sl + self.ct:
             return self.ctV
-        elif(temp < self.fb + self.sl + self.ct + self.cb):
+        elif temp < self.fb + self.sl + self.ct + self.cb:
             return self.cbV
-        elif(temp < self.fb + self.sl + self.ct + self.cb + self.ch):
+        elif temp < self.fb + self.sl + self.ct + self.cb + self.ch:
             return self.chV
-        elif(temp < self.fb + self.sl + self.ct + self.cb + self.ch + self.sf):
+        elif temp < self.fb + self.sl + self.ct + self.cb + self.ch + self.sf:
             return self.sfV
         else:
             return self.knV
@@ -43,7 +45,7 @@ def Pitcher(Player):
     def getPitchSpeed(self):
         baseSpeed = getPitchType()
         temp = randint(0, 9)
-        if(temp <= 5):
+        if temp <= 5:
             return baseSpeed + (-1 * temp)
         else:
             return baseSpeed + temp
