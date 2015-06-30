@@ -94,8 +94,8 @@ class Batting(object):
 	#ball
 	if temp < chance_Of_Ball:
                 current_Batting.addBall()
-		balls = currentBatting.getBalls()
-		System.out.println("Ball " + balls + " outcome " + temp)
+                balls = currentBatting.getBalls()
+		print "Ball " + balls + " outcome " + temp
 		return 1
 	
 	#strike
