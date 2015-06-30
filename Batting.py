@@ -1,6 +1,6 @@
 
 
-import random()
+import random
 class Batting(object):
     chance_Of_Ball = 0
     chance_Of_Strike = 0
@@ -10,7 +10,7 @@ class Batting(object):
     avg_IPR = 52.7
     max_Z = 144.0
     
-    def__init__(self,current_Batting,player,pitcher,outcome,strikes,balls,a_Single,a_Double,a_Triple):
+    def __init__(self,current_Batting,player,pitcher,outcome,strikes,balls,a_Single,a_Double,a_Triple):
         self.current_Batting = current_Batting
         self.player = player
         self.pitcher = pitcher
@@ -48,13 +48,13 @@ class Batting(object):
 
     def generate_FBPR():
         
-        z = -66.7f +(generate_Pitch_Speed()/player.get_IPR())
+        z = -66.7 +(generate_Pitch_Speed()/player.get_IPR())
 	
 	if z < avg_IPR:
 		z = (z/avg_IPR)* 1/2
 	
 	else:
-		z = 1/2f + (((z-avgIPR)/(maxZ - avg_IPR))*(.5));
+		z = 1/2 + (((z-avgIPR)/(maxZ - avg_IPR))*(.5));
 	
 	
 	return z
@@ -79,11 +79,11 @@ class Batting(object):
 		generate_New_FBPR()
 		outcome = pitch()
 		
-		if outcome == 0
+		if outcome == 0:
 			return hit()
 		
 	
-	if current_Batting.get_Balls() == 4
+	if current_Batting.get_Balls() == 4:
 		return 1
 	
 	return 0
@@ -91,21 +91,21 @@ class Batting(object):
 
     def pitch():
 	 temp = (Math.random() * 1000)
-	//ball
+	#ball
 	if temp < chance_Of_Ball:
-		current_Batting.addBall()
+                current_Batting.addBall()
 		balls = currentBatting.getBalls()
 		System.out.println("Ball " + balls + " outcome " + temp)
 		return 1
 	
-	//strike
+	#strike
 	elif temp < chance_Of_Ball + chance_Of_Strike:
 		current_Batting.add_Strike()
 		strikes = current_Batting.get_Strikes()
 		print "Strike " + currentBatting.getStrikes() + " outcome " + temp
 		return 1
-	}
-	//foul
+	
+	#foul
 	elif temp < chanceOfBall + chanceOfStrike + chanceOfFoul:
 		if current_Batting.get_Strikes() < 2:
 			current_Batting.add_Strike()
@@ -119,7 +119,7 @@ class Batting(object):
 			return 1
 		
 	
-	//hit
+	#hit
 	else:
 		print "Ball was hit by " + player + " outcome = " + temp
 		return 0
