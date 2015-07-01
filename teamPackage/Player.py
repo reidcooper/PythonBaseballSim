@@ -110,5 +110,5 @@ class Player(object):
     def set_Position(self, Position):
         self.position = Position
 
-    def duplicate_Player(temp):
-        return new (temp.clonedData)
+    def duplicate_Player(self):
+        return Player(self.clonedData)
