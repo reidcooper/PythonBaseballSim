@@ -1,5 +1,4 @@
 # package teamPackage
-# import java.util.ArrayList
 
 class Team(object):
 
