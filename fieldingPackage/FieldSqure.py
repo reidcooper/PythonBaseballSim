@@ -8,17 +8,9 @@ class FieldSquare(object):
   self.key= key
   self.playerSpace = playerSpace
   Player.fielder = fielder
-
- def FieldSquare():
-       setHasBall(false)
-
- def FieldSquare(ball, position):
-       setHasBall(ball)
-       setKey(position, 10)
-
- def setSize(size):
-       playerSpace = [size]
-
+       
+ def setSize(self,size):
+       self.playerSpace = [0]*size
 
  def getHasBall(self):
        return self.hasBall
