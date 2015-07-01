@@ -1,3 +1,6 @@
 .DS_Store
 team.txt
 pitchers.txt
+*.pyc
+static/simulations/*.json
+!static/simulations/sample.json

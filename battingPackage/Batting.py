@@ -1,6 +1,6 @@
 # package battingPackage
-# import teamPackage.Pitcher
-# import teamPackage.Player
+from teamPackage import Pitcher
+from teamPackage import Player
 from random import randint
 
 class Batting(object):
@@ -123,4 +123,3 @@ class Batting(object):
 
     def toString(self):
         return "Chance of ball: " + self.chanceOfBall + "\n" + "Chance of hit: " + self.chanceOfHit + "\n" + "Chance of foul: " + self.chanceOfFoul + "\n" + "Chance of strike: " + self.chanceOfStrike + "\n"
-    

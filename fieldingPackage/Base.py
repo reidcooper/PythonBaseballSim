@@ -1,5 +1,6 @@
+# fieldingPackage
+from teamPackage import Player
 
-import teamPackage.Player
 class Base(object):
  def __init(self,nextBase,playeronBase):
   self.isFull = false
@@ -35,5 +36,3 @@ class Base(object):
 
  def toString():
   return "Player " + getPlayerOnBase() + " is on base"
-
-

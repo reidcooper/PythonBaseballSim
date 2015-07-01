@@ -1,12 +1,12 @@
-
+# fieldingPackage
+from teamPackage import Player
 import random
-import teamPackage.Player
 
 class FieldSquare(object):
- def __init__(self,ball,position):	
-  self.hasBall = setHasBall(ball)
-  self.key = setKey(position, 10)
-  self.playerSpace = []
+ def __init__(self,hasBall,key,fielder):
+  self.hasBall = hasBall
+  self.key= key
+  self.playerSpace = playerSpace
   Player.fielder = fielder
        
  def setSize(self,size):
@@ -37,7 +37,7 @@ class FieldSquare(object):
            else:
                playerSpace[i] = 60
                #playerSpace[i] = 60;
-	
+
 def wasBallCaught():
        temp = (int)(Math.random() * (len(playerSpace)-1))
        temp2 = (int)(Math.random() * 100)
@@ -47,5 +47,3 @@ def wasBallCaught():
            return true
        else:
            return false
-
-
