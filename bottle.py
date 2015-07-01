@@ -3042,7 +3042,7 @@ class BjoernServer(ServerAdapter):
 
 
 class AiohttpServer(ServerAdapter):
-    """ Untested. 
+    """ Untested.
         aiohttp
         https://pypi.python.org/pypi/aiohttp/
     """

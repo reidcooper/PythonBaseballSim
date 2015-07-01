@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="B.A.S.E.S." content="">
-  <meta name="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache" content="">
+  <meta name="" content="">
   <link rel="icon" href="/static/icons/favicon.ico">
 
   <title>B.A.S.E.S.</title>
@@ -57,6 +57,22 @@
           <li>Provide a user interface with a scoreboard which updates throughout the game</li>
         </ul>
 
+        <h4>Development</h4>
+        <p>The B.A.S.E.S. project was developed using these following tools and frameworks</p>
+        <ul>
+          <li>Google Drive</li>
+          <li>Github</li>
+          <ul>
+            <li><a href="https://github.com/reidcooper/PythonBaseballSim">Python Repo</a></li>
+            <li><a href="https://github.com/SoftwarePhil/BaseballSim">Java Skeleton Prototype Repo</a></li>
+          </ul>
+          <li>Python 2.7.x</li>
+          <li>Java 1.7</li>
+          <li>Bottle: Python Web Framework 0.12</li>
+          <li>Javascript, HTML, and CSS</li>
+          <li>Bootstrap CSS Framework</li>
+        </ul>
+
         <h4>Members</h4>
         <p>B.A.S.E.S. development team members, without us, this whole thing wouldn't of happened.</p>
         <ul>
@@ -72,6 +88,8 @@
         <ul>
           <li><a href="http://www.definedlogic.com/">Defined Logic</a></li>
           <li><a href="http://www.monmouth.edu">Monmouth University</a></li>
+          <li><a href="http://www.starschallenge.org/stars/">Drs. Margaret Ann and Steven Chappell</a></li>
+
         </ul>
 
         <h4>Sources</h4>
@@ -85,12 +103,12 @@
     </div>
 
     <footer class="footer">
-    <center>
-      <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
-      <p>&copy; Monmouth University
-        2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
-      </p>
-    </center>
+      <center>
+        <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
+        <p>&copy; Monmouth University
+          2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
+        </p>
+      </center>
     </footer>
 
   </div> <!-- /container -->
