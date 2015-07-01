@@ -2,7 +2,7 @@ import csv
 import os
 dir = os.path.dirname(__file__)
 filename = os.path.join(dir, 'FanGraphs')
-output_path = "../static/teams/"
+output_path = "static/teams/"
 
 def produceTeamFiles(team):
     printBatting(team)
@@ -14,7 +14,7 @@ def printBatting(team):
 
     batting_players = []
     batting_output = []
-    batting_text = []
+    lines = []
 
     with open(filename + '/FanGraphsBatting/2014_batting_master_withoutPercentage.csv', 'rU') as csvFileBatting:
         readerBatting = csv.DictReader(csvFileBatting)
@@ -34,7 +34,9 @@ def printBatting(team):
 
     for x in batting_output:
         print x
-        team_text.write("{} {} {} {} {} {} {} {} {} {} {} {} {}\n".format(x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9],x[10],x[11],x[12]))
+        lines.append("{} {} {} {} {} {} {} {} {} {} {} {} {}".format(*x))
+    # Since writing them appends a new line character already, you join them on that character
+    team_text.write("\n".join(lines))
     team_text.close
 
 
@@ -42,6 +44,7 @@ def printPitching(team):
 
     pitching_players = []
     pitching_output = []
+    lines = []
 
     with open(filename + '/FanGraphsPitching/2014_pitching_master_withoutPercentage.csv', 'rU') as csvFilePitching:
         readerPitching = csv.DictReader(csvFilePitching)
@@ -59,8 +62,10 @@ def printPitching(team):
 
     for x in pitching_output:
         print x
-        pitcher_text.write("{} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {}\n".format(x[0],x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9],x[10],x[11],x[12],x[13],x[14],x[15],x[16],x[17]))
+        lines.append("{} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {}".format(*x))
 
+    # Since writing them appends a new line character already, you join them on that character
+    pitcher_text.write("\n".join(lines))
     pitcher_text.close
 
 produceTeamFiles("Diamondbacks")

@@ -1,26 +1,6 @@
 from bottle import *
 # from PythonBaseballSim import teamtxt
 
-# @route('/')
-# def homepage():
-#     return static_file("index.html", root='static/')
-
-# @post('/submitTeams', method='POST')
-# def submitTeams():
-#     home_team = request.form('inputHomeTeam')
-#     away_team = request.form('inputAwayTeam')
-
-#     if home_team and away_team:
-#         json.dumps({'html':'<span>All fields good !!</span>'})
-
-# @route('/<filename>')
-# def server_static(filename):
-#     if (filename == "displayCSV.html"):
-#         # teamtxt.printBatting("Mets")
-#         # teamtxt.printPitching("Mets")
-#         print "hello"
-
-#     return static_file(filename, root='static/')
 @route('/')
 @route('/index')
 def homepage():
@@ -38,7 +18,7 @@ def submit_teams():
 
     print "Home Team: " + str(home_team) + " Away Team: " + str(away_team)
 
-# Return any static file
+# Return any static file <> are wildcards
 @route('/static/<directory>/<filename>')
 def static(filename, directory):
     return static_file(filename, root='static/'+directory+'/')
