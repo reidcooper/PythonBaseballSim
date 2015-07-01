@@ -3,22 +3,14 @@ import random
 import teamPackage.Player
 
 class FieldSquare(object):
- def __init__(self,hasBall,key,fielder):	
-  self.hasBall = hasBall
-  self.key= key
-  self.playerSpace = playerSpace
+ def __init__(self,ball,position):	
+  self.hasBall = setHasBall(ball)
+  self.key = setKey(position, 10)
+  self.playerSpace = []
   Player.fielder = fielder
-
- def FieldSquare():
-       setHasBall(false)
-
- def FieldSquare(ball, position):
-       setHasBall(ball)
-       setKey(position, 10)
-
- def setSize(size):
-       playerSpace = [size]
-
+       
+ def setSize(self,size):
+       self.playerSpace = [0]*size
 
  def getHasBall(self):
        return self.hasBall
