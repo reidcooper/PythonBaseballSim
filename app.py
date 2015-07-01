@@ -6,6 +6,10 @@ from bottle import *
 def homepage():
     return template('index')
 
+@route('/about')
+def homepage():
+    return template('about')
+
 @route('/simulation')
 def simulation():
     return template('displayCSV')
