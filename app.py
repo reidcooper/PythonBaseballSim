@@ -56,6 +56,7 @@ if __name__ == '__main__':
 
     # Change for production to false
     debug = True
+    port = 8888
 
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', port))
     run(host='0.0.0.0', port=port, debug=debug)
