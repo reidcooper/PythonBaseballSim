@@ -1,5 +1,12 @@
+#!/usr/bin/python
+
 # fieldingPackage
-from Player import Player
+import os
+import sys
+var = os.path.abspath(os.path.dirname(__file__)+'../..')
+sys.path.append(var)
+
+from teamPackage import Player
 
 class Base(object):
  def __init(self,nextBase,playeronBase):

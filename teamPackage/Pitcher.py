@@ -1,4 +1,11 @@
+#!/usr/bin/python
+
 # package teamPackage
+import os
+import sys
+var = os.path.abspath(os.path.dirname(__file__)+'../..')
+sys.path.append(var)
+
 from random import randint
 from Player import Player
 

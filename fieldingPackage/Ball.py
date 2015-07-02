@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # fieldingPackage
 
 class Ball(object):

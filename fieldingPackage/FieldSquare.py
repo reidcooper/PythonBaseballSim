@@ -1,5 +1,12 @@
+#!/usr/bin/python
+
 # fieldingPackage
-from Player import Player
+import os
+import sys
+var = os.path.abspath(os.path.dirname(__file__)+'../..')
+sys.path.append(var)
+
+from teamPackage import Player
 import random
 
 class FieldSquare(object):
@@ -8,7 +15,7 @@ class FieldSquare(object):
   self.key= key
   self.playerSpace = playerSpace
   Player.fielder = fielder
-       
+
  def setSize(self,size):
        self.playerSpace = [0]*size
 

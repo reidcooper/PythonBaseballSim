@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from bottle import *
 import teamtxt
 
@@ -10,15 +12,20 @@ def homepage():
 def homepage():
     return template('about')
 
-@route('/submitTeams')
-def simulation():
-    return template('displayCSV')
+# Commented out incase they go manually enter the page
+# @route('/submitTeams')
+# def simulation():
+#     return template('displayGame')
 
 # Submit Teams to Form
 @route('/submitTeams', method='POST')
 def submit_teams():
-    home_team = request.json['myDict']['selectHomeTeam']
-    away_team = request.json['myDict']['selectAwayTeam']
+    # For using JSON and Javascript
+    # home_team = request.json['myDict']['selectHomeTeam']
+    # away_team = request.json['myDict']['selectAwayTeam']
+
+    home_team = request.forms.get('selectHomeTeam')
+    away_team = request.forms.get('selectAwayTeam')
 
     # Example Python Method Call with Team Names
     # if home_team and away_team:
@@ -27,6 +34,8 @@ def submit_teams():
 
     print "Home Team: " + str(home_team) + " Away Team: " + str(away_team)
 
+    return template('displayGame', home_team=home_team, away_team=away_team)
+
 # Return any static file <> are wildcards
 @route('/static/<directory>/<filename>')
 def static(filename, directory):
@@ -34,6 +43,11 @@ def static(filename, directory):
 
 # 404 returns index page
 @error(404)
+def error404(error):
+    return template('index')
+
+# 405 returns index page
+@error(405)
 def error404(error):
     return template('index')
 
