@@ -19,16 +19,16 @@ class CurrentField (object):
 
   Ball.ball = Ball()
 
-#* Fielding Array (x marks plate, P is pitcher square)
- #* | 0 | 1 |  2   |
- #* ________________
- #* | 3 | 4x | 5   |
- #* ________________
- #* | 6x | 7P | 8x |
- #* ________________
- #* |   | 9x |     |
- #* ----------------
- #*
+  ''' Fielding Array (x marks plate, P is pitcher square)
+    ________________
+    | 0  | 1  |  2 |
+    ________________
+    | 3  | 4x |  5 |
+    ________________
+    | 6x | 7P | 8x |
+    ________________
+    |    | 9x |    |
+    ---------------- '''
 
   self.rows = 4
   self.columns = 5
@@ -39,12 +39,12 @@ class CurrentField (object):
      one.setNextBase(two)
      two.setNextBase(three)
      three.setNextBase(home)
-	
+
      for x in range(0,len(rows)):
                 for y in range(0,len(column)):
                   gridFieldArray[x][y] = false, null
                   y+=1
-                  
+
                 x+=1
      gridFieldArray[0][0].setKey("LF", 15)
      gridFieldArray[0][2].setKey("CF", 15)
@@ -78,7 +78,7 @@ class CurrentField (object):
      two.removePlayerFromBase()
      three.removePlayerFromBase()
      fieldingTeam = FieldingTeam
-	
+
      gridFieldArray[0][0].setFielder(fieldingTeam.getPlayerInFieldingPostion("LF"))
      gridFieldArray[0][2].setFielder(fieldingTeam.getPlayerInFieldingPostion("CF"))
      gridFieldArray[0][4].setFielder(fieldingTeam.getPlayerInFieldingPostion("RF"))
@@ -118,5 +118,3 @@ class CurrentField (object):
  def toString():
      return "base 1 " +one.toString() + "\n" + "base 2 " +two.toString() + "\n"
      + "base 3 " +three.toString() + "\n"
-
-
