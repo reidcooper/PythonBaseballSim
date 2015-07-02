@@ -1,4 +1,11 @@
-# baseballGamePackage
+#!/usr/bin/python
+
+#baseballGamePackage
+import os
+import sys
+var = os.path.abspath(os.path.dirname(__file__)+'../..')
+sys.path.append(var)
+
 from battingPackage import Batting
 from battingPackage import CurrentBatting
 from teamPackage import CreateTeam

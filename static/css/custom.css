@@ -10,6 +10,12 @@
     /*color: black;*/
 }
 
+.scroll-box {
+    width: auto;
+    height: auto;
+    overflow: scroll;
+}
+
 .footer {
 
 }

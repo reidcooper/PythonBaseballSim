@@ -1,4 +1,11 @@
+#!/usr/bin/python
+
 #package battingPackage
+import os
+import sys
+var = os.path.abspath(os.path.dirname(__file__)+'../..')
+sys.path.append(var)
+
 from teamPackage import Pitcher
 from teamPackage import Player
 

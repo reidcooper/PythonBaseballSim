@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import csv
 import os
 dir = os.path.dirname(__file__)

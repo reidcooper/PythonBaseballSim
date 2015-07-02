@@ -87,8 +87,9 @@
         <p>Our project wouldn't be possible if it wasn't for our wonderful sponsors!</p>
         <ul>
           <li><a href="http://www.definedlogic.com/">Defined Logic</a></li>
-          <li><a href="http://www.monmouth.edu">Monmouth University</a></li>
           <li><a href="http://www.starschallenge.org/stars/">Drs. Margaret Ann and Steven Chappell</a></li>
+          <li><a href="http://www.monmouth.edu">Monmouth University</a></li>
+          <li><a href="http://www.monmouth.edu/school-of-science/school-of-science.aspx">Monmouth University School of Science</a></li>
 
         </ul>
 

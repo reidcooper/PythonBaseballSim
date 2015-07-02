@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # package teamPackage
 
 class Team(object):
