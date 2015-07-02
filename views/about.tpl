@@ -99,6 +99,7 @@
           <li><a href="https://en.wikipedia.org/wiki/File:Baseball_(crop).jpg">Baseball Photo on main page was provided by Wikipedia</a></li>
           <li><a href="http://www.fangraphs.com/">Fangraphs, for their data and statistical glossaries</a></li>
           <li><a href="http://www.mlb.com/">Major League Baseball</a></li>
+          <li>Scoreboard (edited) from Backyard Baseball</li>
         </ul>
       </div>
     </div>

@@ -10,10 +10,12 @@
     /*color: black;*/
 }
 
-.scroll-box {
-    width: auto;
-    height: auto;
-    overflow: scroll;
+.gameEvents {
+    width:auto;
+    height: 305px;
+    border:2px solid black;
+    overflow:scroll;
+    position:relative;
 }
 
 .footer {
@@ -45,5 +47,10 @@ body {
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+
+    .scoreboard {
+        width: 100%;
+        height: auto;
     }
 }
