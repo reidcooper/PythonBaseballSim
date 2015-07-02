@@ -13,7 +13,7 @@ class Team(object):
      self.team_Name = "temp"
      self.score = 0
      self.outs = 0
-     self.found = false
+     self.found = False
      self.count = 0
 
     def config_Fielding_Roster(self):
