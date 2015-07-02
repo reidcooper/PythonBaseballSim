@@ -41,7 +41,7 @@
       <h3 class="text-muted main-title">B.A.S.E.S.</h3>
     </div>
 
-    <div class="row marketing center-content">
+    <div class="row marketing">
 
       <div id="gameOutput" class="gameOutput">
 
@@ -59,22 +59,22 @@
             <center>
               <h4>Game Events</h4>
             </center>
-            <div class="scroll-box" id="gameEvents">
+            <div class="scroll-box gameEvents" id="game1">
               <script>
                 $.getJSON('/static/simulations/sample.json', function(data) {
                             //now json variable contains data in json format
                             //let's display a few items
                             var output="<ul>";
                             for(var i in data.sample){
-                              output += '<li>Name: ' + data.sample[i].name + '<br />About: ' + data.sample[i].about+"</li>";
+                              output += '<li>Index: ' + data.sample[i].index + '<br />About: ' + data.sample[i].about+"</li>";
                             }
                             output += "</ul>";
-                            $('#gameEvents').html(output);
+                            $('#game1').html(output);
                           });
               </script>
             </div>
           </div>
-        </div>
+        </div> <!-- End Gameoutput1 -->
 
         <div id="gameOutputRow2" class="gameOutputRow2">
           <div class="col-md-6">
@@ -88,22 +88,23 @@
             <center>
               <h4>Game Events</h4>
             </center>
-            <div class="scroll-box" id="gameEvents2">
+            <div class="scroll-box gameEvents" id="game2">
               <script>
                 $.getJSON('/static/simulations/sample.json', function(data) {
                             //now json variable contains data in json format
                             //let's display a few items
                             var output="<ul>";
                             for(var i in data.sample){
-                              output += '<li>Name: ' + data.sample[i].name + '<br />About: ' + data.sample[i].about+"</li>";
+                              output += '<li>Index: ' + data.sample[i].index + '<br />About: ' + data.sample[i].about+"</li>";
                             }
                             output += "</ul>";
-                            $('#gameEvents2').html(output);
+                            $('#game2').html(output);
+                            console.log(Object.keys(myObject).length)
                           });
               </script>
             </div>
           </div>
-        </div>
+        </div><!-- End Gameoutput2 -->
       </div>
 
       <footer class="footer">
