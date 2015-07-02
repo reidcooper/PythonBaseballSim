@@ -52,7 +52,7 @@
         <p>Pick Two Teams!</p>
 
         <div id= "select-team">
-          <form class="select-team-form" id="select-team-form" action="/submitTeams" method="post" role="form">
+          <form class="select-team-form" id="select-team-form" action="/submitTeams" method="POST">
             <div id="homeTeam">
               <script type="text/javascript">
                 $(document).ready(function() {
@@ -60,7 +60,7 @@
                 });
               </script>
               <h4>Home Team:</h4>
-              <select class="js-example-basic-single" id="selectHomeTeam">
+              <select class="js-example-basic-single" id="selectHomeTeam" name="selectHomeTeam">
                 <option value="Diamondbacks">Arizona Diamondbacks</option>
                 <option value="Braves">Atlanta Braves</option>
                 <option value="Orioles">Baltimore Orioles</option>
@@ -96,7 +96,7 @@
 
             <div id="awayTeam">
               <h4>Away Team:</h4>
-              <select class="js-example-basic-single" id="selectAwayTeam">
+              <select class="js-example-basic-single" id="selectAwayTeam" name="selectAwayTeam">
                 <option value="Diamondbacks">Arizona Diamondbacks</option>
                 <option value="Braves">Atlanta Braves</option>
                 <option value="Orioles">Baltimore Orioles</option>
@@ -130,7 +130,8 @@
               </select>
             </div>
             <div id="createTeams" class="createTeams">
-              <a class="btn btn-success" id="btnCreateTeams" type="button">Play Ball!</a>
+<!--               <a class="btn btn-success" id="btnCreateTeams" type="button">Play Ball!</a> -->
+              <input class="btn btn-success" value="Play Ball!" type="submit" />
             </div>
           </form>
         </div>

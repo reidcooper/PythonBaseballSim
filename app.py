@@ -17,8 +17,12 @@ def simulation():
 # Submit Teams to Form
 @route('/submitTeams', method='POST')
 def submit_teams():
-    home_team = request.json['myDict']['selectHomeTeam']
-    away_team = request.json['myDict']['selectAwayTeam']
+    # For using JSON and Javascript
+    # home_team = request.json['myDict']['selectHomeTeam']
+    # away_team = request.json['myDict']['selectAwayTeam']
+
+    home_team = request.forms.get('selectHomeTeam')
+    away_team = request.forms.get('selectAwayTeam')
 
     # Example Python Method Call with Team Names
     # if home_team and away_team:
@@ -26,6 +30,8 @@ def submit_teams():
     #     teamtxt.produceTeamFiles(away_team)
 
     print "Home Team: " + str(home_team) + " Away Team: " + str(away_team)
+
+    return template('displayCSV')
 
 # Return any static file <> are wildcards
 @route('/static/<directory>/<filename>')
