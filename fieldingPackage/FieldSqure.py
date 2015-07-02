@@ -1,5 +1,5 @@
 # fieldingPackage
-from teamPackage import Player
+from Player import Player
 import random
 
 class FieldSquare(object):

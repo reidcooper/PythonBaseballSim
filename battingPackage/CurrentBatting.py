@@ -1,6 +1,6 @@
 #package battingPackage
-from teamPackage import Pitcher
-from teamPackage import Player
+from Pitcher import Pitcher
+from Player import Player
 
 class Current_Batting(object):
 

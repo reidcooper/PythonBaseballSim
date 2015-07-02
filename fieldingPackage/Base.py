@@ -1,5 +1,5 @@
 # fieldingPackage
-from teamPackage import Player
+from Player import Player
 
 class Base(object):
  def __init(self,nextBase,playeronBase):
