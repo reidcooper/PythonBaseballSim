@@ -150,8 +150,8 @@ class CreateTeam(object):
                     team.add_Player(pitcher)
                     temp2 = temp2 + 1
 
-            self.team.config_Batting_Roster()
-            #self.team.config_Fielding_Roster()
+            team.config_Batting_Roster()
+            team.config_Fielding_Roster()
 
             scanner.close()
             scanner2.close()
