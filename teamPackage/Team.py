@@ -74,7 +74,6 @@ class Team(object):
         return False
 
     def config_Batting_Roster(self):
-     print "this has run!"
      for x in range(0,8):
         self.players.append(self.full_Team[x])
      self.players.append(self.full_Team[(len(self.full_Team)-1)])
