@@ -65,37 +65,37 @@ class Player(object):
         self.chance_Homerun = Chance_Homerun
 
     def get_IPR(self):
-        return self.IPR
+        return float(self.IPR)
 
     def set_IPR(self, iPR):
         self.IPR = iPR
 
     def get_Hits(self):
-        return self.hits
+        return float(self.hits)
 
     def set_Hits(self, Hits):
         self.hits = Hits
 
     def get_o_Swing(self):
-        return self.o_Swing
+        return float(self.o_Swing)
 
     def set_o_Swing(self, O_Swing):
         self.o_Swing = O_Swing
 
     def get_z_Swing(self):
-        return self.z_Swing
+        return float(self.z_Swing)
 
     def set_z_Swing(self, Z_Swing):
         self.z_Swing = Z_Swing
 
     def get_o_Contact(self):
-        return self_o_Contact
+        return float(self.o_Contact)
 
     def set_o_Contact(self, O_Contact):
         self.o_Contact = O_Contact
 
     def get_z_Contact(self):
-        return self.z_Contact
+        return float(self.z_Contact)
 
     def set_z_Contact(self, Z_Contact):
         self.z_Contact = Z_Contact

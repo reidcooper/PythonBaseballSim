@@ -9,7 +9,7 @@ sys.path.append(var)
 from teamPackage import Pitcher
 from teamPackage import Player
 
-class Current_Batting(object):
+class CurrentBatting(object):
 
     def __init__(self, pitcher, player):
         self.strikes = 0
@@ -49,7 +49,7 @@ class Current_Batting(object):
     def get_Player(self):
         return self.player
 
-    def getPitcher(self):
+    def get_Pitcher(self):
         return self.pitcher
 
     def getHomerunOrWalk(self):
