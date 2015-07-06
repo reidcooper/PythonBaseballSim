@@ -47,7 +47,7 @@ class Field(object):
         if not (currentField.one.getPlayerOnBase() == False):
                        if n == 1:
                 
-                    currentField.one.movePlayerOneBase()
+                        currentField.one.movePlayerOneBase()
                     isPlayerOutOnBase(2, checkIfPlayerIsOnSameBaseAsBall(2))
                     
                     moveOneBase(p)
@@ -55,35 +55,35 @@ class Field(object):
                 
                        elif n ==2:
                 
-                    currentField.one.movePlayerOneBase()
-                    isPlayerOutOnBase(2, checkIfPlayerIsOnSameBaseAsBall(2))
-                    currentField.two.movePlayerOneBase()
-                    isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
+                         currentField.one.movePlayerOneBase()
+                         isPlayerOutOnBase(2, checkIfPlayerIsOnSameBaseAsBall(2))
+                         currentField.two.movePlayerOneBase()
+                         isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
     
-                    moveTwoBases(p)
-                    break
+                         moveTwoBases(p)
+                         break
                        elif n==3:
                 
                 
-                    currentField.one.movePlayerOneBase()
-                    isPlayerOutOnBase(2, checkIfPlayerIsOnSameBaseAsBall(2))
-                    currentField.two.movePlayerOneBase()
-                    isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
-                    playerOnThrid()
+                        currentField.one.movePlayerOneBase()
+                        isPlayerOutOnBase(2, checkIfPlayerIsOnSameBaseAsBall(2))
+                        currentField.two.movePlayerOneBase()
+                        isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
+                        playerOnThrid()
     
-                    movePlayerThreeBases(p)
-                    break
+                       movePlayerThreeBases(p)
+                       break
                 
                        elif n==4:
                 
-                    currentField.one.movePlayerOneBase()
-                    isPlayerOutOnBase(2, checkIfPlayerIsOnSameBaseAsBall(2))
-                    currentField.two.movePlayerOneBase();
-                    isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
-                    playerOnThrid()
+                        currentField.one.movePlayerOneBase()
+                        isPlayerOutOnBase(2, checkIfPlayerIsOnSameBaseAsBall(2))
+                        currentField.two.movePlayerOneBase();
+                        isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
+                        playerOnThrid()
                     
-                    movePlayerFourBases(p)
-                    break
+                        movePlayerFourBases(p)
+                        break
                 
      else:
             if n==1:
@@ -192,40 +192,40 @@ if rand > 60:
 else:
     return False
     #!/*
-    #currentField.putBallIntoRandomInFieldSquare();
+ #def putBallIntoRandomInFieldSquare(self,basNum):
     
-    #int[] basePos = new int[2];
-    #switch (baseNum){
-    #case 1:{
-        #basePos[0] = 3;
-        #basePos[1] = 4;
-        #break;
-    #}
-    #case 2:{
-        #basePos[0] = 2;
-        #basePos[1] = 3;
-        #break;
-    #}
-    #case 3:{
-        #basePos[0] = 3;
-        #basePos[1] = 0;
-        #break;
-    #}
-    #case 4:{
-        #basePos[0] = 3;
-        #basePos[1] = 2;
-        #break;
-    #}
-    #}
-    #temp = currentField.ball.getPostion(); 
-    #System.out.println("Base num " + basePos[0] +" : "+ basePos[1] + " Ball pos " + temp[0] +" :" + temp[1]);
-    #if(temp[0] == basePos[0] && temp[1] == basePos[1] ){
-        #System.out.println("Ball and player are on same base");
-        #return isBallCaught(temp[0], temp[1]);
-    #}
+    #basePos = []
     
-    #return false;*/
-#}
+    #if basNum == 1:
+        #basePos.append(3)
+        #basePos.append(4)
+        #break
+    
+    #elif basNum == 2:
+        #basePos.append(2)
+        #basePos.append(3)
+        #break
+    
+    #elif basNum == 3:
+        #basePos.append(3)
+        #basePos[1] = 0
+        #break;
+    
+    #elif basNum ==4:
+        #basePos.append(3)
+        #basePos.append(2)
+        #break
+    
+    
+    #temp = currentField.ball.getPostion()
+    #print "Base num " + basePos[0] +" : "+ basePos[1] + " Ball pos " + temp[0] +" :" + temp[1]);
+    #if temp[0] == basePos[0] and temp[1] == basePos[1] ):
+        #print "Ball and player are on same base"
+        #return isBallCaught(temp[0], temp[1])
+   
+    
+    #return False;*/
+
 
 def isPlayerOutOnBase(baseNum, b) raise Exception:
 try:
