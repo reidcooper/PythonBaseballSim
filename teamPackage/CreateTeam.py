@@ -43,99 +43,99 @@ class CreateTeam(object):
             self.teamBatting = "static/teams/Yankees_batting.txt"
             self.teamPitching = "static/teams/Yankees_pitchers.txt"
         elif teamName == "Phillies":
-            self.teamBatting = "team/Phillies_batting.txt"
-            self.teamPitching = "team/Phillies_pitchers.txt"
+            self.teamBatting = "static/teams/Phillies_batting.txt"
+            self.teamPitching = "static/teams/Phillies_pitchers.txt"
         elif teamName == "Red_Sox":
-            self.teamBatting = "team/Red_Sox_batting.txt"
-            self.teamPitching = "team/Red_Sox_pitchers.txt"
+            self.teamBatting = "static/teams/Red_Sox_batting.txt"
+            self.teamPitching = "static/teams/Red_Sox_pitchers.txt"
         elif teamName == "Angels":
-            self.teamBatting = "team/Angels_batting.txt"
-            self.teamPitching = "team/Angels_pitchers.txt"
+            self.teamBatting = "static/teams/Angels_batting.txt"
+            self.teamPitching = "static/teams/Angels_pitchers.txt"
         elif teamName == "White_Sox":
-            self.teamBatting = "team/White_Sox_batting.txt"
-            self.teamPitching = "team/White_Sox_pitchers.txt"
+            self.teamBatting = "static/teams/White_Sox_batting.txt"
+            self.teamPitching = "static/teams/White_Sox_pitchers.txt"
         elif teamName == "Cubs":
-            self.teamBatting = "team/Cubs_batting.txt"
-            self.teamPitching = "team/Cubs_pitchers.txt"
+            self.teamBatting = "static/teams/Cubs_batting.txt"
+            self.teamPitching = "static/teams/Cubs_pitchers.txt"
         elif teamName == "Mets":
-            self.teamBatting = "team/Mets_batting.txt"
-            self.teamPitching = "team/Mets_pitchers.txt"
+            self.teamBatting = "static/teams/Mets_batting.txt"
+            self.teamPitching = "static/teams/Mets_pitchers.txt"
         elif teamName == "Giants":
-            self.teamBatting = "team/Giants_batting.txt"
-            self.teamPitching = "team/Giants_pitchers.txt"
+            self.teamBatting = "static/teams/Giants_batting.txt"
+            self.teamPitching = "static/teams/Giants_pitchers.txt"
         elif teamName == "Twins":
-            self.teamBatting = "team/Twins_batting.txt"
-            self.teamPitching = "team/Twins_pitchers.txt"
+            self.teamBatting = "static/teams/Twins_batting.txt"
+            self.teamPitching = "static/teams/Twins_pitchers.txt"
         elif teamName == "Tigers":
-            self.teamBatting = "team/Tigers_batting.txt"
-            self.teamPitching = "team/Tigers_pitchers.txt"
+            self.teamBatting = "static/teams/Tigers_batting.txt"
+            self.teamPitching = "static/teams/Tigers_pitchers.txt"
         elif teamName == "Cardinals":
-            self.teamBatting = "team/Cardinals_batting.txt"
-            self.teamPitching = "team/Cardinals_pitchers.txt"
+            self.teamBatting = "static/teams/Cardinals_batting.txt"
+            self.teamPitching = "static/teams/Cardinals_pitchers.txt"
         elif teamName == "Dodgers":
-            self.teamBatting = "team/Dodgers_batting.txt"
-            self.teamPitching = "team/Dodgers_pitchers.txt"
+            self.teamBatting = "static/teams/Dodgers_batting.txt"
+            self.teamPitching = "static/teams/Dodgers_pitchers.txt"
         elif teamName == "Rangers":
-            self.teamBatting = "team/Rangers_batting.txt"
-            self.teamPitching = "team/Rangers_pitchers.txt"
+            self.teamBatting = "static/teams/Rangers_batting.txt"
+            self.teamPitching = "static/teams/Rangers_pitchers.txt"
         elif teamName == "Rockies":
-            self.teamBatting = "team/Rockies_batting.txt"
-            self.teamPitching = "team/Rockies_pitchers.txt"
+            self.teamBatting = "static/teams/Rockies_batting.txt"
+            self.teamPitching = "static/teams/Rockies_pitchers.txt"
         elif teamName == "Braves":
-            self.teamBatting = "team/Braves_batting.txt"
-            self.teamPitching = "team/Braves_pitchers.txt"
+            self.teamBatting = "static/teams/Braves_batting.txt"
+            self.teamPitching = "static/teams/Braves_pitchers.txt"
         elif teamName == "Mariners":
-            self.teamBatting = "team/Mariners_batting.txt"
-            self.teamPitching = "team/Mariners_pitchers.txt"
+            self.teamBatting = "static/teams/Mariners_batting.txt"
+            self.teamPitching = "static/teams/Mariners_pitchers.txt"
         elif teamName == "Brewers":
-            self.teamBatting = "team/Brewers_batting.txt"
-            self.teamPitching = "team/Brewers_pitchers.txt"
+            self.teamBatting = "static/teams/Brewers_batting.txt"
+            self.teamPitching = "static/teams/Brewers_pitchers.txt"
         elif teamName == "Orioles":
-            self.teamBatting = "team/Orioles_batting.txt"
-            self.teamPitching = "team/Orioles_pitchers.txt"
+            self.teamBatting = "static/teams/Orioles_batting.txt"
+            self.teamPitching = "static/teams/Orioles_pitchers.txt"
         elif teamName == "Reds":
-            self.teamBatting = "team/Reds_batting.txt"
-            self.teamPitching = "team/Reds_pitchers.txt"
+            self.teamBatting = "static/teams/Reds_batting.txt"
+            self.teamPitching = "static/teams/Reds_pitchers.txt"
         elif teamName == "Astros":
-            self.teamBatting = "team/Astros_batting.txt"
-            self.teamPitching = "team/Astros_pitchers.txt"
+            self.teamBatting = "static/teams/Astros_batting.txt"
+            self.teamPitching = "static/teams/Astros_pitchers.txt"
         elif teamName == "Athletics":
-            self.teamBatting = "team/Athletics_batting.txt"
-            self.teamPitching = "team/Athletics_pitchers.txt"
+            self.teamBatting = "static/teams/Athletics_batting.txt"
+            self.teamPitching = "static/teams/Athletics_pitchers.txt"
         elif teamName == "Nationals":
-            self.teamBatting = "team/Nationals_batting.txt"
-            self.teamPitching = "team/Nationals_pitchers.txt"
+            self.teamBatting = "static/teams/Nationals_batting.txt"
+            self.teamPitching = "static/teams/Nationals_pitchers.txt"
         elif teamName == "Blue_Jays":
-            self.teamBatting = "team/Blue_Jays_batting.txt"
-            self.teamPitching = "team/Blue_Jays_pitchers.txt"
+            self.teamBatting = "static/teams/Blue_Jays_batting.txt"
+            self.teamPitching = "static/teams/Blue_Jays_pitchers.txt"
         elif teamName == "Marlins":
-            self.teamBatting = "team/Marlins_batting.txt"
-            self.teamPitching = "team/Marlins_pitchers.txt"
+            self.teamBatting = "static/teams/Marlins_batting.txt"
+            self.teamPitching = "static/teams/Marlins_pitchers.txt"
         elif teamName == "Diamondbacks":
-            self.teamBatting = "team/Diamondbacks_batting.txt"
-            self.teamPitching = "team/Diamondbacks_pitchers.txt"
+            self.teamBatting = "static/teams/Diamondbacks_batting.txt"
+            self.teamPitching = "static/teams/Diamondbacks_pitchers.txt"
         elif teamName == "Indians":
-            self.teamBatting = "team/Indians_batting.txt"
-            self.teamPitching = "team/Indians_pitchers.txt"
+            self.teamBatting = "static/teams/Indians_batting.txt"
+            self.teamPitching = "static/teams/Indians_pitchers.txt"
         elif teamName == "Padres":
-            self.teamBatting = "team/Padres_batting.txt"
-            self.teamPitching = "team/Padres_pitchers.txt"
+            self.teamBatting = "static/teams/Padres_batting.txt"
+            self.teamPitching = "static/teams/Padres_pitchers.txt"
         elif teamName == "Pirates":
-            self.teamBatting = "team/Pirates_batting.txt"
-            self.teamPitching = "team/Pirates_pitchers.txt"
+            self.teamBatting = "static/teams/Pirates_batting.txt"
+            self.teamPitching = "static/teams/Pirates_pitchers.txt"
         elif teamName == "Rays":
-            self.teamBatting = "team/Rays_batting.txt"
-            self.teamPitching = "team/Rays_pitchers.txt"
+            self.teamBatting = "static/teams/Rays_batting.txt"
+            self.teamPitching = "static/teams/Rays_pitchers.txt"
         elif teamName == "Royals":
-            self.teamBatting = "team/Royals_batting.txt"
-            self.teamPitching = "team/Royals_pitchers.txt"
+            self.teamBatting = "static/teams/Royals_batting.txt"
+            self.teamPitching = "static/teams/Royals_pitchers.txt"
         else:
             print "enter a valid team, capitalize"
 
         try:
             scanner = open(var + "/"+ self.teamBatting, "r")
             scanner2 = open(var + "/" + self.teamPitching, "r")
-
+          
 
             for line in scanner:
                 playerData = line.split()
@@ -150,15 +150,15 @@ class CreateTeam(object):
                     team.add_Player(pitcher)
                     temp2 = temp2 + 1
 
-            self.team.config_Batting_Roster()
-            #self.team.config_Fielding_Roster()
-
+            team.config_Batting_Roster()
+            team.config_Fielding_Roster()
+            
             scanner.close()
             scanner2.close()
 
         except:
             print "Unexpected error"
 
-
+        
 
         return team

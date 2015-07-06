@@ -57,7 +57,7 @@ class CurrentField (object):
      gridFieldArray[3][4].setKey("1B", 5)
 
 
- def reset():
+ def reset(self):
      score = 0
      resetOuts()
      home.removePlayerFromBase()
@@ -66,7 +66,7 @@ class CurrentField (object):
      three.removePlayerFromBase()
 
 
- def resetOuts():
+ def resetOuts(self):
      outs = 0
 
 
@@ -90,12 +90,12 @@ class CurrentField (object):
      gridFieldArray[3][4].setFielder(fieldingTeam.getPlayerInFieldingPostion("1B"))
 
 
- def putBallIntoRandomSquare():
+ def putBallIntoRandomSquare(self):
      ball.setPostion((random.randint()*4), (random.randit()*5))
 	#ball.setPostion(0, 0);
 
 
- def putBallIntoRandomInFieldSquare():
+ def putBallIntoRandomInFieldSquare(self):
      ball.setPostion((random.randint()*2 + 2), (random.randint()*4))
 
 
@@ -115,6 +115,6 @@ class CurrentField (object):
  def addOneToOuts(self):
      self.outs = self.outs + 1
 
- def toString():
+ def toString(self):
      return "base 1 " +one.toString() + "\n" + "base 2 " +two.toString() + "\n"
      + "base 3 " +three.toString() + "\n"
