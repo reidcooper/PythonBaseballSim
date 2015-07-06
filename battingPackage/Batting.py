@@ -105,8 +105,8 @@ class Batting(object):
                 print "Foul that was strike " + str(self.strikes) + " outcome " + str(temp)
                 return 1
             else:
-                current_Batting.add_Foul()
-                print "foul " + str(self.currentBatting.get_Fouls()) + " outcome " + str(temp)
+                self.current_Batting.add_Foul()
+                print "foul " + str(self.current_Batting.get_Fouls()) + " outcome " + str(temp)
                 return 1
         #hit
         else:
@@ -129,4 +129,4 @@ class Batting(object):
         return self.current_Batting.get_Player()
 
     def to_String(self):
-        return "Chance of ball: " + self.chanceOfBall + "\n" + "Chance of hit: " + self.chanceOfHit + "\n" + "Chance of foul: " + self.chanceOfFoul + "\n" + "Chance of strike: " + self.chanceOfStrike + "\n"
+        return "Chance of ball: " + str(self.chanceOfBall) + "\n" + "Chance of hit: " + str(self.chanceOfHit) + "\n" + "Chance of foul: " + str(self.chanceOfFoul) + "\n" + "Chance of strike: " + str(self.chanceOfStrike) + "\n"
