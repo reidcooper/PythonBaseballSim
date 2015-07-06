@@ -17,7 +17,7 @@ class Team(object):
      self.count = 0
 
     def config_Fielding_Roster(self):
-        self.fielding_Roster.append(get_Player_From_Array("LF"))
+        self.fielding_Roster.append(self.get_Player_From_Array("LF"))
         self.fielding_Roster.append(get_Player_From_Array("CF"))
         self.fielding_Roster.append(get_Player_From_Array("RF"))
         self.fielding_Roster.append(get_Player_From_Array("3B"))
@@ -45,7 +45,7 @@ class Team(object):
                 return self.fielding_Roster.get(x)
 
      print "null player found this is very bad " + pos
-     return null
+     return none
 
 
     def fill_Player_Spot(self):
@@ -58,19 +58,19 @@ class Team(object):
             if not player_On_List:
                 return full_Team.get(x)
 
-     return null
+     return none
 
 
-    def get_PlayerFrom_Array(self,position):
+    def get_Player_From_Array(self, position):
         self.count = 0;
-        self.found = false;
-        while not found and count < len(full_Team()):
+        self.found = False;
+        while not self.found and self.count < len(self.full_Team()):
             if full_Team.get(count).get_Position() == position:
                 return fullTeam.get(count)
             else:
                 count+=1
         missingPositions.append(position)
-        return null
+        return none
 
     def config_Batting_Roster(self):
      for x in range(0,8):

@@ -5,6 +5,9 @@ var = os.path.abspath(os.path.dirname(__file__)+'../..')
 sys.path.append(var)
 
 from Team import Team
+from Player import Player
+from Pitcher import Pitcher
+
 
 class CreateTeam(object):
 
@@ -23,8 +26,8 @@ class CreateTeam(object):
         self.teamNameHome = teamNameHome
         self.teamNameAway = teamNameAway
 
-        self.home = createTeam(self.teamNameHome)
-        self.away = createTeam(self.teamNameAway)
+        self.home = self.createTeam(self.teamNameHome)
+        self.away = self.createTeam(self.teamNameAway)
 
         self.teams = [self.home, self.away]
 
@@ -37,8 +40,8 @@ class CreateTeam(object):
         temp2 = 0
 
         if teamName == "Yankees":
-            self.teamBatting = "team/Yankees_batting.txt"
-            self.teamPitching = "team/Yankees_pitchers.txt"
+            self.teamBatting = "static/teams/Yankees_batting.txt"
+            self.teamPitching = "static/teams/Yankees_pitchers.txt"
         elif teamName == "Phillies":
             self.teamBatting = "team/Phillies_batting.txt"
             self.teamPitching = "team/Phillies_pitchers.txt"
@@ -130,29 +133,32 @@ class CreateTeam(object):
             print "enter a valid team, capitalize"
 
         try:
-            scanner = open(teamBatting, "r")
-            scanner2 = open(teamPitching, "r")
+            scanner = open(var + "/"+ self.teamBatting, "r")
+            scanner2 = open(var + "/" + self.teamPitching, "r")
+          
 
             for line in scanner:
-                playerData = scanner.readline().split()
+                playerData = line.split()
                 player = Player(playerData)
                 team.add_Player(player)
 
             for line in scanner2:# find a better way!
-                if temp2 < pitchCount:
+                if temp2 < self.pitcherCount:
                     playerData = ["0"] * 13
-                    pitcherData = scanner2.readline().split()
+                    pitcherData = line.split()
                     pitcher = Pitcher(playerData, pitcherData)
                     team.add_Player(pitcher)
-                    temp2 += 1
+                    temp2 = temp2 + 1
 
-            team.config_Batting_Roster()
-            team.config_Fielding_Roster()
+            #self.team.config_Batting_Roster()
+            #self.team.config_Fielding_Roster()
+            
+            scanner.close()
+            scanner2.close()
 
         except:
             print "Unexpected error"
 
-        scanner.close()
-        scanner2.close()
+        
 
         return team
