@@ -9,17 +9,27 @@ def homepage():
     return template('index')
 
 @route('/about')
-def homepage():
+def about():
     return template('about')
 
-# Commented out incase they go manually enter the page
-# @route('/submitTeams')
-# def simulation():
-#     return template('displayGame')
+# Works in Progress ==========================================
+@route('/historicGame')
+def historicGame():
+    return template('historicGame')
+
+@route('/submitHistoricGame', method='POST')
+def submitHistoricGame():
+
+    json_game = request.forms.get('selectGame')
+
+    print "Game Selected: " + json_game
+
+    return template('displayGame', json_game=json_game)
+# Works in Progress ==========================================
 
 # Submit Teams to Form
 @route('/submitTeams', method='POST')
-def submit_teams():
+def submitTeams():
     # For using JSON and Javascript
     # home_team = request.json['myDict']['selectHomeTeam']
     # away_team = request.json['myDict']['selectAwayTeam']
@@ -48,7 +58,7 @@ def error404(error):
 
 # 405 returns index page
 @error(405)
-def error404(error):
+def error405(error):
     return template('index')
 
 # Set debug to false for production
