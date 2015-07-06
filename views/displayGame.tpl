@@ -43,25 +43,32 @@
 
     <div class="row marketing">
 
-      <div id="gameOutput" class="gameOutput">
+      <div class="gameOutput" id="game1">
 
-        <div id="gameOutputRow1" class="gameOutputRow1">
+        <div id="game1-row1">
           <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
 
-          <div class="col-md-6">
-            <center>
+          <div class="col-md-6" id="scoreboard">
+            <div id="scoreboard-content">
               <h4>Scoreboard</h4>
-              <img class="scoreboard img-rounded" src="/static/images/scoreboard.jpg" alt="scoreboard" style="">
-            </center>
+              <div class="scoreboard-bgd">
+                <img class="img-rounded" src="/static/images/scoreboard.jpg" alt="scoreboard" style="">
+                <div class="scoreboard-writing">
+                  <div id="scoreboard-homeTeam">
+                    {{ home_team }}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6" id="gameEvents">
             <center>
               <h4>Game Events</h4>
             </center>
-            <div class="scroll-box gameEvents" id="game1">
+            <div class="scroll-box gameEvents-json" id="game1-row1-json">
               <script>
-                $.getJSON('/static/simulations/sample.json', function(data) {
+                $.getJSON('/static/simulations/butt.json', function(data) {
                             //now json variable contains data in json format
                             //let's display a few items
                             var output="<ul>";
@@ -69,43 +76,13 @@
                               output += '<li>Index: ' + data.sample[i].index + '<br />About: ' + data.sample[i].about+"</li>";
                             }
                             output += "</ul>";
-                            $('#game1').html(output);
+                            $('#game1-row1-json').html(output);
                           });
               </script>
             </div>
           </div>
-        </div> <!-- End Gameoutput1 -->
-
-        <div id="gameOutputRow2" class="gameOutputRow2">
-          <div class="col-md-6">
-            <center>
-              <h4>Scoreboard</h4>
-              <img class="scoreboard  img-rounded" src="/static/images/scoreboard.jpg" alt="scoreboard" style="">
-            </center>
-          </div>
-
-          <div class="col-md-6">
-            <center>
-              <h4>Game Events</h4>
-            </center>
-            <div class="scroll-box gameEvents" id="game2">
-              <script>
-                $.getJSON('/static/simulations/sample.json', function(data) {
-                            //now json variable contains data in json format
-                            //let's display a few items
-                            var output="<ul>";
-                            for(var i in data.sample){
-                              output += '<li>Index: ' + data.sample[i].index + '<br />About: ' + data.sample[i].about+"</li>";
-                            }
-                            output += "</ul>";
-                            $('#game2').html(output);
-                            console.log(Object.keys(myObject).length)
-                          });
-              </script>
-            </div>
-          </div>
-        </div><!-- End Gameoutput2 -->
-      </div>
+        </div> <!-- End Game1 Row1 -->
+      </div> <!-- End GameOutput -->
 
       <footer class="footer">
         <center>

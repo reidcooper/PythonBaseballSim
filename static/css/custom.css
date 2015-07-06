@@ -10,16 +10,44 @@
     /*color: black;*/
 }
 
-.gameEvents {
+.gameEvents-json {
     width:auto;
     height: 305px;
-    border:2px solid black;
+    /*border:2px solid black;*/
     overflow:scroll;
     position:relative;
 }
 
 .footer {
 
+}
+
+#scoreboard-content {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.scoreboard-bgd {
+/*    background: url("../images/scoreboard.jpg") no-repeat;*/
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.scoreboard-writing {
+    z-index: 1;
+    position: absolute;
+    color: #FFFF00;
+    text-align: center;
+    font-size: 200%;
+}
+
+#scoreboard-homeTeam {
+/*    left: ;
+    top: ;
+    height: inherit;
+    width: inherit;*/
 }
 
 .baseball {
@@ -47,10 +75,5 @@ body {
         margin-left: auto;
         margin-right: auto;
         display: block;
-    }
-
-    .scoreboard {
-        width: 100%;
-        height: auto;
     }
 }

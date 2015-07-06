@@ -135,7 +135,7 @@ class CreateTeam(object):
         try:
             scanner = open(var + "/"+ self.teamBatting, "r")
             scanner2 = open(var + "/" + self.teamPitching, "r")
-          
+
 
             for line in scanner:
                 playerData = line.split()
@@ -150,15 +150,15 @@ class CreateTeam(object):
                     team.add_Player(pitcher)
                     temp2 = temp2 + 1
 
-            #self.team.config_Batting_Roster()
+            self.team.config_Batting_Roster()
             #self.team.config_Fielding_Roster()
-            
+
             scanner.close()
             scanner2.close()
 
         except:
             print "Unexpected error"
 
-        
+
 
         return team

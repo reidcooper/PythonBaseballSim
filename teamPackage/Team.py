@@ -18,14 +18,14 @@ class Team(object):
 
     def config_Fielding_Roster(self):
         self.fielding_Roster.append(self.get_Player_From_Array("LF"))
-        self.fielding_Roster.append(get_Player_From_Array("CF"))
-        self.fielding_Roster.append(get_Player_From_Array("RF"))
-        self.fielding_Roster.append(get_Player_From_Array("3B"))
-        self.fielding_Roster.append(get_Player_From_Array("SS"))
-        self.fielding_Roster.append(get_Player_From_Array("2B"))
-        self.fielding_Roster.append(get_Player_From_Array("1B"))
-        self.fielding_Roster.append(get_Player_From_Array("C"))
-        self.fielding_Roster.append(get_Player_From_Array("P"))
+        self.fielding_Roster.append(self.get_Player_From_Array("CF"))
+        self.fielding_Roster.append(self.get_Player_From_Array("RF"))
+        self.fielding_Roster.append(self.get_Player_From_Array("3B"))
+        self.fielding_Roster.append(self.get_Player_From_Array("SS"))
+        self.fielding_Roster.append(self.get_Player_From_Array("2B"))
+        self.fielding_Roster.append(self.get_Player_From_Array("1B"))
+        self.fielding_Roster.append(self.get_Player_From_Array("C"))
+        self.fielding_Roster.append(self.get_Player_From_Array("P"))
 
         for x in range(0,len(self.fielding_Roster)):
             if fieldingRoster.get(x) == null:
@@ -64,18 +64,19 @@ class Team(object):
     def get_Player_From_Array(self, position):
         self.count = 0;
         self.found = False;
-        while not self.found and self.count < len(self.full_Team()):
-            if full_Team.get(count).get_Position() == position:
-                return fullTeam.get(count)
+        while not self.found and self.count < len(self.full_Team):
+            if self.full_Team[self.count].get_Position() == position:
+                return self.full_Team[self.count]
             else:
-                count+=1
-        missingPositions.append(position)
+                self.count+=1
+        self.missing_Positions.append(position)
+
         return none
 
     def config_Batting_Roster(self):
      for x in range(0,8):
-        players.append(full_Team.get(x))
-     players.append(full_Team.get(len(full_Team)-1))
+        self.players.append(self.full_Team[x])
+     self.players.append(self.full_Team[len(self.full_Team)-1])
 
 
     def addOneToScore(self):
