@@ -197,7 +197,7 @@ class Field(object):
             else:
                 self.currentField.three.movePlayerOneBase()
                 self.currentField.addScore()
-                print self.currentField.home.getPlayerOnBase() + " has scored"
+                print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
 
         if not self.currentField.two.getPlayerOnBase() is None:
             self.currentField.two.movePlayerOneBase()
@@ -213,25 +213,25 @@ class Field(object):
         if not self.currentField.three.getPlayerOnBase() is None:
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore()
-            print self.currentField.home.getPlayerOnBase() + " has scored"
+            print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
 
         if not self.currentField.two.getPlayerOnBase() is None:
             self.currentField.two.movePlayerOneBase()
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore();
-            print self.currentField.home.getPlayerOnBase() + " has scored"
+            print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
 
         if not self.currentField.one.getPlayerOnBase() is None:
             self.currentField.one.movePlayerOneBase()
             self.currentField.two.movePlayerOneBase()
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore();
-            print self.currentField.home.getPlayerOnBase() + " has scored"
+            print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
 
         self.currentField.one.addPlayerToBase(p)
         self.currentField.one.movePlayerOneBase()
         self.currentField.two.movePlayerOneBase()
         self.currentField.three.movePlayerOneBase()
         self.currentField.addScore()
-        print self.currentField.home.getPlayerOnBase() + " has scored"
-        print "amount of outs " + self.currentField.getOuts()
+        print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+        print "amount of outs " + str(self.currentField.getOuts())
