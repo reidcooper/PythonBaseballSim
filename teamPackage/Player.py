@@ -41,25 +41,25 @@ class Player(object):
         return self.name + " " + self.position
 
     def get_Chance_Single(self):
-        return self.chance_Single
+        return float(self.chance_Single)
 
     def set_Chance_Single(self,Chance_Single):
         self.chance_Single = Chance_Single
 
     def get_Chance_Double(self):
-        return self.chance_Double
+        return float(self.chance_Double)
 
     def set_Chance_Double(self,Chance_Double):
         self.chance_Double = Chance_Double
 
     def get_Chance_Triple(self):
-        return self.chance_Triple
+        return float(self.chance_Triple)
 
     def set_Chance_Triple(self,Chance_Triple):
         self.chance_Triple = Chance_Triple
 
     def get_Chance_Homerun(self):
-        return self.chance_Homerun
+        return float(self.chance_Homerun)
 
     def set_Chance_Homerun(self, Chance_Homerun):
         self.chance_Homerun = Chance_Homerun
@@ -101,7 +101,7 @@ class Player(object):
         self.z_Contact = Z_Contact
 
     def get_FP(self):
-        return self.FP
+        return float(self.FP)
 
     def set_FP(self, fP):
         self.FP = fP

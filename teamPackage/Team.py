@@ -37,7 +37,7 @@ class Team(object):
                 #self.missing_Positions.remove(0)
 
         for h in range (0, len(self.fielding_Roster)):
-            print self.fielding_Roster[h]
+            print self.fielding_Roster[h].to_String()
 
 
     def get_Player_In_Fielding_Postion(self,pos):

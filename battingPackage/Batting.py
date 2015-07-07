@@ -42,9 +42,9 @@ class Batting(object):
         self.chanceOfHit = self.chanceOfHit * 1000
         self.chanceOfFoul = self.chanceOfFoul * 1000
 
-        self.a_Single = self.player.get_Chance_Single() * 100
-        self.a_Double = self.player.get_Chance_Double() * 100
-        self.a_Triple = self.player.get_Chance_Triple() * 100
+        self.a_Single = int(self.player.get_Chance_Single() * 100)
+        self.a_Double = int(self.player.get_Chance_Double() * 100)
+        self.a_Triple = int(self.player.get_Chance_Triple() * 100)
 
         return self.at_Bat()
 
@@ -74,13 +74,12 @@ class Batting(object):
             self.generate_new_FBPR()
             outcome = self.pitch()
 
-        if outcome == 0:
-            return hit()
+            if outcome == 0:
+               return self.hit()
 
-        if self.current_Batting.get_Balls() == 4:
-            self.current_Batting.setHomerunOrWalk("walk")
-            return 1
-
+            if self.current_Batting.get_Balls() == 4:
+               self.current_Batting.setHomerunOrWalk("walk")
+               return 1
         return 0
 
     def pitch(self):
