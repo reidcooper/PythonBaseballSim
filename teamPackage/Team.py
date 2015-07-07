@@ -108,7 +108,6 @@ class Team(object):
 
     def get_Next_Player_At_Bat(self):
      self.player_At_Bat = self.player_At_Bat + 1
-     print self.player_At_Bat % 7
      return self.players[self.player_At_Bat % 7]
 
     def get_Pitcher(self):

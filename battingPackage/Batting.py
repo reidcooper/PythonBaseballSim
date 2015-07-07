@@ -30,11 +30,11 @@ class Batting(object):
         self.current_Batting = cb
         self.pitcher = cb.get_Pitcher()
         self.player = cb.get_Player()
-        self.FBPR = generate_FBPR()
+        self.FBPR = self.generate_FBPR()
 
-        self.chanceOfBall = (1 - self.pitcher.get_Zone_Per()) * (1 - self.player.get_to_Swing())
+        self.chanceOfBall = (1 - self.pitcher.get_Zone_Per()) * (1 - self.player.get_o_Swing())
         self.chanceOfStrike = (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * (1 - self.player.get_z_Contact())) + (self.pitcher.get_Zone_Per() * (1 - self.player.get_z_Swing())) + (((1 - self.pitcher.get_Zone_Per()) * self.player.get_o_Swing() * (1 - self.player.get_o_Contact())))
-        self.chanceOfFoul = ((1 - self.pitcher.get_Zon_ePer()) * self.player.get_o_Swing() * self.player.get_o_Contact() * self.FBPR) + (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * self.player.get_z_Contact() * self.FBPR)
+        self.chanceOfFoul = ((1 - self.pitcher.get_Zone_Per()) * self.player.get_o_Swing() * self.player.get_o_Contact() * self.FBPR) + (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * self.player.get_z_Contact() * self.FBPR)
         self.chanceOfHit = ((1 - self.pitcher.get_Zone_Per()) * self.player.get_o_Swing() * self.player.get_o_Contact() * (1 - self.FBPR)) + (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * self.player.get_z_Contact() * (1 - self.FBPR))
 
         self.chanceOfBall = self.chanceOfBall * 1000
@@ -46,32 +46,32 @@ class Batting(object):
         self.a_Double = self.player.get_Chance_Double() * 100
         self.a_Triple = self.player.get_Chance_Triple() * 100
 
-        return atBat()
+        return self.at_Bat()
 
     def generate_FBPR(self):
         z = -66.7 + (self.generate_Pitch_Speed()/self.player.get_IPR())
         if z < self.avg_IPR:
             z = (z/self.avg_IPR) * 0.5
         else:
-            z = 0.5 + (((self.z-self.avgIPR)/(self.maxZ - self.avg_IPR)) * 0.5);
+            z = 0.5 + (((self.z-self.avg_IPR)/(self.max_Z - self.avg_IPR)) * 0.5);
         return z
 
     def generate_new_FBPR(self):
 
         self.FBPR = self.generate_FBPR()
-        self.chanceOfFoul = ((1 - self.pitcher.get_Zon_ePer()) * self.player.get_o_Swing() * self.player.get_o_Contact() * self.FBPR) + (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * self.player.get_z_Contact() * self.FBPR)
+        self.chanceOfFoul = ((1 - self.pitcher.get_Zone_Per()) * self.player.get_o_Swing() * self.player.get_o_Contact() * self.FBPR) + (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * self.player.get_z_Contact() * self.FBPR)
         self.chanceOfHit = ((1 - self.pitcher.get_Zone_Per()) * self.player.get_o_Swing() * self.player.get_o_Contact() * (1 - self.FBPR)) + (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * self.player.get_z_Contact() * (1 - self.FBPR))
 
         self.chanceOfFoul = 1000 * self.chanceOfFoul
         self.chanceOfHit = 1000 * self.chanceOfHit
 
     def generate_Pitch_Speed(self):
-        return self.pitcher.get_Pitch_Speed()
+        return self.pitcher.getPitchSpeed()
 
     def at_Bat(self):
         self.strikes = self.current_Batting.get_Strikes()
-        while strikes <= 2 and balls <= 3:
-            self.generate_New_FBPR()
+        while self.strikes <= 2 and self.balls <= 3:
+            self.generate_new_FBPR()
             outcome = self.pitch()
 
             if outcome == 0:
@@ -80,7 +80,6 @@ class Batting(object):
             if self.current_Batting.get_Balls() == 4:
                current_Batting.setHomerunOrWalk("walk")
                return 1
-
         return 0
 
     def pitch(self):
@@ -89,28 +88,28 @@ class Batting(object):
         if temp < self.chanceOfBall:
             self.current_Batting.add_Ball()
             self.balls = self.current_Batting.get_Balls()
-            print "Ball " + self.balls + " outcome " + temp
+            print "Ball " + str(self.balls) + " outcome " + str(temp)
             return 1
         #strike
         elif temp < self.chanceOfBall + self.chanceOfStrike:
             self.current_Batting.add_Strike()
             self.strikes = self.current_Batting.get_Strikes()
-            print "Strike " + self.strikes + " outcome " + temp
+            print "Strike " + str(self.strikes) + " outcome " + str(temp)
             return 1
         #foul
         elif temp < self.chanceOfBall + self.chanceOfStrike + self.chanceOfFoul:
             if self.current_Batting.get_Strikes() < 2:
                 self.current_Batting.add_Strike()
                 self.strikes = self.current_Batting.get_Strikes()
-                print "Foul that was strike " + self.strikes + " outcome " + temp
+                print "Foul that was strike " + str(self.strikes) + " outcome " + str(temp)
                 return 1
             else:
-                current_Batting.add_Foul()
-                print "foul " + self.currentBatting.get_Fouls() + " outcome " + temp
+                self.current_Batting.add_Foul()
+                print "foul " + str(self.current_Batting.get_Fouls()) + " outcome " + str(temp)
                 return 1
         #hit
         else:
-            print "Ball was hit by " + self.player + " outcome = " + temp
+            print "Ball was hit by " + str(self.player.to_String()) + " outcome = " + str(temp)
             return 0
 
     def hit(self):
@@ -128,5 +127,5 @@ class Batting(object):
     def get_Batter(self):
         return self.current_Batting.get_Player()
 
-    def toString(self):
-        return "Chance of ball: " + self.chanceOfBall + "\n" + "Chance of hit: " + self.chanceOfHit + "\n" + "Chance of foul: " + self.chanceOfFoul + "\n" + "Chance of strike: " + self.chanceOfStrike + "\n"
+    def to_String(self):
+        return "Chance of ball: " + str(self.chanceOfBall) + "\n" + "Chance of hit: " + str(self.chanceOfHit) + "\n" + "Chance of foul: " + str(self.chanceOfFoul) + "\n" + "Chance of strike: " + str(self.chanceOfStrike) + "\n"

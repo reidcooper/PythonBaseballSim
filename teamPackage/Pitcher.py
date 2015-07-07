@@ -51,14 +51,14 @@ class Pitcher(Player):
             return self.knV
 
     def getPitchSpeed(self):
-        baseSpeed = getPitchType()
+        baseSpeed = self.getPitchType()
         temp = randint(0, 9)
         if temp <= 5:
             return baseSpeed + (-1 * temp)
         else:
             return baseSpeed + temp
 
-    def getZonePer(self):
+    def get_Zone_Per(self):
         return self.zonePer
     def getFb(self):
         return self.fb
