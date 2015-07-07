@@ -24,7 +24,7 @@ class Batting(object):
     def __init__(self):
         pass
 
-    def start_Batting(self, cb):
+    def startBatting(self, cb):
         self.balls = 0
         self.strikes = 0
         self.current_Batting = cb

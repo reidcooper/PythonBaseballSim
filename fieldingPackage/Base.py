@@ -19,7 +19,7 @@ class Base(object):
   self.isFull = True
 
  def movePlayerOneBase(self):
-  self.nextBase.addPlayerToBase(playerOnBase)
+  self.nextBase.addPlayerToBase(self.playerOnBase)
   self.removePlayerFromBase()
 
  def removePlayerFromBase(self):
@@ -28,17 +28,17 @@ class Base(object):
 
 
  def getPlayerOnBase(self):
-  return self.PlayerOnBase
+  return self.playerOnBase
 
 #This is a test change
  def getIsFull(self):
-  return isFull
+  return self.isFull
 
  def nextBase(self):
-  return Base.nextBase
+  return self.nextBase
 
  def setNextBase(self,b):
-  Base.nextBase = b
+  self.nextBase = b
 
 
  def toString(self):
