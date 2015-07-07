@@ -3,6 +3,7 @@
 from bottle import *
 import teamtxt
 import json
+from baseballGamePackage.Game import Game
 
 @route('/')
 @route('/index')
@@ -45,6 +46,11 @@ def submitTeams():
 
     print "Home Team: " + str(home_team) + " Away Team: " + str(away_team)
 
+    # Run Simulation ======
+    g = Game(str(home_team), str(away_team))
+    game = g.playGame()
+    print game
+
     return template('displayGame', home_team=home_team, away_team=away_team)
 
 # Return any static file <> are wildcards
@@ -66,17 +72,6 @@ def static():
 @route('/static/js/dist/themes/default/<filename>')
 def static(filename):
     return static_file(filename, root='static/js/dist/themes/default/')
-# ====== File Tree =======
-
-# 404 returns index page
-@error(404)
-def error404(error):
-    return template('index')
-
-# 405 returns index page
-@error(405)
-def error405(error):
-    return template('index')
 
 def obtainDirectoryListing():
     import os
@@ -102,6 +97,17 @@ def obtainDirectoryListing():
 
     # print json_data
     return json_data
+# ====== File Tree =======
+
+# 404 returns index page
+@error(404)
+def error404(error):
+    return template('index')
+
+# 405 returns index page
+@error(405)
+def error405(error):
+    return template('index')
 
 # Set debug to false for production
 if __name__ == '__main__':
