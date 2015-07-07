@@ -75,10 +75,10 @@ class Batting(object):
             outcome = self.pitch()
 
             if outcome == 0:
-               return hit()
+               return self.hit()
 
             if self.current_Batting.get_Balls() == 4:
-               current_Batting.setHomerunOrWalk("walk")
+               self.current_Batting.setHomerunOrWalk("walk")
                return 1
         return 0
 
