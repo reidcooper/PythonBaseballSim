@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +21,9 @@
 
   <script type="text/javascript" src="/static/js/submit_teams.js" charset="utf-8"></script>
 
+  <script type="text/javascript" src="/static/js/dist/jstree.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="/static/js/dist/themes/default/style.min.css">
+
   <link rel="stylesheet" href="/static/css/custom.css">
 
   <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
@@ -43,114 +45,73 @@
     </div>
 
     <div class="jumbotron">
-      <h1>Baseball's Accurate Statistical Engine Simulator</h1>
-      <p class="lead">Just provide two selected teams below and simulate a real life baseball game!</p>
+      <h1>Historical Games</h1>
     </div>
 
     <div class="row marketing center-content">
-      <div class="col-md-6">
-        <h4>Python's Baseball Simulator</h4>
-        <p>Pick Two Teams!</p>
-
-        <div id= "select-team">
-          <form class="select-team-form" id="select-team-form" action="/submitTeams" method="POST">
-            <div id="homeTeam">
-              <script type="text/javascript">
-                $(document).ready(function() {
-                  $(".js-example-basic-single").select2();
-                });
-              </script>
-              <h4>Home Team:</h4>
-              <select class="js-example-basic-single" id="selectHomeTeam" name="selectHomeTeam">
-                <option value="Diamondbacks">Arizona Diamondbacks</option>
-                <option value="Braves">Atlanta Braves</option>
-                <option value="Orioles">Baltimore Orioles</option>
-                <option value="Red Sox">Boston Red Sox</option>
-                <option value="White Sox">Chicago White Sox</option>
-                <option value="Cubs">Chicago Cubs</option>
-                <option value="Reds">Cincinnati Reds</option>
-                <option value="Indians">Cleveland Indians</option>
-                <option value="Rockies">Colorado Rockies</option>
-                <option value="Tigers">Detroit Tigers</option>
-                <option value="Marlins">Florida Marlins</option>
-                <option value="Astros">Houston Astros</option>
-                <option value="Royals">Kansas City Royals</option>
-                <option value="Angels">Los Angeles Angels</option>
-                <option value="Dodgers">Los Angeles Dodgers</option>
-                <option value="Brewers">Milwaukee Brewers</option>
-                <option value="Twins">Minnesota Twins</option>
-                <option value="Mets">New York Mets</option>
-                <option value="Yankees">New York Yankees</option>
-                <option value="Athletics">Oakland Athletics</option>
-                <option value="Phillies">Philadelphia Phillies</option>
-                <option value="Pirates">Pittsburgh Pirates</option>
-                <option value="Padres">San Diego Padres</option>
-                <option value="Giants">San Francisco Giants</option>
-                <option value="Mariners">Seattle Mariners</option>
-                <option value="Cardinals">St. Louis Cardinals</option>
-                <option value="Rays">Tampa Bay Rays</option>
-                <option value="Rangers">Texas Rangers</option>
-                <option value="Blue Jays">Toronto Blue Jays</option>
-                <option value="Nationals">Washington Nationals</option>
-              </select>
-            </div>
-
-            <div id="awayTeam">
-              <h4>Away Team:</h4>
-              <select class="js-example-basic-single" id="selectAwayTeam" name="selectAwayTeam">
-                <option value="Diamondbacks">Arizona Diamondbacks</option>
-                <option value="Braves">Atlanta Braves</option>
-                <option value="Orioles">Baltimore Orioles</option>
-                <option value="Red Sox">Boston Red Sox</option>
-                <option value="White Sox">Chicago White Sox</option>
-                <option value="Cubs">Chicago Cubs</option>
-                <option value="Reds">Cincinnati Reds</option>
-                <option value="Indians">Cleveland Indians</option>
-                <option value="Rockies">Colorado Rockies</option>
-                <option value="Tigers">Detroit Tigers</option>
-                <option value="Marlins">Florida Marlins</option>
-                <option value="Astros">Houston Astros</option>
-                <option value="Royals">Kansas City Royals</option>
-                <option value="Angels">Los Angeles Angels</option>
-                <option value="Dodgers">Los Angeles Dodgers</option>
-                <option value="Brewers">Milwaukee Brewers</option>
-                <option value="Twins">Minnesota Twins</option>
-                <option value="Mets">New York Mets</option>
-                <option value="Yankees">New York Yankees</option>
-                <option value="Athletics">Oakland Athletics</option>
-                <option value="Phillies">Philadelphia Phillies</option>
-                <option value="Pirates">Pittsburgh Pirates</option>
-                <option value="Padres">San Diego Padres</option>
-                <option value="Giants">San Francisco Giants</option>
-                <option value="Mariners">Seattle Mariners</option>
-                <option value="Cardinals">St. Louis Cardinals</option>
-                <option value="Rays">Tampa Bay Rays</option>
-                <option value="Rangers">Texas Rangers</option>
-                <option value="Blue Jays">Toronto Blue Jays</option>
-                <option value="Nationals">Washington Nationals</option>
-              </select>
-            </div>
-            <div id="createTeams" class="createTeams">
-<!--               <a class="btn btn-success" id="btnCreateTeams" type="button">Play Ball!</a> -->
-              <input class="btn btn-success" value="Play Ball!" type="submit" />
-            </div>
-          </form>
-        </div>
+      <div class="col-md-12">
+        <h4>Here you can select a previously simulated game and view the results!</h4>
+        <p>Since we are able to simulate baseball games, provided two teams, wouldn't it be nice to revisit a game already simulated? That's why we provided this tool to allow the user to select a previously simulate game and either: view the results of the game or print out the game file!</p>
       </div>
       <div class="col-md-6">
-        <img class="baseball" src="https://upload.wikimedia.org/wikipedia/en/1/1e/Baseball_(crop).jpg" alt="baseball" style="width:250px;height:250px;">
-      </div>
-    </div>
+        <h4>Game Browser</h4>
+        <script>
+          $(function () {
+            // 6 create an instance when the DOM is ready
+            $('#jstree').jstree({ 'core' : {
+              'data' : [
+              {
+                'id': 'game_1',
+                'parent' : '#',
+                "text" : 'Game 1'
+              },
+              {
+                'id': 'game_2',
+                'parent' : '#',
+                "text" : 'Game 2'
+              },
+              {
+                'id': 'game_3',
+                'parent' : '#',
+                "text" : 'Game 3'
+              }
+             ]
+           } });
+            // 7 bind to events triggered on the tree
+            $('#jstree').on("changed.jstree", function (e, data) {
+              console.log(data.selected);
+            });
+            // 8 interact with the tree - either way is OK
+            $('button').on('click', function () {
+              $('#jstree').jstree(true).select_node('child_node_1');
+              $('#jstree').jstree('select_node', 'child_node_1');
+              $.jstree.reference('#jstree').select_node('child_node_1');
+            });
+          });
+</script>
+<!-- 3 setup a container element -->
+<div id="jstree">
+  <!-- in this example the tree is populated from inline HTML -->
+<!--   <ul>
+    <li data-jstree='{"icon":"glyphicon glyphicon-leaf"}' id="child_node_1">Game 1</li>
+    <li data-jstree='{"icon":"glyphicon glyphicon-leaf"}' id="child_node_2">Game 2</li>
+  </ul> -->
+</div>
+</div>
+<div class="col-md-6">
+  <h4>Load a Game File</h4>
+</div>
+</div>
 
-    <footer class="footer">
-      <center>
-        <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
-        <p>&copy; Monmouth University
-        2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
-        </p>
-      </center>
-    </footer>
+<footer class="footer">
+  <center>
+    <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
+    <p>&copy; Monmouth University
+      2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
+    </p>
+  </center>
+</footer>
 
-  </div> <!-- /container -->
+</div> <!-- /container -->
 </body>
 </html>
