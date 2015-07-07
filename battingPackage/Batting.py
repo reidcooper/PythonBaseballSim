@@ -42,9 +42,9 @@ class Batting(object):
         self.chanceOfHit = self.chanceOfHit * 1000
         self.chanceOfFoul = self.chanceOfFoul * 1000
 
-        self.a_Single = self.player.get_Chance_Single() * 100
-        self.a_Double = self.player.get_Chance_Double() * 100
-        self.a_Triple = self.player.get_Chance_Triple() * 100
+        self.a_Single = int(self.player.get_Chance_Single() * 100)
+        self.a_Double = int(self.player.get_Chance_Double() * 100)
+        self.a_Triple = int(self.player.get_Chance_Triple() * 100)
 
         return self.at_Bat()
 
@@ -117,7 +117,6 @@ class Batting(object):
         if temp < self.a_Single:
             return 1
         elif temp < self.a_Single + self.a_Double:
-            print "not a single"
             return 2
         elif temp < self.a_Single + self.a_Double + self.a_Triple:
             return 3
