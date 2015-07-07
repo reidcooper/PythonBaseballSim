@@ -5,6 +5,7 @@ sys.path.append(var)
 
 from teamPackage import Team
 from random import randint
+
 class CurrentField (object):
  def __init__ (self):
   self.score = 0
