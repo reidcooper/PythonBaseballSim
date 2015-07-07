@@ -101,7 +101,7 @@ class Player(object):
         self.z_Contact = Z_Contact
 
     def get_FP(self):
-        return self.FP
+        return float(self.FP)
 
     def set_FP(self, fP):
         self.FP = fP

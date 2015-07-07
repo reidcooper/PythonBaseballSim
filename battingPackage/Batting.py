@@ -117,6 +117,7 @@ class Batting(object):
         if temp < self.a_Single:
             return 1
         elif temp < self.a_Single + self.a_Double:
+            print "not a single"
             return 2
         elif temp < self.a_Single + self.a_Double + self.a_Triple:
             return 3
