@@ -35,21 +35,6 @@
     max-width: 100%;
 }
 
-.scoreboard-writing {
-    z-index: 1;
-    position: absolute;
-    color: #FFFF00;
-    text-align: center;
-    font-size: 200%;
-}
-
-#scoreboard-homeTeam {
-/*    left: ;
-    top: ;
-    height: inherit;
-    width: inherit;*/
-}
-
 .baseball {
     margin-left: auto;
     margin-right: auto;
@@ -76,4 +61,9 @@ body {
         margin-right: auto;
         display: block;
     }
+
+    .gameOutput {
+
+    }
+
 }

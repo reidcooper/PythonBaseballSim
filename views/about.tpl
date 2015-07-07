@@ -35,6 +35,7 @@
       <nav>
         <ul class="nav nav-pills pull-right">
           <li role="presentation"><a href="/">Home</a></li>
+          <li role="presentation"><a href="/historicGame">Historic Game</a></li>
           <li role="presentation" class="active"><a href="/about">About</a></li>
         </ul>
       </nav>

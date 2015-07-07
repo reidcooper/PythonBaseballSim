@@ -35,6 +35,7 @@
       <nav>
         <ul class="nav nav-pills pull-right">
           <li role="presentation" class="active"><a href="/">Home</a></li>
+          <li role="presentation"><a href="/historicGame">Historic Game</a></li>
           <li role="presentation"><a href="/about">About</a></li>
         </ul>
       </nav>
@@ -52,12 +53,59 @@
             <div id="scoreboard-content">
               <h4>Scoreboard</h4>
               <div class="scoreboard-bgd">
-                <img class="img-rounded" src="/static/images/scoreboard.jpg" alt="scoreboard" style="">
-                <div class="scoreboard-writing">
-                  <div id="scoreboard-homeTeam">
-                    {{ home_team }}
-                  </div>
-                </div>
+                <table class="table table-condensed table-bordered">
+                  <tr class="warning">
+                    <td><b>Team</b></td>
+                    <td><b>-</b></td>
+                    <td><b>1</b></td>
+                    <td><b>2</b></td>
+                    <td><b>3</b></td>
+                    <td><b>4</b></td>
+                    <td><b>5</b></td>
+                    <td><b>6</b></td>
+                    <td><b>7</b></td>
+                    <td><b>8</b></td>
+                    <td><b>9</b></td>
+                    <td><b>-</b></td>
+                    <td><b>R</b></td>
+                    <td><b>H</b></td>
+                    <td><b>E</b></td>
+                  </tr>
+                  <tr class="success">
+                    <td>{{ home_team }}</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>-</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                  </tr>
+                  <tr class="info">
+                    <td>{{ away_team }}</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>-</td>
+                    <td>00</td>
+                    <td>00</td>
+                    <td>00</td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
