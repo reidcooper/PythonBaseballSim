@@ -9,37 +9,37 @@ sys.path.append(var)
 from teamPackage import Player
 
 class Base(object):
- def __init(self,nextBase,playeronBase):
-  self.isFull = false
-  Base.nextBase = nextBase
-  Player.playerOnBase = playeronBase
+ def __init(self):
+  self.isFull = False
+  self.nextBase = Base()
+  self.playerOnBase = None
 
  def addPlayerToBase(self,p):
-  Player.playerOnBase = p
-  self.isFull = true
+  self.playerOnBase = p
+  self.isFull = True
 
- def movePlayerOneBase():
-  nextBase.addPlayerToBase(playerOnBase)
-  removePlayerFromBase()
+ def movePlayerOneBase(self):
+  self.nextBase.addPlayerToBase(playerOnBase)
+  self.removePlayerFromBase()
 
  def removePlayerFromBase(self):
-  Player.playerOnBase = null
-  self.isFull = false
+  self.playerOnBase = None
+  self.isFull = False
 
 
- def getPlayerOnBase():
-  return Player.playerOnBase
+ def getPlayerOnBase(self):
+  return self.PlayerOnBase
 
 #This is a test change
- def getIsFull():
+ def getIsFull(self):
   return isFull
 
- def nextBase():
+ def nextBase(self):
   return Base.nextBase
 
- def setNextBase(b):
+ def setNextBase(self,b):
   Base.nextBase = b
 
 
- def toString():
+ def toString(self):
   return "Player " + getPlayerOnBase() + " is on base"

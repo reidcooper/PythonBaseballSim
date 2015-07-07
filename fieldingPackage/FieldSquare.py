@@ -6,18 +6,18 @@ import sys
 var = os.path.abspath(os.path.dirname(__file__)+'../..')
 sys.path.append(var)
 
-from teamPackage import Player
+from teamPackage.Player import Player
 import random
 
 class FieldSquare(object):
- def __init__(self,hasBall,key,fielder):
-  self.hasBall = hasBall
-  self.key= key
-  self.playerSpace = playerSpace
-  Player.fielder = fielder
+ def __init__(self):
+  self.hasBall = False
+  self.key = None
+  self.playerSpace = [0,0,0]
+  self.fielder = None
 
- def setSize(self,size):
-       self.playerSpace = [0]*size
+ def setSize(self, this_size):
+       self.playerSpace = [0]*this_size
 
  def getHasBall(self):
        return self.hasBall
@@ -28,29 +28,30 @@ class FieldSquare(object):
  def getKey(self):
        return self.key
 
- def setKey(self,Key,Size):
-       self.key = Key
-       self.size = Size
-       setSize(self.size)
+ def setKey(self,this_key,this_size):
+       self.key = this_key
+       self.setSize(this_size)
 
- def  getFielder(Player):
+ def  getFielder(self, Player):
        return Player.fielder
 
- def setFielder(Fielder):
-       Player.fielder = Fielder
-       for i in range(0, len(playerSpace)):
+ def setFielder(self, this_fielder):
+       self.fielder = this_fielder
+       for i in range(0, len(self.playerSpace)):
            if i < 50:
-               playerSpace[i] = (int)(fielder.getFP()*100) - (i)
+               self.playerSpace[i] = (int)(self.fielder.getFP()*100) - (i)
            else:
                playerSpace[i] = 60
                #playerSpace[i] = 60;
+ def toString(self):
+  return "This is a FieldSquare"
 
-def wasBallCaught():
-       temp = (int)(Math.random() * (len(playerSpace)-1))
+ def wasBallCaught(self):
+       temp = (int)(random() * (len(playerSpace)-1))
        temp2 = (int)(Math.random() * 100)
-       print "chance " + (100 - playerSpace[temp]) + " random num " + temp2
-       if temp2 > (100 - playerSpace[temp]):
+       print "chance " + (100 - self.layerSpace[temp]) + " random num " + temp2
+       if temp2 > (100 - self.playerSpace[temp]):
            print "BALL HAS BEEN CAUGHT OUT"
-           return true
+           return True
        else:
-           return false
+           return False

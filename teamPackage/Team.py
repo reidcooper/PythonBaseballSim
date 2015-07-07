@@ -31,7 +31,7 @@ class Team(object):
             if self.fielding_Roster[x] == False:
                 temp = self.fill_Player_Spot()
                 temp2 = temp.duplicate_Player()
-                self.fielding_Roster[x]= temp
+                self.fielding_Roster[x]= temp2
                 self.fielding_Roster[x].set_Position(self.missing_Positions[0]);
                 self.missing_Positions.pop(0)
                 #self.missing_Positions.remove(0)
@@ -40,10 +40,10 @@ class Team(object):
             print self.fielding_Roster[h].to_String()
 
 
-    def get_Player_In_Fielding_Postion(self,pos):
+    def getPlayerInFieldingPostion(self,pos):
      for x in range(0, len(self.fielding_Roster)):
-        if self.fielding_Roster.get(x).getPosition() == pos:
-                return self.fielding_Roster.get(x)
+        if self.fielding_Roster[x].get_Position() == pos:
+                return self.fielding_Roster[x]
 
      print "null player found this is very bad " + pos
      return None

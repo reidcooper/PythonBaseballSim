@@ -4,7 +4,7 @@ var = os.path.abspath(os.path.dirname(__file__)+'../..')
 sys.path.append(var)
 
 from random import random
-from teamPackage import player
+from teamPackage import Player
 
 class Field(object):
 
@@ -21,7 +21,7 @@ class Field(object):
         elif walkOrHomeRun == "homerun":
             self.newPlayerOnBasesHomerun(p)
         else:
-            currentField.putBallIntoRandomSquare()
+            self.currentField.putBallIntoRandomSquare()
             if not self.checkIfBallIsCaught():
                 try:
                     print "amount of bases to move " + str(n)
@@ -99,7 +99,7 @@ class Field(object):
         #gridFieldArray[0][2].setKey("CF", 15);
         #gridFieldArray[0][4].setKey("RF", 15);
         self.temp = self.currentField.ball.getPostion()
-        print "Ball hit into field at " + " Ball pos " + self.temp[0] + " :" + self.temp[1]
+        print "Ball hit into field at " + " Ball pos " + str(self.temp[0]) + " :" + str(self.temp[1])
 
         if (self.temp[0] == 0 and self.temp[1] == 0) or (self.temp[0] == 0 and self.temp[1] == 2) or (self.temp[0] == 0 and self.temp[1] == 4):
             print "...checking if ball was caught"
