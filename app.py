@@ -14,7 +14,6 @@ def homepage():
 def about():
     return template('about')
 
-# Works in Progress ==========================================
 @route('/historicGame')
 def historicGame():
     return template('historicGame')
@@ -22,12 +21,10 @@ def historicGame():
 @route('/submitHistoricGame', method='POST')
 def submitHistoricGame():
 
-    json_game = request.forms.get('selectGame')
-
+    json_game = request.forms.get('gameFile')
     print "Game Selected: " + json_game
 
-    return template('displayGame', json_game=json_game)
-# Works in Progress ==========================================
+    return template('displayGame')
 
 # Submit Teams to Form
 @route('/submitTeams', method='POST')
@@ -46,7 +43,10 @@ def submitTeams():
     game = g.playGame()
     print game
 
-    return template('displayGame', home_team=home_team, away_team=away_team)
+    # For A Dynamic Page
+    # <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
+    # return template('displayGame', home_team=home_team, away_team=away_team)
+    return template('displayGame')
 
 # Return any static file <> are wildcards
 @route('/static/<directory>/<filename>')

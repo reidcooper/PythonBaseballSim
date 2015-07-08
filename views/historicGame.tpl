@@ -56,13 +56,14 @@
       </div>
       <div class="col-md-6">
         <h4>Game Browser</h4>
-        <form class="select-game-form" id="select-game-form" action="/submitTeams" method="POST">
+        <form class="select-game-form" id="select-game-form" name="select-game-form" action="/submitHistoricGame" method="POST">
           <div class="scroll-box gameEvents-json" id="game1-row1-json">
             <div id="jstree"></div>
           </div>
-          <div id="jstree-selection"></div>
+          <!-- Holds the value of the game file to be submitted -->
+          <input type="hidden" name="gameFile" value="0">
           <div id="createTeams" class="createTeams">
-            <input class="btn btn-success" value="Play Ball!" type="submit" />
+            <input class="btn btn-success" value="Play Ball!" type="submit"/>
           </div>
         </form>
       </div>

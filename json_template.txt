@@ -1,12 +1,13 @@
 {
     // Everything in square brackets is a part of an array, each element of the array is contained within squigley brackets
     "list_of_games": [
-        {
+        { // Game
             "info": {
                 "time": "9:43 AM",
                 "date": "7/7/15",
                 "home_team": [
                     {
+                        "id": "0",
                         "name": "Reid Cooper",
                         "batting_number": "2",
                         "position": "1B",
@@ -23,6 +24,7 @@
                         ] // END PLAYER STATS
                     }, // END PLAYER INFO
                     {
+                        "id": "2",
                         "name": "Michael Jordan",
                         "batting_number": "3",
                         "position": "P",
@@ -77,75 +79,7 @@
             "game_events": [
                 {
                     "inning": "1",
-                    "half": "top" // or "bottom"
-                    "next_batters": [
-                        {
-                            "name": "Michael Jordan",
-                            "batting_number": "3",
-                            "position": "P",
-                            "stats": [
-                                {
-                                    "AVG": ".300"
-                                },
-                                {
-                                    "HR": "25"
-                                },
-                                {
-                                    "1B": "30"
-                                }
-                            ] // END PLAYER STATS
-                        }, // END PLAYER
-                        {
-                            "name": "Michael Jordan",
-                            "batting_number": "3",
-                            "position": "P",
-                            "stats": [
-                                {
-                                    "AVG": ".300"
-                                },
-                                {
-                                    "HR": "25"
-                                },
-                                {
-                                    "1B": "30"
-                                }
-                            ] // END PLAYER STATS
-                        }, // END PLAYER
-                        {
-                            "name": "Michael Jordan",
-                            "batting_number": "3",
-                            "position": "P",
-                            "stats": [
-                                {
-                                    "AVG": ".300"
-                                },
-                                {
-                                    "HR": "25"
-                                },
-                                {
-                                    "1B": "30"
-                                }
-                            ] // END PLAYER STATS
-                        } // END PLAYER
-                    ], // END NEXT BATTERS
-                    "pitcher": [
-                        {
-                            "name": "Michael Jordan",
-                            "batting_number": "3",
-                            "position": "P",
-                            "stats": [
-                                {
-                                    "AVG": ".300"
-                                },
-                                {
-                                    "HR": "25"
-                                },
-                                {
-                                    "1B": "30"
-                                }
-                            ] // END PLAYER STATS
-                        } // END PITCHER
-                    ], // END PITCHER
+                    "half": "top", // or "bottom"
                     "inning_events": [ // THESE ARE CODES FOR EVENTS, IN ANY ORDER
                         {
                             "id": "0", // THIS CHANGES AS EVENTS ARE ADDED

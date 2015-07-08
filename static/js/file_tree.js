@@ -20,6 +20,7 @@ $(function () {
     for(i = 0, j = data.selected.length; i < j; i++) {
       r.push(data.instance.get_node(data.selected[i]).text);
     }
-    $('#jstree-selection').html('<br><b>Selected: ' + r.join(', ')+'</b>');
+    // $('#jstree-selection').html('<br><b>Selected: ' + r.join(', ')+'</b>');
+    document.getElementsByName('gameFile')[0].value = r.join(', ');
   }).jstree(); // create the instance
 });
