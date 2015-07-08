@@ -21,7 +21,8 @@
 
   <script type="text/javascript" src="/static/js/submit_teams.js" charset="utf-8"></script>
 
-  <script type="text/javascript" src="/static/js/dist/jstree.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/static/js/dist/jstree.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/static/js/file_tree.js" charset="utf-8"></script>
   <link rel="stylesheet" href="/static/js/dist/themes/default/style.min.css">
 
   <link rel="stylesheet" href="/static/css/custom.css">
@@ -55,63 +56,30 @@
       </div>
       <div class="col-md-6">
         <h4>Game Browser</h4>
-        <script>
-          $(function () {
-            // 6 create an instance when the DOM is ready
-            $('#jstree').jstree({ 'core' : {
-              'data' : [
-              {
-                'id': 'game_1',
-                'parent' : '#',
-                "text" : 'Game 1'
-              },
-              {
-                'id': 'game_2',
-                'parent' : '#',
-                "text" : 'Game 2'
-              },
-              {
-                'id': 'game_3',
-                'parent' : '#',
-                "text" : 'Game 3'
-              }
-             ]
-           } });
-            // 7 bind to events triggered on the tree
-            $('#jstree').on("changed.jstree", function (e, data) {
-              console.log(data.selected);
-            });
-            // 8 interact with the tree - either way is OK
-            $('button').on('click', function () {
-              $('#jstree').jstree(true).select_node('child_node_1');
-              $('#jstree').jstree('select_node', 'child_node_1');
-              $.jstree.reference('#jstree').select_node('child_node_1');
-            });
-          });
-</script>
-<!-- 3 setup a container element -->
-<div id="jstree">
-  <!-- in this example the tree is populated from inline HTML -->
-<!--   <ul>
-    <li data-jstree='{"icon":"glyphicon glyphicon-leaf"}' id="child_node_1">Game 1</li>
-    <li data-jstree='{"icon":"glyphicon glyphicon-leaf"}' id="child_node_2">Game 2</li>
-  </ul> -->
-</div>
-</div>
-<div class="col-md-6">
-  <h4>Load a Game File</h4>
-</div>
-</div>
+        <form class="select-game-form" id="select-game-form" action="/submitTeams" method="POST">
+          <div class="scroll-box gameEvents-json" id="game1-row1-json">
+            <div id="jstree"></div>
+          </div>
+          <div id="jstree-selection"></div>
+          <div id="createTeams" class="createTeams">
+            <input class="btn btn-success" value="Play Ball!" type="submit" />
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h4>Load a Game File</h4>
+      </div>
+    </div>
 
-<footer class="footer">
-  <center>
-    <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
-    <p>&copy; Monmouth University
-      2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
-    </p>
-  </center>
-</footer>
+    <footer class="footer">
+      <center>
+        <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
+        <p>&copy; Monmouth University
+          2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
+        </p>
+      </center>
+    </footer>
 
-</div> <!-- /container -->
+  </div> <!-- /container -->
 </body>
 </html>
