@@ -113,7 +113,7 @@ class Batting(object):
             return 0
 
     def hit(self):
-        temp = randint(0, 99)
+        temp = randint(0, 100)
         if temp < self.a_Single:
             return 1
         elif temp < self.a_Single + self.a_Double:

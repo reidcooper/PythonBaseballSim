@@ -1,5 +1,6 @@
 import os
 import sys
+import traceback
 var = os.path.abspath(os.path.dirname(__file__)+'../..')
 sys.path.append(var)
 
@@ -45,14 +46,14 @@ class Field(object):
                                 self.currentField.one.movePlayerOneBase()
                                 self.isPlayerOutOnBase(2, self.checkIfPlayerIsOnSameBaseAsBall(2))
                                 self.currentField.two.movePlayerOneBase()
-                                self.isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
+                                self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3))
                                 self.moveTwoBases(p)
                                 #break
                             elif n == 3:
                                 self.currentField.one.movePlayerOneBase()
                                 self.isPlayerOutOnBase(2, self.checkIfPlayerIsOnSameBaseAsBall(2))
                                 self.currentField.two.movePlayerOneBase()
-                                self.isPlayerOutOnBase(3, checkIfPlayerIsOnSameBaseAsBall(3))
+                                self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3))
                                 self.playerOnThird()
                                 self.movePlayerThreeBases(p)
                                 #break
@@ -67,7 +68,7 @@ class Field(object):
                                 self.movePlayerThreeBases(p)
                                 #break
 
-                except:
+                except ThreeOuts, args:
                     print "three outs have happened! ending fielding"
             else:
                 self.currentField.addOneToOuts()
@@ -123,24 +124,24 @@ class Field(object):
 
         self.currentField.putBallIntoRandomInFieldSquare()
         basePos = [None] * 2
-        if basNum == 1:
+        if baseNum == 1:
             basePos[0] = 3
             basePos[1] = 4
 
-        elif basNum == 2:
+        elif baseNum == 2:
             basePos[0] = 2
             basePos[1] = 3
 
-        elif basNum == 3:
+        elif baseNum == 3:
             basePos[0] = 3
             basePos[1] = 0
 
-        elif basNum ==4:
+        elif baseNum ==4:
             basePos[0] = 3
             basePos[1] = 2
 
         temp = self.currentField.ball.getPostion()
-        print "Base num " + basePos[0] + " : " + basePos[1] + " Ball pos " + self.temp[0] + " :" + self.temp[1]
+        print "Base num " + str(basePos[0]) + " : " + str(basePos[1]) + " Ball pos " + str(self.temp[0]) + " :" + str(self.temp[1])
         if self.temp[0] == basePos[0] and self.temp[1] == basePos[1]:
             print "Ball and player are on same base"
             return self.isBallCaught(temp[0], temp[1])
@@ -148,7 +149,8 @@ class Field(object):
 
     def isPlayerOutOnBase(self, baseNum, b):
         if self.currentAmountOfOuts + self.currentField.getOuts() >= 3:
-            raise Exception("3 outs have happened")
+            print "This exception has happened " + str(self.currentAmountOfOuts) +" "+ str(self.currentField.getOuts())
+            raise ThreeOuts("3 outs have happened")
         if b:
             print "Player may get out on base"
             if baseNum == 1:
@@ -173,10 +175,10 @@ class Field(object):
             else:
                 print "SOMETHING WENT WRONG"
 
-        print "Player made it to base safely!" + b
+        print "Player made it to base safely!" + str(b)
         return False
 
-    def playerOnThird(self, currentField):
+    def playerOnThird(self):
         if self.currentField.three.getPlayerOnBase() is None:
             pass
         else:
@@ -235,3 +237,6 @@ class Field(object):
         self.currentField.addScore()
         print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
         print "amount of outs " + str(self.currentField.getOuts())
+class ThreeOuts(Exception):
+ def __init__(self, arg):
+  self.msg = arg
