@@ -149,7 +149,6 @@ class Field(object):
 
     def isPlayerOutOnBase(self, baseNum, b):
         if self.currentAmountOfOuts + self.currentField.getOuts() >= 3:
-            print "This exception has happened " + str(self.currentAmountOfOuts) +" "+ str(self.currentField.getOuts())
             raise ThreeOuts("3 outs have happened")
         if b:
             print "Player may get out on base"
