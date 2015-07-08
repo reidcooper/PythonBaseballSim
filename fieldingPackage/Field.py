@@ -183,12 +183,12 @@ class Field(object):
             pass
         else:
             try:
-                test = self.isPlayerOutOnBase(4, checkIfPlayerIsOnSameBaseAsBall(4))
+                test = self.isPlayerOutOnBase(4, self.checkIfPlayerIsOnSameBaseAsBall(4))
                 if not test:
                     self.currentField.three.movePlayerOneBase()
                     self.currentField.addScore()
-                    print self.currentField.home.getPlayerOnBase() + " has scored"
-            except:
+                    print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+            except ThreeOuts, args:
                 print "3 outs have happened on the field"
 
     def newPlayerOnBasesWalk(self, p):
@@ -237,6 +237,7 @@ class Field(object):
         self.currentField.addScore()
         print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
         print "amount of outs " + str(self.currentField.getOuts())
+
 class ThreeOuts(Exception):
  def __init__(self, arg):
   self.msg = arg
