@@ -22,5 +22,7 @@ $(function () {
     }
     // $('#jstree-selection').html('<br><b>Selected: ' + r.join(', ')+'</b>');
     document.getElementsByName('gameFile')[0].value = r.join(', ');
+    var link = "/download/"+r.join(', ');
+    $("a#download_btn").attr("href", link);
   }).jstree(); // create the instance
 });

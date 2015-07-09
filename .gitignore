@@ -5,3 +5,4 @@ pitchers.txt
 *.pyc
 static/simulations/*.json
 !static/simulations/sample.json
+static/teams/butt.json

@@ -54,21 +54,22 @@
         <h4>Here you can select a previously simulated game and view the results!</h4>
         <p>Since we are able to simulate baseball games, provided two teams, wouldn't it be nice to revisit a game already simulated? That's why we provided this tool to allow the user to select a previously simulate game and either: view the results of the game or print out the game file!</p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-12 game-browser">
         <h4>Game Browser</h4>
-        <form class="select-game-form" id="select-game-form" name="select-game-form" action="/submitHistoricGame" method="POST">
+        <form class="select-game-form" id="select-game-form" name="select-game-form" action="/submitHistoricGame" method="POST" enctype="multipart/form-data">
           <div class="scroll-box gameEvents-json" id="game1-row1-json">
             <div id="jstree"></div>
           </div>
           <!-- Holds the value of the game file to be submitted -->
-          <input type="hidden" name="gameFile" value="0">
+          <input type="hidden" name="gameFile" value="0"/>
+          <br>
+          <input type="file" name="upload" />
           <div id="createTeams" class="createTeams">
-            <input class="btn btn-success" value="Play Ball!" type="submit"/>
+            <input class="btn btn-success" name="play_ball_btn" value="Play Ball!" type="submit"/>
+            <a href="/index" id="download_btn" name="download_btn" class="btn btn-success mylink">Download!</a>
+            <input class="btn btn-success" name="upload_btn" value="Upload!" type="submit"/>
           </div>
         </form>
-      </div>
-      <div class="col-md-6">
-        <h4>Load a Game File</h4>
       </div>
     </div>
 

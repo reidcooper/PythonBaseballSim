@@ -3,32 +3,72 @@
 from bottle import *
 import teamtxt
 import json
+import sys
+import os
 from baseballGamePackage.Game import Game
 
+''' Global Settings '''
+historical_games_location = "teams/"
+debug = True # Change for production to false
+port = 8888 # Typically 80 for websites
+
 @route('/')
-@route('/index')
+@route('/index.html')
 def homepage():
+    '''Routes for index page'''
+
     return template('index')
 
 @route('/about')
 def about():
+    '''Routes for about page'''
+
     return template('about')
 
 @route('/historicGame')
 def historicGame():
+    '''When the historical page loads, the method obtainDirectoryListing() is called to create a JSON file listing of all the files in the simulations directory'''
+
+    obtainDirectoryListing()
     return template('historicGame')
 
 @route('/submitHistoricGame', method='POST')
 def submitHistoricGame():
+    '''When user selects a previously simulated game and selects Play Ball! the webpage will call this route and then return the displayGame page'''
 
-    json_game = request.forms.get('gameFile')
-    print "Game Selected: " + json_game
+    # Play Ball with a selected JSON game file
+    if request.forms.get('play_ball_btn'):
+        json_game = request.forms.get('gameFile')
+        print "Game Selected: " + json_game
+        return template('displayGame')
 
-    return template('displayGame')
+    # If the User wants to upload a JSON game file
+    elif request.forms.get('upload_btn'):
+        if request.files.get('upload'):
+
+            upload = request.files.get('upload')
+            name, ext = os.path.splitext(upload.filename)
+
+            if re.match('.json', ext):
+                var = os.path.abspath(os.path.dirname(__file__))+"/static/"+historical_games_location
+
+                file_path = "{path}/{file}".format(path=var, file=upload.filename)
+                upload.save(file_path, overwrite=True)
+                return template('displayGame')
+            else:
+                print "Error - Not a JSON file"
+                return template('historicGame')
+        else:
+            print "Error - No file uploaded"
+            return template('historicGame')
+    else:
+        print "Did not select Play Ball or Upload"
+        return template('historicGame')
 
 # Submit Teams to Form
 @route('/submitTeams', method='POST')
 def submitTeams():
+    '''Submits the two baseball teams ready for simulation, obtains those two teams, and runs the Python Simulator'''
     # For using JSON and Javascript
     # home_team = request.json['myDict']['selectHomeTeam']
     # away_team = request.json['myDict']['selectAwayTeam']
@@ -48,31 +88,38 @@ def submitTeams():
     # return template('displayGame', home_team=home_team, away_team=away_team)
     return template('displayGame')
 
-# Return any static file <> are wildcards
+@route('/download/<filename>')
+def static(filename):
+    '''Download Simulation Files'''
+    print "DOWNLOAD FROM "+historical_games_location
+    return static_file(filename, root='static/teams/', download=filename)
+
 @route('/static/<directory>/<filename>')
 def static(filename, directory):
-    # Creates JSON file of all the historical games simulated
-    obtainDirectoryListing()
+    '''Serve Directory Files from the Static Directory <> are wildcards'''
+    print "SERVE STATIC DIRECTORY"
     return static_file(filename, root='static/'+directory+'/')
 
-# ====== File Tree =======
+''' ====== FILE TREE ======= '''
+''' These next four methods serve the purpose of creating the jQuery File Tree shown on the historical game page'''
 @route('/static/js/dist/<filename>')
 def static(filename):
+    print "SERVE JQUERY JS DIRECTORY"
     return static_file(filename, root='static/js/dist/')
 
 @route('/static/js/dist/themes/default/style.min.css')
 def static():
+    print "SERVE JQUERY CSS DIRECTORY"
     return static_file('style.min.css', root='static/js/dist/themes/default/')
 
 @route('/static/js/dist/themes/default/<filename>')
 def static(filename):
+    print "SERVE JQUERY PICTURE/ICONS DIRECTORY"
     return static_file(filename, root='static/js/dist/themes/default/')
 
 # Creates JSON file of all the historical games simulated
 def obtainDirectoryListing():
-    import os
-    import sys
-    historical_games_location = "teams/"
+    '''Creates a JSON file listing all files within the scanned directory. Typically it will be scanning the /simulations directory '''
     var = os.path.abspath(os.path.dirname(__file__))+"/static/"+historical_games_location
     files = os.listdir(var)
 
@@ -87,24 +134,24 @@ def obtainDirectoryListing():
 
     with open(var+'file_tree.json', 'w') as outfile:
         json.dump(record_array, outfile)
-# ====== File Tree =======
 
-# 404 returns index page
+    print "CREATED JSON DIRECTORY LISTING"
+''' ====== FILE TREE ======= '''
+
+''' 404 returns index page'''
 @error(404)
 def error404(error):
+    print "404 Error"
     return template('index')
 
-# 405 returns index page
+''' 405 returns index page'''
 @error(405)
 def error405(error):
+    print "404 Error"
     return template('index')
 
 # Set debug to false for production
 if __name__ == '__main__':
-
-    # Change for production to false
-    debug = True
-    port = 8888
-
+    print "\nServinging Up PythonBaseballSimulator...\n"
     port = int(os.environ.get('PORT', port))
     run(host='0.0.0.0', port=port, debug=debug)
