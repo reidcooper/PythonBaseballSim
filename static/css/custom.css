@@ -13,7 +13,15 @@
 .gameEvents-json {
     width:auto;
     height: 305px;
-    /*border:2px solid black;*/
+/*    border:2px solid black;*/
+    overflow:scroll;
+    position:relative;
+}
+
+.historicGameFiles {
+    width:auto;
+    height: 305px;
+    border:2px solid black;
     overflow:scroll;
     position:relative;
 }

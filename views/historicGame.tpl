@@ -57,13 +57,13 @@
       <div class="col-md-12 game-browser">
         <h4>Game Browser</h4>
         <form class="select-game-form" id="select-game-form" name="select-game-form" action="/submitHistoricGame" method="POST" enctype="multipart/form-data">
-          <div class="scroll-box gameEvents-json" id="game1-row1-json">
+          <div class="scroll-box historicGameFiles" id="game1-row1-json">
             <div id="jstree"></div>
           </div>
           <!-- Holds the value of the game file to be submitted -->
           <input type="hidden" name="gameFile" value="0"/>
           <br>
-          <input type="file" name="upload" />
+          <center><input type="file" name="upload" /></center>
           <div id="createTeams" class="createTeams">
             <input class="btn btn-success" name="play_ball_btn" value="Play Ball!" type="submit"/>
             <a href="/index" id="download_btn" name="download_btn" class="btn btn-success mylink">Download!</a>
