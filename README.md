@@ -4,14 +4,14 @@
 B.A.S.E.S. is a python application with a website front-end interface. The website was developed with the python web framework Bottle.
 
 Run Website:
-  
+
 * First open up app.py and locate at the end of the file, the port number and debug option
 * For production, turn debug to false (debug = false)
 * The port number is anything to specify (i.e. 8888)
 * Run the website by typing the command below into the command prompt
-        
+
         python app.py
-        
+
 * Navigate to your webbrowser and enter [http://localhost:8888/](http://localhost:8888/)
 
 # About the Project
@@ -48,7 +48,7 @@ The B.A.S.E.S. project was developed using these following tools and frameworks
 
 #### Members
 
-B.A.S.E.S. development team members, without us, this whole thing wouldn't of happened.
+B.A.S.E.S. development team members, without us, this whole thing wouldn't have happened.
 
 *   Reid Cooper
 *   Philip DiMarco

@@ -82,22 +82,22 @@ class Team(object):
     def addOneToScore(self):
      self.score+=1
 
-    def add_Num_To_Score(self, n):
+    def addNumToScore(self, n):
      self.score = self.score + n
 
-    def add_One_To_Outs(self):
+    def addOneToOuts(self):
      self.outs+=1
 
-    def add_Num_To_Outs(self, o):
+    def addNumToOuts(self, o):
      self.outs = self.outs + o
 
-    def set_Outs_To_Zero(self):
+    def setOutsToZero(self):
      self.outs = 0
 
-    def get_Outs(self):
+    def getOuts(self):
      return self.outs
 
-    def get_Score(self):
+    def getScore(self):
      return self.score
 
     def add_Player(self, p):
@@ -106,7 +106,7 @@ class Team(object):
     def get_Player(self, index):
      return self.players.get(index)
 
-    def get_Next_Player_At_Bat(self):
+    def getNextPlayerAtBat(self):
      self.player_At_Bat = self.player_At_Bat + 1
      return self.players[self.player_At_Bat % 7]
 

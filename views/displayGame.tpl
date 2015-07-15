@@ -47,7 +47,7 @@
       <div class="gameOutput" id="game1">
 
         <div id="game1-row1">
-          <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
+          <center><h3>Game 1</h3></center>
 
           <div class="col-md-6" id="scoreboard">
             <div id="scoreboard-content">
@@ -72,7 +72,7 @@
                     <td><b>E</b></td>
                   </tr>
                   <tr class="success">
-                    <td>{{ home_team }}</td>
+                    <td>Home Team</td>
                     <td>-</td>
                     <td>1</td>
                     <td>2</td>
@@ -89,7 +89,7 @@
                     <td>00</td>
                   </tr>
                   <tr class="info">
-                    <td>{{ away_team }}</td>
+                    <td>Away Team</td>
                     <td>-</td>
                     <td>1</td>
                     <td>2</td>

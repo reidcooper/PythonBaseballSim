@@ -92,12 +92,12 @@ class CurrentField (object):
 
 
  def putBallIntoRandomSquare(self):
-     self.ball.setPostion(randint(0, 4), randint(0, 5))
+     self.ball.setPostion(0, randint(0, 5))
 	#ball.setPostion(0, 0);
 
 
  def putBallIntoRandomInFieldSquare(self):
-     self.ball.setPostion(randint(2,3),randint(0, 99))
+     self.ball.setPostion(randint(2,3),randint(0, 4))
 
 
  def wasBallCaught(self, x, y):

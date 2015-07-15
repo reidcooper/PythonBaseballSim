@@ -47,9 +47,9 @@ class FieldSquare(object):
   return "This is a FieldSquare"
 
  def wasBallCaught(self):
-       temp = (int)(random() * (len(playerSpace)-1))
-       temp2 = (int)(Math.random() * 100)
-       print "chance " + (100 - self.layerSpace[temp]) + " random num " + temp2
+       temp = (int)(random.random() * (len(self.playerSpace)-1))
+       temp2 = (int)(random.random() * 100)
+       print "chance " + (str(100 - self.playerSpace[temp])) + " random num " + str(temp2)
        if temp2 > (100 - self.playerSpace[temp]):
            print "BALL HAS BEEN CAUGHT OUT"
            return True
