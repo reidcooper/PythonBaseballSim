@@ -1,10 +1,10 @@
 {
 
-    "date": “15/Jul/2015",
-    "time": “14:25:08",
+    "date": "15/Jul/2015",
+    "time": "14:25:08",
 
-    “home_team": "Yankees",
-    “home_team_lineup": [
+    "home_team": "Yankees",
+    "home_team_lineup": [
         {
             "name": "Alfonso Soriano",
             "position": "LF"
@@ -44,8 +44,8 @@
 
     ],
 
-    “away_team": "Diamondbacks",
-    “away_team_lineup": [
+    "away_team": "Diamondbacks",
+    "away_team_lineup": [
         {
             "name": "Roger Kieschnick",
             "position": "LF"
@@ -89,8 +89,8 @@
         {
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -98,7 +98,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -110,23 +110,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -138,27 +138,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! David Peralta struck out! Out 1!”
+                    "description": "You're Out! David Peralta struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -166,15 +166,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! Andy Marte made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Andy Marte made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -182,23 +182,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -209,63 +209,63 @@
                     "description": "Chris Owings is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! Chris Owings hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "Mark Trumbo is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! Mark Trumbo made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! Mark Trumbo made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “0”,
-	    “away_score”: “4”
+	    "home_score": "0",
+	    "away_score": "4"
         },
 	
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -273,27 +273,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Alfonso Soriano struck out! Out 1!”
+                    "description": "You're Out! Alfonso Soriano struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -301,15 +301,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -321,15 +321,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Mark Teixeira made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Mark Teixeira made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -337,15 +337,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -357,39 +357,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Derek Jeter hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Antoan Richardson came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Antoan Richardson came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Zelous Wheeler was thrown out at Third Base! Out 3!”
+                    "description": "Out! Zelous Wheeler was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “1”,
-	    “away_score”: “4”
+	    "home_score": "1",
+	    "away_score": "4"
  
         },
 
         {
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -397,7 +397,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -409,23 +409,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -437,27 +437,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Roger Kieschnick struck out! Out 1!”
+                    "description": "You're Out! Roger Kieschnick struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -465,15 +465,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! David Peralta made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! David Peralta made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -481,23 +481,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -508,64 +508,64 @@
                     "description": "Andy Marte is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! Andy Marte hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "David Peralta is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “1”,
-	    “away_score”: “8”
+	    "home_score": "1",
+	    "away_score": "8"
  
         },
 	
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -573,27 +573,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Jose Pirela struck out! Out 1!”
+                    "description": "You're Out! Jose Pirela struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -601,15 +601,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -621,15 +621,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! JR Murphy made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! JR Murphy made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -637,15 +637,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -657,39 +657,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Alfonso Soriano hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Mark Teixeira came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Mark Teixeira came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Chase Whitley was thrown out at Third Base! Out 3!”
+                    "description": "Out! Chase Whitley was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “2”,
-	    “away_score”: “8”
+	    "home_score": "2",
+	    "away_score": "8"
  
         },
 	
 	{
 		"events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -697,7 +697,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -709,23 +709,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -737,27 +737,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Tuffy Gosewisch struck out! Out 1!”
+                    "description": "You're Out! Tuffy Gosewisch struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -765,15 +765,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! Wade Miley made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Wade Miley made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -781,23 +781,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -808,12 +808,12 @@
                     "description": "David Peralta is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
@@ -821,51 +821,51 @@
                 },
 		{
                     "code": "RUN-SCORES",
-                    "description": "Chris Owings came home! Run Scores for the Diamondbacks”
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks"
                 },
 		{
                     "code": "RUN-SCORES",
-                    "description": "David Mark Trumbo came home! Run Scores for the Diamondbacks!”
+                    "description": "David Mark Trumbo came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "RUN-SCORES",
-                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!”
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "RUN-SCORES",
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "David Peralta is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “2”,
-	    “away_score”: “12”
+	    "home_score": "2",
+	    "away_score": "12"
  
         },
 	
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -873,27 +873,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Antoan Richardson struck out! Out 1!”
+                    "description": "You're Out! Antoan Richardson struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -901,15 +901,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -921,15 +921,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Zelous Wheeler made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Zelous Wheeler made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -937,15 +937,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -957,39 +957,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Jose Pirela hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Mark Teixeira came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Mark Teixeira came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Derek Jeter was thrown out at Third Base! Out 3!”
+                    "description": "Out! Derek Jeter was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “3”,
-	    “away_score”: “12”
+	    "home_score": "3",
+	    "away_score": "12"
  
         },
 
 	{
 		"events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -997,7 +997,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -1009,23 +1009,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -1037,27 +1037,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Chris Owings struck out! Out 1!”
+                    "description": "You're Out! Chris Owings struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1065,15 +1065,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! Mark Trumbo made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Mark Trumbo made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1081,23 +1081,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -1108,64 +1108,64 @@
                     "description": "Wade Miley is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! Andy Marte hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "Roger Kieschnick is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! Roger Kieschnick made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! Roger Kieschnick made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “3”,
-	    “away_score”: “16”
+	    "home_score": "3",
+	    "away_score": "16"
  
         },
 	
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -1173,27 +1173,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Mark Teixeira struck out! Out 1!”
+                    "description": "You're Out! Mark Teixeira struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1201,15 +1201,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -1221,15 +1221,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Chase Whitley made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Chase Whitley made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1237,15 +1237,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -1257,39 +1257,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Antoan Richardson hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "JR Murphy came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "JR Murphy came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Alfonso Soriano was thrown out at Third Base! Out 3!”
+                    "description": "Out! Alfonso Soriano was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “4”,
-	    “away_score”: “16”
+	    "home_score": "4",
+	    "away_score": "16"
  
         },
 
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -1297,7 +1297,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -1309,23 +1309,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -1337,27 +1337,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Andy Marte struck out! Out 1!”
+                    "description": "You're Out! Andy Marte struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1365,15 +1365,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! David Peralta made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! David Peralta made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1381,23 +1381,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -1408,64 +1408,64 @@
                     "description": "Mark Trumbo is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! Mark Trumbo hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "Tuffy Gosewisch is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! Tuffy Gosewisch made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! Tuffy Gosewisch made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “4”,
-	    “away_score”: “20”
+	    "home_score": "4",
+	    "away_score": "20"
  
         },
 	
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -1473,27 +1473,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Mark Teixeira struck out! Out 1!”
+                    "description": "You're Out! Mark Teixeira struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1501,15 +1501,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -1521,15 +1521,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Derek Jeter made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Derek Jeter made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1537,15 +1537,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -1557,39 +1557,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Mark Teixeira hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Zelous Wheeler came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Zelous Wheeler came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Jose Pirela was thrown out at Third Base! Out 3!”
+                    "description": "Out! Jose Pirela was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “5”,
-	    “away_score”: “20”
+	    "home_score": "5",
+	    "away_score": "20"
  
         },
 
 	{
 		"events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -1597,7 +1597,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -1609,23 +1609,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -1637,27 +1637,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! David Peralta struck out! Out 1!”
+                    "description": "You're Out! David Peralta struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1665,15 +1665,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! David Peralta made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! David Peralta made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1681,23 +1681,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -1708,64 +1708,64 @@
                     "description": "David Peralta is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! David Peralta hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Wade Miley came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "Chris Owings is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! Chris Owings made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! Chris Owings made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “5”,
-	    “away_score”: “24”
+	    "home_score": "5",
+	    "away_score": "24"
  
         },
 	
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -1773,27 +1773,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! JR Murphy struck out! Out 1!”
+                    "description": "You're Out! JR Murphy struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1801,15 +1801,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -1821,15 +1821,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Alfonso Soriano made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Alfonso Soriano made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1837,15 +1837,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -1857,39 +1857,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Mark Teixeira hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Chase Whitley came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Chase Whitley came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Antoan Richardson was thrown out at Third Base! Out 3!”
+                    "description": "Out! Antoan Richardson was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “6”,
-	    “away_score”: “24”
+	    "home_score": "6",
+	    "away_score": "24"
 
         },
 
 	{
 		"events": [ 
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1897,7 +1897,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -1909,23 +1909,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -1937,27 +1937,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Wade Miley struck out! Out 1!”
+                    "description": "You're Out! Wade Miley struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1965,15 +1965,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! Roger Kieschnick made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Roger Kieschnick made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1981,23 +1981,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -2008,64 +2008,64 @@
                     "description": "David Peralta is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! David Peralta hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "Andy Marte is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! Andy Marte made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! Andy Marte made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “6”,
-	    “away_score”: “28”
+	    "home_score": "6",
+	    "away_score": "28"
  
         },
 	
 	{
             "events": [ 
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2073,27 +2073,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Zelous Wheeler struck out! Out 1!”
+                    "description": "You're Out! Zelous Wheeler struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2101,15 +2101,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -2121,15 +2121,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Jose Pirela made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Jose Pirela made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2137,15 +2137,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -2157,39 +2157,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! JR Murphy hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Derek Jeter came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Derek Jeter came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Mark Teixeira was thrown out at Third Base! Out 3!”
+                    "description": "Out! Mark Teixeira was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “7”,
-	    “away_score”: “28”
+	    "home_score": "7",
+	    "away_score": "28"
  
         },
 
 	{
 		"events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -2197,7 +2197,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -2209,23 +2209,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -2237,27 +2237,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Mark Trumbo struck out! Out 1!”
+                    "description": "You're Out! Mark Trumbo struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2265,15 +2265,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! Tuffy Gosewisch made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Tuffy Gosewisch made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2281,23 +2281,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -2308,64 +2308,64 @@
                     "description": "Roger Kieschnick is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! Roger Kieschnick hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "David Peralta is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “7”,
-	    “away_score”: “32”
+	    "home_score": "7",
+	    "away_score": "32"
 
         },
 	
 	{
             "events": [ 
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2373,27 +2373,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Chase Whitley struck out! Out 1!”
+                    "description": "You're Out! Chase Whitley struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2401,15 +2401,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -2421,15 +2421,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Antoan Richardson made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Antoan Richardson made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2437,15 +2437,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -2457,39 +2457,39 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Zelous Wheeler hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Alfonso Soriano came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Alfonso Soriano came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! Mark Teixeira was thrown out at Third Base! Out 3!”
+                    "description": "Out! Mark Teixeira was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “8”,
-	    “away_score”: “32”
+	    "home_score": "8",
+	    "away_score": "32"
  
         },
 
 	{
 		"events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Diamondbacks are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Diamondbacks are up at bat!"
                 }, 
 		{
                     "code": "NEW-BATTER",
@@ -2497,7 +2497,7 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
@@ -2509,23 +2509,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -2537,27 +2537,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "FOUL",
-                    "description": "Foul Ball!”
+                    "description": "Foul Ball!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! David Peralta struck out! Out 1!”
+                    "description": "You're Out! David Peralta struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2565,15 +2565,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "OUT-BH",
-                    "description": "Out! Chris Owings made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Chris Owings made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2581,23 +2581,23 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 3!”
+                    "description": "Ball 3!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 4!”
+                    "description": "Ball 4!"
                 },
                 {
                     "code": "BB",
@@ -2608,64 +2608,64 @@
                     "description": "Tuffy Gosewisch is next up to bat!"
                 },
                 {
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
                 {
                     "code": "HR",
                     "description": "Homerun! Tuffy Gosewisch hit a homerun!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "David Peralta came home! Run Scores for the Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!"
                 },
 		{
                     "code": "NEW-BATTER",
                     "description": "Wade Miley is next up to bat!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 1!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 1!"
                 },
 		{
-                    "code": "FOUL-STRIKE“,
-                    "description": "Foul Ball for Strike 2!”
+                    "code": "FOUL-STRIKE",
+                    "description": "Foul Ball for Strike 2!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "OUT-1BH",
-                    "description": "Out! Wade Miley made contact but was thrown out at First Base! Out 3!”
+                    "description": "Out! Wade Miley made contact but was thrown out at First Base! Out 3!"
                 }
             ],
-	    “home_score”: “8”,
-	    “away_score”: “36”
+	    "home_score": "8",
+	    "away_score": "36"
  
         },
 	
 	{
             "events": [
 		{
-                    "code": “START-HALF-INNING",
-                    "description": “The Yankees are up at bat!”
+                    "code": "START-HALF-INNING",
+                    "description": "The Yankees are up at bat!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2673,27 +2673,27 @@
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 3!”
+                    "description": "Strike 3!"
                 },
                 {
                     "code": "KO",
-                    "description": "You're Out! Derek Jeter struck out! Out 1!”
+                    "description": "You're Out! Derek Jeter struck out! Out 1!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2701,15 +2701,15 @@
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 2!”
+                    "description": "Strike 2!"
                 },
 		{
                     "code": "1B",
@@ -2721,15 +2721,15 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "OUT-BH",
-                    "description": "Out! Mark Teixeira made contact, but the fielding team caught the ball! Out 2!”
+                    "description": "Out! Mark Teixeira made contact, but the fielding team caught the ball! Out 2!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2737,15 +2737,15 @@
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "1B",
@@ -2757,36 +2757,36 @@
                 },
 		{
                     "code": "BALL",
-                    "description": "Ball 1!”
+                    "description": "Ball 1!"
                 },
                 {
                     "code": "BALL",
-                    "description": "Ball 2!”
+                    "description": "Ball 2!"
                 },
 		{
                     "code": "STRIKE",
-                    "description": "Strike 1!”
+                    "description": "Strike 1!"
                 },
 		{
                     "code": "2B",
                     "description": "Hit! Chase Whitley hit a double!"
                 },
 		{
-                    "code": “RUN-SCORES”,
-                    "description": "Jose Pirela came home! Run Scores for the Yankees!”
+                    "code": "RUN-SCORES",
+                    "description": "Jose Pirela came home! Run Scores for the Yankees!"
                 },
 		{
                     "code": "OUT-3B",
-                    "description": "Out! JR Murphy was thrown out at Third Base! Out 3!”
+                    "description": "Out! JR Murphy was thrown out at Third Base! Out 3!"
                 }
             ],
-	    “home_score”: “9”,
-	    “away_score”: “36”
+	    "home_score": "9",
+	    "away_score": "36"
 
         }
 
     ],
-    “final_home_score”: “9”,
-    “final_away_score”: “36” 
+    "final_home_score": "9",
+    "final_away_score": "36" 
 
 }
