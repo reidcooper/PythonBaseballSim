@@ -89,6 +89,10 @@
         {
             "events": [
 		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                },
+		{
                     "code": "NEW-BATTER",
                     "description": "Roger Kieschnick is next up to bat!"
                 },
@@ -126,7 +130,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! David Peralta walked!"
+                    "description": "Take a Base! David Peralta walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -198,7 +202,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! David Peralta walked!"
+                    "description": "Take a Base! David Peralta walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -217,20 +221,20 @@
                     "description": "Homerun! Chris Owings hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Roger Kieschnick came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Chris Owings came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -251,16 +255,18 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! Mark Trumbo made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 4, Yankees: 0”
                 }
-            ]
+            ],
+	    “home_score”: “0”,
+	    “away_score”: “4”
         },
 	
 	{
             "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                },
 		{
                     "code": "NEW-BATTER",
                     "description": "Alfonso Soriano is next up to bat!"
@@ -366,22 +372,25 @@
                     "description": "Hit! Derek Jeter hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Antoan Richardson came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Antoan Richardson came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Zelous Wheeler was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 4, Yankees: 1”
                 }
-            ] 
+            ],
+	    “home_score”: “1”,
+	    “away_score”: “4”
+ 
         },
 
         {
-            "events": [ 
+            "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Tuffy Gosewisch is next up to bat!"
@@ -420,7 +429,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Wade Miley walked!"
+                    "description": "Take a Base! Wade Miley walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -492,7 +501,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! David Peralta walked!"
+                    "description": "Take a Base! David Peralta walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -511,20 +520,20 @@
                     "description": "Homerun! Andy Marte hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Tuffy Gosewisch came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Wade Miley came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Andy Marte came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -545,16 +554,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 8, Yankees: 1”
                 }
-            ] 
+            ],
+	    “home_score”: “1”,
+	    “away_score”: “8”
+ 
         },
 	
 	{
-            "events": [ 
+            "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Jose Pirela is next up to bat!"
@@ -660,22 +672,25 @@
                     "description": "Hit! Alfonso Soriano hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Mark Teixeira came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Mark Teixeira came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Chase Whitley was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 8, Yankees: 2”
                 }
-            ] 
+            ],
+	    “home_score”: “2”,
+	    “away_score”: “8”
+ 
         },
 	
 	{
-                        "events": [ 
+		"events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Chris Owings is next up to bat!"
@@ -714,7 +729,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Mark Trumbo walked!"
+                    "description": "Take a Base! Mark Trumbo walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -786,7 +801,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Roger Kieschnick walked!"
+                    "description": "Take a Base! Roger Kieschnick walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -805,20 +820,20 @@
                     "description": "Homerun! David Peralta hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Chris Owings came home! Run Scores for Diamondbacks”
+                    "code": "RUN-SCORES",
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Mark Trumbo came home! Run Scores for Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Mark Trumbo came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Roger Kieschnick came home! Run Scores for Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": "RUN-SCORES",
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -839,16 +854,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 12, Yankees: 2”
                 }
-            ] 
+            ],
+	    “home_score”: “2”,
+	    “away_score”: “12”
+ 
         },
 	
 	{
-            "events": [ 
+            "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Antoan Richardson is next up to bat!"
@@ -954,22 +972,25 @@
                     "description": "Hit! Jose Pirela hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Mark Teixeira came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Mark Teixeira came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Derek Jeter was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 12, Yankees: 3”
                 }
-            ] 
+            ],
+	    “home_score”: “3”,
+	    “away_score”: “12”
+ 
         },
 
 	{
-                        "events": [ 
+		"events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Andy Marte is next up to bat!"
@@ -1008,7 +1029,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! David Peralta walked!"
+                    "description": "Take a Base! David Peralta walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1080,7 +1101,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Tuffy Gosewisch walked!"
+                    "description": "Take a Base! Tuffy Gosewisch walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1099,20 +1120,20 @@
                     "description": "Homerun! Andy Marte hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Roger Kieschnick came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Tuffy Gosewisch came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Wade Miley came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1133,16 +1154,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! Roger Kieschnick made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 16, Yankees: 3”
                 }
-            ] 
+            ],
+	    “home_score”: “3”,
+	    “away_score”: “16”
+ 
         },
 	
 	{
-            "events": [ 
+            "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Mark Teixeira is next up to bat!"
@@ -1248,22 +1272,25 @@
                     "description": "Hit! Antoan Richardson hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "JR Murphy came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "JR Murphy came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Alfonso Soriano was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 16, Yankees: 4”
                 }
-            ] 
+            ],
+	    “home_score”: “4”,
+	    “away_score”: “16”
+ 
         },
 
 	{
-                        "events": [ 
+            "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "David Peralta is next up to bat!"
@@ -1302,7 +1329,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! David Peralta walked!"
+                    "description": "Take a Base! David Peralta walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1374,7 +1401,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Chris Owings walked!"
+                    "description": "Take a Base! Chris Owings walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1393,20 +1420,20 @@
                     "description": "Homerun! Mark Trumbo hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Chris Owings came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Mark Trumbo came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1427,16 +1454,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! Tuffy Gosewisch made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 20, Yankees: 4”
                 }
-            ] 
+            ],
+	    “home_score”: “4”,
+	    “away_score”: “20”
+ 
         },
 	
 	{
-            "events": [ 
+            "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Mark Teixeira is next up to bat!"
@@ -1542,22 +1572,25 @@
                     "description": "Hit! Mark Teixeira hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Zelous Wheeler came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Zelous Wheeler came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Jose Pirela was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 20, Yankees: 5”
                 }
-            ] 
+            ],
+	    “home_score”: “5”,
+	    “away_score”: “20”
+ 
         },
 
 	{
-                        "events": [ 
+		"events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "Wade Miley is next up to bat!"
@@ -1596,7 +1629,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Roger Kieschnick walked!"
+                    "description": "Take a Base! Roger Kieschnick walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1668,7 +1701,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Andy Marte walked!"
+                    "description": "Take a Base! Andy Marte walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1687,20 +1720,20 @@
                     "description": "Homerun! David Peralta hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Wade Miley came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Roger Kieschnick came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Andy Marte came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1721,16 +1754,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! Chris Owings made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 24, Yankees: 5”
                 }
-            ] 
+            ],
+	    “home_score”: “5”,
+	    “away_score”: “24”
+ 
         },
 	
 	{
-            "events": [ 
+            "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "JR Murphy is next up to bat!"
@@ -1836,22 +1872,25 @@
                     "description": "Hit! Mark Teixeira hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Chase Whitley came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Chase Whitley came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Antoan Richardson was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 24, Yankees: 6”
                 }
-            ]
+            ],
+	    “home_score”: “6”,
+	    “away_score”: “24”
+
         },
 
 	{
-                        "events": [ 
+		"events": [ 
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                },
 		{
                     "code": "NEW-BATTER",
                     "description": "Mark Trumbo is next up to bat!"
@@ -1890,7 +1929,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Tuffy Gosewisch walked!"
+                    "description": "Take a Base! Tuffy Gosewisch walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -1962,7 +2001,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! David Peralta walked!"
+                    "description": "Take a Base! David Peralta walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -1981,20 +2020,20 @@
                     "description": "Homerun! David Peralta hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Mark Trumbo came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Tuffy Gosewisch came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2015,16 +2054,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! Andy Marte made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 28, Yankees: 6”
                 }
-            ] 
+            ],
+	    “home_score”: “6”,
+	    “away_score”: “28”
+ 
         },
 	
 	{
             "events": [ 
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                },
 		{
                     "code": "NEW-BATTER",
                     "description": "Zelous Wheeler is next up to bat!"
@@ -2130,22 +2172,25 @@
                     "description": "Hit! JR Murphy hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Derek Jeter came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Derek Jeter came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Mark Teixeira was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 28, Yankees: 7”
                 }
-            ] 
+            ],
+	    “home_score”: “7”,
+	    “away_score”: “28”
+ 
         },
 
 	{
-                        "events": [ 
+		"events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "David Peralta is next up to bat!"
@@ -2184,7 +2229,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Chris Owings walked!"
+                    "description": "Take a Base! Chris Owings walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2256,7 +2301,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Wade Miley walked!"
+                    "description": "Take a Base! Wade Miley walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2275,20 +2320,20 @@
                     "description": "Homerun! Roger Kieschnick hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Chris Owings came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Chris Owings came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Wade Miley came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Wade Miley came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Roger Kieschnick came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Roger Kieschnick came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2309,16 +2354,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! David Peralta made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 32, Yankees: 7”
                 }
-            ]
+            ],
+	    “home_score”: “7”,
+	    “away_score”: “32”
+
         },
 	
 	{
             "events": [ 
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                },
 		{
                     "code": "NEW-BATTER",
                     "description": "Chase Whitley is next up to bat!"
@@ -2424,22 +2472,25 @@
                     "description": "Hit! Zelous Wheeler hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Alfonso Soriano came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Alfonso Soriano came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! Mark Teixeira was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 32, Yankees: 8”
                 }
-            ] 
+            ],
+	    “home_score”: “8”,
+	    “away_score”: “32”
+ 
         },
 
 	{
-                        "events": [ 
+		"events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Diamondbacks are up at bat!”
+                }, 
 		{
                     "code": "NEW-BATTER",
                     "description": "David Peralta is next up to bat!"
@@ -2478,7 +2529,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Andy Marte walked!"
+                    "description": "Take a Base! Andy Marte walked!"
                 },
                 {
                     "code": "NEW-BATTER",
@@ -2550,7 +2601,7 @@
                 },
                 {
                     "code": "BB",
-                    "description": "Ball 4, Take a Base! Mark Trumbo walked!"
+                    "description": "Take a Base! Mark Trumbo walked!"
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2569,20 +2620,20 @@
                     "description": "Homerun! Tuffy Gosewisch hit a homerun!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "David Peralta came home! Run Scores for Diamondbacks”
+                    "code": “RUN-SCORES”,
+                    "description": "David Peralta came home! Run Scores for the Diamondbacks”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Andy Marte came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Andy Marte came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Mark Trumbo came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Mark Trumbo came home! Run Scores for the Diamondbacks!”
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Tuffy Gosewisch came home! Run Scores for Diamondbacks!”
+                    "code": “RUN-SCORES”,
+                    "description": "Tuffy Gosewisch came home! Run Scores for the Diamondbacks!”
                 },
 		{
                     "code": "NEW-BATTER",
@@ -2603,16 +2654,19 @@
 		{
                     "code": "OUT-1BH",
                     "description": "Out! Wade Miley made contact but was thrown out at First Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 36, Yankees: 8”
                 }
-            ] 
+            ],
+	    “home_score”: “8”,
+	    “away_score”: “36”
+ 
         },
 	
 	{
             "events": [
+		{
+                    "code": “START-HALF-INNING",
+                    "description": “The Yankees are up at bat!”
+                },
 		{
                     "code": "NEW-BATTER",
                     "description": "Derek Jeter is next up to bat!"
@@ -2718,20 +2772,21 @@
                     "description": "Hit! Chase Whitley hit a double!"
                 },
 		{
-                    "code": "SCORE",
-                    "description": "Jose Pirela came home! Run Scores for Yankees!”
+                    "code": “RUN-SCORES”,
+                    "description": "Jose Pirela came home! Run Scores for the Yankees!”
                 },
 		{
                     "code": "OUT-3B",
                     "description": "Out! JR Murphy was thrown out at Third Base! Out 3!”
-                },
-		{
-                    "code": "INNING-OVER",
-                    "description": "Inning Over, Diamondbacks: 36, Yankees: 9”
                 }
-            ]
+            ],
+	    “home_score”: “9”,
+	    “away_score”: “36”
+
         }
 
-    ] 
+    ],
+    “final_home_score”: “9”,
+    “final_away_score”: “36” 
 
 }
