@@ -184,8 +184,8 @@
                 }
             ], // ***END EVENTS***
 
-	    "end_home_score": "0", // ***HOME TEAM SCORE AT END OF HALF-INNING***
-	    "end_away_score": "0" // ***AWAY TEAM SCORE AT END OF HALF-INNING***
+	    "home_score": "0", // ***HOME TEAM SCORE AT END OF HALF-INNING***
+	    "away_score": "0" // ***AWAY TEAM SCORE AT END OF HALF-INNING***
 
         }, // ***END TOP OF THE FIRST***
 
