@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>JSON Sample</title>
+</head>
+<body>
+    <div id="placeholder"></div>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+  $.getJSON('data.json', function(data) {
+        var output="<ul>";
+
+        output+="<p>***** " + data.date + " " + data.time + " *****</p>";
+        output+="<p>***** Final Score -- " + data.home_team + ": " + data.final_home_score + " -- " + data.away_team + ": " + data.final_away_score + " *****</p>";
+        output+="<p>***** " + data.home_team + " *****</p>";
+        for (var i in data.home_team_lineup) {
+            output+="<li>" + data.home_team_lineup[i].name + " " + "--" + data.home_team_lineup[i].position+"</li>";
+        }
+        output+="<p>***** " + data.away_team + " *****</p>";
+        for (var i in data.away_team_lineup) {
+            output+="<li>" + data.away_team_lineup[i].name + " " + "--" + data.away_team_lineup[i].position+"</li>";
+        }
+        output+="<p>**************************************************</p>";
+        for (var i in data.half_innings) {
+            if(i%2 === 0){
+              output+="<p>***** " + "Top of Inning " + Math.floor(i/2 + 1) + " *****</p>";
+            } else {
+              output+="<p>***** " + "Bottom of Inning " + Math.floor(i/2 + 1) + " *****</p>";
+            }
+            output+="<p>" + data.home_team + ": " + data.half_innings[i].home_score + " -- " + data.away_team + ": " + data.half_innings[i].away_score + "</p>";
+
+        }
+        output+="<p>**************************************************</p>";
+        for (var i in data.half_innings) {
+            if(i%2 === 0){
+              output+="<p>***** " + "Top of Inning " + Math.floor(i/2 + 1) + " *****</p>";
+            } else {
+              output+="<p>***** " + "Bottom of Inning " + Math.floor(i/2 + 1) + " *****</p>";
+            }
+            for(var j in data.half_innings[i].events){
+              output+="<li>" + data.half_innings[i].events[j].description + "</li>";
+            }
+        }
+
+        output+="</ul>";
+        document.getElementById("placeholder").innerHTML=output;
+  });
+    </script>
+</body>
+</html>
