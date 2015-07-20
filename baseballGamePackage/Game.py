@@ -3,6 +3,7 @@
 #baseballGamePackage
 import os
 import sys
+import json
 var = os.path.abspath(os.path.dirname(__file__)+'../..')
 sys.path.append(var)
 
@@ -28,6 +29,7 @@ class Game(object):
     self.pitchingTeam = 1
     self.initOrder = True
     self.innings = 1
+    self.gameEventList = []
 
  def switchTeams(self):
     if self.initOrder == True:
@@ -42,12 +44,15 @@ class Game(object):
 
  def teamAtBat(self):
   self.cf.start(self.teams[self.pitchingTeam])
+  self.addGameEvents([{"code" : "START-HALF-INNING", "description" : "The " + self.teams[self.battingTeam].get_Team_Name() + " are up at bat!"}])
   while self.teams[self.battingTeam].getOuts() < 3:
    self.currentBattingPlayer = self.teams[self.battingTeam].getNextPlayerAtBat()
    cb = CurrentBatting(self.teams[self.pitchingTeam].get_Pitcher(), self.currentBattingPlayer)
    self.amountOfBasesToMove = self.bat.startBatting(cb)
+   self.addGameEvents(self.bat.getGameString())
    if self.amountOfBasesToMove > 0:
     outsToBeAdded = self.f.newPlayerOnBases(self.amountOfBasesToMove, self.currentBattingPlayer, self.teams[self.battingTeam].getOuts(), cb.getHomerunOrWalk())
+    self.addGameEvents(self.f.getGameString())
     if outsToBeAdded > 0:
       self.teams[self.battingTeam].addNumToOuts(outsToBeAdded)
    else:
@@ -80,3 +85,10 @@ class Game(object):
 
     temp = [self.teams[0].getScore(), self.teams[1].getScore()]
     return temp
+ 
+ def addGameEvents(self, aList):
+  self.gameEventList.extend(aList) 
+
+ def getJSONData(self):
+  with open('data.txt' , 'w') as outfile:
+	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)

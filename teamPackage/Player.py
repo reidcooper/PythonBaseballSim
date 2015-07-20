@@ -38,7 +38,7 @@ class Player(object):
         self.clonedData = playerData
 
     def to_String(self):
-        return self.name + " " + self.position
+        return self.name
 
     def get_Chance_Single(self):
         return float(self.chance_Single)

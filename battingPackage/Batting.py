@@ -20,17 +20,21 @@ class Batting(object):
     avg_IPR = 52.7
     max_Z = 144.0
     FBPR = 0
+    gameString = [{"code" : "THIS IS THE START OF THE FILE"}]
 
     def __init__(self):
         pass
 
     def startBatting(self, cb):
+        self.gameString[:] = []
         self.balls = 0
         self.strikes = 0
         self.current_Batting = cb
         self.pitcher = cb.get_Pitcher()
         self.player = cb.get_Player()
         self.FBPR = self.generate_FBPR()
+        
+        self.gameString.append({"code" : "NEW-BATTER", "description" : str(self.player.to_String()) + " is next up to bat!"})
 
         self.chanceOfBall = (1 - self.pitcher.get_Zone_Per()) * (1 - self.player.get_o_Swing())
         self.chanceOfStrike = (self.pitcher.get_Zone_Per() * self.player.get_z_Swing() * (1 - self.player.get_z_Contact())) + (self.pitcher.get_Zone_Per() * (1 - self.player.get_z_Swing())) + (((1 - self.pitcher.get_Zone_Per()) * self.player.get_o_Swing() * (1 - self.player.get_o_Contact())))
@@ -78,8 +82,10 @@ class Batting(object):
                return self.hit()
 
             if self.current_Batting.get_Balls() == 4:
+               self.gameString.append({"code" : "BB", "description" : "Take a Base! " + str(self.player.to_String()) + " walked"})
                self.current_Batting.setHomerunOrWalk("walk")
                return 1
+        self.gameString.append({"code" : "KO", "description" : "You're Out! " + str(self.player.to_String()) + " struck out!"})
         return 0
 
     def pitch(self):
@@ -89,12 +95,14 @@ class Batting(object):
             self.current_Batting.add_Ball()
             self.balls = self.current_Batting.get_Balls()
             print "Ball " + str(self.balls) + " outcome " + str(temp)
+            self.gameString.append({"code" : "BALL" , "description" : "Ball " + str(self.balls)})
             return 1
         #strike
         elif temp < self.chanceOfBall + self.chanceOfStrike:
             self.current_Batting.add_Strike()
             self.strikes = self.current_Batting.get_Strikes()
             print "Strike " + str(self.strikes) + " outcome " + str(temp)
+            self.gameString.append({"code" : "STRIKE", "description" : "Strike " + str(self.strikes)})
             return 1
         #foul
         elif temp < self.chanceOfBall + self.chanceOfStrike + self.chanceOfFoul:
@@ -102,10 +110,12 @@ class Batting(object):
                 self.current_Batting.add_Strike()
                 self.strikes = self.current_Batting.get_Strikes()
                 print "Foul that was strike " + str(self.strikes) + " outcome " + str(temp)
+                self.gameString.append({"code" : "FOUL-STRIKE", "description" : "Foul that was strike " + str(self.strikes)})
                 return 1
             else:
                 self.current_Batting.add_Foul()
                 print "foul " + str(self.current_Batting.get_Fouls()) + " outcome " + str(temp)
+                self.gameString.append({"code" : "FOUL", "description" : "Foul " + str(self.current_Batting.get_Fouls())})
                 return 1
         #hit
         else:
@@ -115,13 +125,17 @@ class Batting(object):
     def hit(self):
         temp = randint(0, 100)
         if temp < self.a_Single:
+            self.gameString.append({"code" : "1B", "description" : "Hit! " + str(self.player.to_String()) + " hit a single!"})
             return 1
         elif temp < self.a_Single + self.a_Double:
+            self.gameString.append({"code" : "2B", "description" : "Hit! " + str(self.player.to_String()) + " hit a double!"})
             return 2
         elif temp < self.a_Single + self.a_Double + self.a_Triple:
+            self.gameString.append({"code" : "3B", "description" : "Hit! " + str(self.player.to_String()) + " hit a triple!"})
             return 3
         else:
             self.current_Batting.setHomerunOrWalk("homerun")
+            self.gameString.append({"code" : "HR", "description" : "Hit! " + str(self.player.to_String()) + " hit a homerun!"})
             return 4
 
     def get_Batter(self):
@@ -129,3 +143,6 @@ class Batting(object):
 
     def to_String(self):
         return "Chance of ball: " + str(self.chanceOfBall) + "\n" + "Chance of hit: " + str(self.chanceOfHit) + "\n" + "Chance of foul: " + str(self.chanceOfFoul) + "\n" + "Chance of strike: " + str(self.chanceOfStrike) + "\n"
+    
+    def getGameString(self):
+		return self.gameString
