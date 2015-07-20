@@ -194,6 +194,7 @@ class Field(object):
                     self.currentField.three.movePlayerOneBase()
                     self.currentField.addScore()
                     print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+                    self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
             except ThreeOuts, args:
                 print "3 outs have happened on the field"
 
@@ -206,6 +207,7 @@ class Field(object):
                 self.currentField.three.movePlayerOneBase()
                 self.currentField.addScore()
                 print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+                self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
 
         if not self.currentField.two.getPlayerOnBase() is None:
             self.currentField.two.movePlayerOneBase()
@@ -222,12 +224,14 @@ class Field(object):
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore()
             print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
 
         if not self.currentField.two.getPlayerOnBase() is None:
             self.currentField.two.movePlayerOneBase()
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore();
             print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
 
         if not self.currentField.one.getPlayerOnBase() is None:
             self.currentField.one.movePlayerOneBase()
@@ -235,6 +239,7 @@ class Field(object):
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore();
             print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
 
         self.currentField.one.addPlayerToBase(p)
         self.currentField.one.movePlayerOneBase()
@@ -242,6 +247,7 @@ class Field(object):
         self.currentField.three.movePlayerOneBase()
         self.currentField.addScore()
         print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+        self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
     
     def getGameString(self):
      return self.gameString
