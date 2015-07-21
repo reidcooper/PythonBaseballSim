@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="B.A.S.E.S." content="">
-  <meta name="" content="">
+  <meta name="author" content="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert">
   <link rel="icon" href="/static/icons/favicon.ico">
 
   <title>B.A.S.E.S.</title>
@@ -53,57 +53,29 @@
             <div id="scoreboard-content">
               <h4>Scoreboard</h4>
               <div class="scoreboard-bgd">
+                <table style="float: left">
+                  <tr><td><b>Team</b></td></tr>
+                  <tr><td>Home Team</td></tr>
+                  <tr><td>Away Team</td></tr>
+                </table>
                 <table class="table table-condensed table-bordered">
                   <tr class="warning">
-                    <td><b>Team</b></td>
-                    <td><b>-</b></td>
-                    <td><b>1</b></td>
-                    <td><b>2</b></td>
-                    <td><b>3</b></td>
-                    <td><b>4</b></td>
-                    <td><b>5</b></td>
-                    <td><b>6</b></td>
-                    <td><b>7</b></td>
-                    <td><b>8</b></td>
-                    <td><b>9</b></td>
-                    <td><b>-</b></td>
-                    <td><b>R</b></td>
-                    <td><b>H</b></td>
-                    <td><b>E</b></td>
+                    <td width='50px'><center><b>1</b></center></td>
+                    <td width='50px'><center><b>2</b></center></td>
+                    <td width='50px'><center><b>3</b></center></td>
+                    <td width='50px'><center><b>4</b></center></td>
+                    <td width='50px'><center><b>5</b></center></td>
+                    <td width='50px'><center><b>6</b></center></td>
+                    <td width='50px'><center><b>7</b></center></td>
+                    <td width='50px'><center><b>8</b></center></td>
+                    <td width='50px'><center><b>9</b></center></td>
+                    <td width='50px'><center><b>R</b></center></td>
+                    <td width='50px'><center><b>H</b></center></td>
+                    <td width='50px'><center><b>E</b></center></td>
                   </tr>
-                  <tr class="success">
-                    <td>Home Team</td>
-                    <td>-</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>-</td>
-                    <td>00</td>
-                    <td>00</td>
-                    <td>00</td>
+                  <tr class="success" id="home">
                   </tr>
-                  <tr class="info">
-                    <td>Away Team</td>
-                    <td>-</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>-</td>
-                    <td>00</td>
-                    <td>00</td>
-                    <td>00</td>
+                  <tr class="info" id="away">
                   </tr>
                 </table>
               </div>
@@ -115,32 +87,68 @@
               <h4>Game Events</h4>
             </center>
             <div class="scroll-box gameEvents-json" id="game1-row1-json">
+
               <script>
-                $.getJSON('/static/simulations/butt.json', function(data) {
-                            //now json variable contains data in json format
-                            //let's display a few items
-                            var output="<ul>";
-                            for(var i in data.sample){
-                              output += '<li>Index: ' + data.sample[i].index + '<br />About: ' + data.sample[i].about+"</li>";
-                            }
-                            output += "</ul>";
-                            $('#game1-row1-json').html(output);
-                          });
-              </script>
-            </div>
-          </div>
-        </div> <!-- End Game1 Row1 -->
-      </div> <!-- End GameOutput -->
+                // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
+                // In time the location of this data file should be dynamic
+                file_location = '/static/simulations/data.json'
 
-      <footer class="footer">
-        <center>
-          <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
-          <p>&copy; Monmouth University
-            2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
-          </p>
-        </center>
-      </footer>
+                $.getJSON(file_location, function(data) {
+                  var output="<ul>";
 
-    </div> <!-- /container -->
-  </body>
-  </html>
+                  i=1;
+                  var away=" ";
+                  var home="";
+                  var j=0, k=0;
+                  var speedInterval = 200; // Change this to varry speed of simulation
+
+                  setInterval(function(){ eventFunction(data.half_innings)}, speedInterval);
+
+                  function scoreFunction() {
+                    home+="<td width='50px'><center>"+data.half_innings[i].home_score+"</td></center>";
+                    away+="<td width='50px'><center>"+data.half_innings[i].away_score+"</td></center>";
+                    i+=2;
+                    document.getElementById("away").innerHTML=away;
+                    document.getElementById("home").innerHTML=home;
+                  }
+
+                  function eventFunction(arr) {
+                    output="<center>" + arr[k].events[j].description + "</center>";
+                    document.getElementById("game1-row1-json").innerHTML = output;
+                    if (arr[k].events[j].code=="OUT-1BH" || arr[k].events[j].code=="OUT-3B") {
+                      j=-1;
+                      k++;
+                      if (k%2==0) {
+                        scoreFunction();
+                      }
+                    }
+                    j++;
+                    if (k==18) {
+                      output="<center>***** Final Score -- " + data.home_team + ": " + data.final_home_score + " -- " + data.away_team + ": " + data.final_away_score + " *****</center>";
+                      document.getElementById("game1-row1-json").innerHTML = output;
+                      home+="<td width='50px'><center>"+data.final_home_score+"</td></center>";
+                      away+="<td width='50px'><center>"+data.final_away_score+"</td></center>";
+                      document.getElementById("away").innerHTML=away;
+                      document.getElementById("home").innerHTML=home;
+                    }
+                  }
+                  output+="</ul>";
+                });
+</script>
+</div>
+</div>
+</div> <!-- End Game1 Row1 -->
+</div> <!-- End GameOutput -->
+
+<footer class="footer">
+  <center>
+    <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert</p>
+    <p>&copy; Monmouth University
+      2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
+    </p>
+  </center>
+</footer>
+
+</div> <!-- /container -->
+</body>
+</html>
