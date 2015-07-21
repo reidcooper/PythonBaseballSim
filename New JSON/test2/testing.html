@@ -10,17 +10,164 @@
     <script>
   $.getJSON('testdata.json', function(data) {
         var output="<ul>";
-
+ 
         for (var i in data.events) {
-            if(data.events[i].code === "START-HALF-INNING"){
-              output+="<p>**************************************************</p>";
-            }
-            output+="<li>" + data.events[i].description + "</li>";
-        }
 
+            switch(data.events[i].code){
+              case "START-HALF-INNING":
+                output+="<p>**************************************************</p>";
+                break;
+              case "NEW-BATTER":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "NEW-PITCHER":
+                output+="<p>**************************************************</p>";
+                break;
+              case "BALL":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "STRIKE":
+                output+="<p>**************************************************</p>";
+                break;
+              case "FOUL-STRIKE":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "FOUL":
+                output+="<p>**************************************************</p>";
+                break;
+              case "BB":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "KO":
+                output+="<p>**************************************************</p>";
+                break;
+              case "1B":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "2B":
+                output+="<p>**************************************************</p>";
+                break;
+              case "3B":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "HR":
+                output+="<p>**************************************************</p>";
+                break;
+              case "RUN-SCORES":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "OUT-BH":
+                output+="<p>**************************************************</p>";
+                break;
+              case "OUT-1BH":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "OUT-2BH":
+                output+="<p>**************************************************</p>";
+                break;
+              case "OUT-3BH":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "OUT-4BH":
+                output+="<p>**************************************************</p>";
+                break;
+              case "OUT-1B":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "OUT-2B":
+                output+="<p>**************************************************</p>";
+                break;
+              case "OUT-3B":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              case "OUT-4B":
+                output+="<p>**************************************************</p>";
+                break;
+              case "DIAMOND":
+                output+="<p>!!!!!!!!!!!!!!!Get your peanuts here!!!!!!!!!!!!!!!</p>";
+                break;
+              default:
+                output+="<p>---------------</p>";
+            }
+        }
+ 
         output+="</ul>";
         document.getElementById("placeholder").innerHTML=output;
   });
     </script>
 </body>
 </html>
+ 
+ 
+<!--"code": "START-HALF-INNING",
+"description": "The (Batting_team) are up at bat!"
+ 
+"code": "NEW-BATTER",
+"description": "(Batter) is next up to bat!"
+ 
+"code": "NEW-PITCHER",
+"description": "Pitching Change! (Pitcher) is now pitching!"
+ 
+"code": "BALL",
+"description": "Ball (ball_count)!"
+ 
+"code": "STRIKE",
+"description": "Strike (strike_count)!"
+ 
+"code": "FOUL-STRIKE",
+"description": "Foul Ball for Strike (strike_count)!"
+ 
+"code": "FOUL",
+"description": "Foul Ball!"
+ 
+"code": "BB",
+"description": "Take a Base! (Batter) walked!"
+ 
+"code": "KO",
+"description": "You're Out! (Batter) struck out! Out (out_count)!"
+ 
+"code": "1B",
+"description": "Hit! (Batter) hit a single!"
+ 
+"code": "2B",
+"description": "Hit! (Batter) hit a double!"
+ 
+"code": "3B",
+"description": "Hit! (Batter) hit a triple!"
+ 
+"code": "HR",
+"description": "Homerun! (Batter) hit a homerun!"
+ 
+"code": "RUN-SCORES",
+"description": "(Baserunner/Batter) came home! Run Scores for the (Batting_team)!"
+ 
+"code": "OUT-BH",
+"description": "Out! (Batter) made contact, but the fielding team caught the ball! Out (out_count)!"
+ 
+"code": "OUT-1BH",
+"description": "Out! (Batter) made contact but was thrown out at First Base! Out (out_count)!"
+ 
+"code": "OUT-2BH",
+"description": "Out! (Batter) made contact but was thrown out at Second Base! Out (out_count)!"
+ 
+"code": "OUT-3BH",
+"description": "Out! (Batter) made contact but was thrown out at Third Base! Out (out_count)!"
+ 
+"code": "OUT-4BH",
+"description": "Out! (Batter) made contact but was thrown out at Home Plate! Out (out_count)!"
+ 
+"code": "OUT-1B",
+"description": "Out! (Baserunner) was thrown out at First Base! Out (out_count)!"
+ 
+"code": "OUT-2B",
+"description": "Out! (Baserunner) was thrown out at Second Base! Out (out_count)!"
+ 
+"code": "OUT-3B",
+"description": "Out! (Baserunner) was thrown out at Third Base! Out (out_count)!"
+ 
+"code": "OUT-4B",
+"description": "Out! (Baserunner) was thrown out at Home Plate! Out (out_count)!"
+ 
+"code": "DIAMOND", // ***SHOULD APPEAR IMMEDIATELY BEFORE NEW-BATTER***
+"description": "empty" or "first" or "second" or "third" or "firstandsecond" or "firstandthird" or "secondandthird" or "loaded"
+-->
