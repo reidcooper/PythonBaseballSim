@@ -1,0 +1,250 @@
+{ // Game
+
+    "time": "9:43 AM",
+    "date": "7/7/15",
+
+    "home_team": "Diamondbacks",
+    "home_team_lineup": [
+        {
+            "name": "Reid Cooper",
+            "position": "1B"
+        },
+        {
+            "name": "Michael Jordan",
+            "position": "P"
+        }
+    ], // END HOME_TEAM_LINEUP
+
+    "away_team": "Yankees",
+    "away_team_lineup": [
+        {
+            "name": "Reid Cooper",
+            "position": "1B"
+        },
+        {
+            "name": "Michael Jordan",
+            "position": "P"
+        }
+    ], // END AWAY_TEAM_LINEUP
+
+    "half_innings": [
+        {
+            "events": [ // THESE ARE CODES FOR EVENTS, IN ANY ORDER
+                {
+                    "code": "STRIKE", // THIS STAYS STATIC
+                    "description": "Strike (strike_count)" // THIS STAYS STATIC
+                },
+                {
+                    "code": "FOUL",
+                    "description": "Foul Ball (foul_count)!"
+                },
+                {
+                    "code": "BALL",
+                    "description": "Ball (ball_count)!"
+                },
+                {
+                    "code": "KO",
+                    "description": "Strike 3, You're Out! (Batter) struck out!"
+                },
+                {
+                    "code": "BB",
+                    "description": "Ball 4, Take a Base! (Batter) walked!"
+                },
+                {
+                    "code": "1B",
+                    "description": "Hit! (Batter) hit a single!"
+                },
+                {
+                    "code": "2B",
+                    "description": "Hit! (Batter) hit a double!"
+                },
+                {
+                    "code": "3B",
+                    "description": "Hit! (Batter) hit a triple!"
+                },
+                {
+                    "code": "HR",
+                    "description": "Homerun! (Batter) hit a homerun!"
+                },
+                {
+                    "code": "OUT-BH",
+                    "description": "Out! (Batter) made contact but the fielding team caught the ball! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-1BH",
+                    "description": "Out! (Batter) made contact but was thrown out at First Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-2BH",
+                    "description": "Out! (Batter) made contact but was thrown out at Second Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-3BH",
+                    "description": "Out! (Batter) made contact but was thrown out at Third Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-4BH",
+                    "description": "Out! (Batter) made contact but was thrown out at Home Plate! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-1B",
+                    "description": "Out! (Baserunner) was thrown out at First Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-2B",
+                    "description": "Out! (Baserunner) was thrown out at Second Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-3B",
+                    "description": "Out! (Baserunner) was thrown out at Third Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-4B",
+                    "description": "Out! (Baserunner) was thrown out at Home Plate! (out_count) outs!"
+                },
+                {
+                    "code": "COUNT",
+                    "description": "(Batter)'s count: (strike_count) Strikes & (ball_count) Balls."
+                },
+                {
+                    "code": "OUT",
+                    "description": "Fielding Team made an Out! (out_count) outs!"
+                },
+                {
+                    "code": "INNING-START",
+                    "description": "Inning Start! The (batting_team) are up to bat!"
+                },
+                {
+                    "code": "INNING-OVER",
+                    "description": "3 Outs! Inning Over, (home_team): (home_team_score) (away_team): (away_team_score)"
+                },
+                {
+                    "code": "NEW-BATTER",
+                    "description": "(Batter) is next up to bat!"
+                },
+                {
+                    "code": "NEW-PITCHER",
+                    "description": "Pitcher Change! (Pitcher) is now pitching!"
+                },
+                {
+                    "code": "SCORE",
+                    "description": "Run Scores for (Batting_Team)! (home_team): (home_team_score) (away_team): (away_team_score)"
+                },
+                {
+                    "code": "END-GAME",
+                    "description": "Game Over! (Winning_Team) wins! Final Score - (home_team): (home_team_score) (away_team): (away_team_score)"
+                }
+            ] // END EVENTS
+        },
+
+        {
+            "events": [ // THESE ARE CODES FOR EVENTS, IN ANY ORDER
+                {
+                    "code": "STRIKE", // THIS STAYS STATIC
+                    "description": "Strike (strike_count)" // THIS STAYS STATIC
+                },
+                {
+                    "code": "FOUL",
+                    "description": "Foul Ball (foul_count)!"
+                },
+                {
+                    "code": "BALL",
+                    "description": "Ball (ball_count)!"
+                },
+                {
+                    "code": "KO",
+                    "description": "Strike 3, You're Out! (Batter) struck out!"
+                },
+                {
+                    "code": "BB",
+                    "description": "Ball 4, Take a Base! (Batter) walked!"
+                },
+                {
+                    "code": "1B",
+                    "description": "Hit! (Batter) hit a single!"
+                },
+                {
+                    "code": "2B",
+                    "description": "Hit! (Batter) hit a double!"
+                },
+                {
+                    "code": "3B",
+                    "description": "Hit! (Batter) hit a triple!"
+                },
+                {
+                    "code": "HR",
+                    "description": "Homerun! (Batter) hit a homerun!"
+                },
+                {
+                    "code": "OUT-BH",
+                    "description": "Out! (Batter) made contact but the fielding team caught the ball! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-1BH",
+                    "description": "Out! (Batter) made contact but was thrown out at First Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-2BH",
+                    "description": "Out! (Batter) made contact but was thrown out at Second Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-3BH",
+                    "description": "Out! (Batter) made contact but was thrown out at Third Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-4BH",
+                    "description": "Out! (Batter) made contact but was thrown out at Home Plate! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-1B",
+                    "description": "Out! (Baserunner) was thrown out at First Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-2B",
+                    "description": "Out! (Baserunner) was thrown out at Second Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-3B",
+                    "description": "Out! (Baserunner) was thrown out at Third Base! (out_count) outs!"
+                },
+                {
+                    "code": "OUT-4B",
+                    "description": "Out! (Baserunner) was thrown out at Home Plate! (out_count) outs!"
+                },
+                {
+                    "code": "COUNT",
+                    "description": "(Batter)'s count: (strike_count) Strikes & (ball_count) Balls."
+                },
+                {
+                    "code": "OUT",
+                    "description": "Fielding Team made an Out! (out_count) outs!"
+                },
+                {
+                    "code": "INNING-START",
+                    "description": "Inning Start! The (batting_team) are up to bat!"
+                },
+                {
+                    "code": "INNING-OVER",
+                    "description": "3 Outs! Inning Over, (home_team): (home_team_score) (away_team): (away_team_score)"
+                },
+                {
+                    "code": "NEW-BATTER",
+                    "description": "(Batter) is next up to bat!"
+                },
+                {
+                    "code": "NEW-PITCHER",
+                    "description": "Pitcher Change! (Pitcher) is now pitching!"
+                },
+                {
+                    "code": "SCORE",
+                    "description": "Run Scores for (Batting_Team)! (home_team): (home_team_score) (away_team): (away_team_score)"
+                },
+                {
+                    "code": "END-GAME",
+                    "description": "Game Over! (Winning_Team) wins! Final Score - (home_team): (home_team_score) (away_team): (away_team_score)"
+                }
+            ] // END EVENTS
+        }
+    ] // END HALF_INNINGS
+
+} // END GAME

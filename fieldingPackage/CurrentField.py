@@ -115,6 +115,25 @@ class CurrentField (object):
 
  def addOneToOuts(self):
      self.outs = self.outs + 1
+ 
+ def printFieldInfo(self):
+  baseInfo = ""
+  if(self.one.getIsFull() == False):
+	  baseInfo = "0"
+  else: 
+	  baseInfo = "1"
+  
+  if(self.two.getIsFull() == False):
+	  baseInfo = baseInfo + "0"
+  else: 
+	  baseInfo = baseInfo + "1"
+  
+  if(self.three.getIsFull() == False):
+	  baseInfo = baseInfo + "0"
+  else: 
+	  baseInfo = baseInfo + "1"
+ 
+  return baseInfo
 
  def toString(self):
      return "base 1 " +one.toString() + "\n" + "base 2 " +two.toString() + "\n"

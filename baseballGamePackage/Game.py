@@ -78,10 +78,12 @@ class Game(object):
     while self.innings < 9:
         self.inning()
         print "score at end of inning " + str(self.innings) + " is: " + "\n" + "Home Team: " + str(self.teams[0].getScore()) + "\n" + "Away Team: " + str(self.teams[1].getScore())
+        self.addGameEvents([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[0].getScore()) + "  " + "Away Team: " + str(self.teams[1].getScore())}])
 
     while self.teams[0].getScore() == self.teams[1].getScore():
         self.inning()
         print "score at end of inning " + str(self.innings) + " is: " + "\n" + "Home Team: " + str(self.teams[0].getScore()) + "\n" + "Away Team: " + str(self.teams[1].getScore())
+        self.addGameEvents([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[0].getScore()) + "  " + "Away Team: " + str(self.teams[1].getScore())}])
 
     temp = [self.teams[0].getScore(), self.teams[1].getScore()]
     return temp
@@ -89,6 +91,14 @@ class Game(object):
  def addGameEvents(self, aList):
   self.gameEventList.extend(aList) 
 
+ def createJSON(self):
+  with open('data.json' , 'w') as outfile:
+	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
+  test = open('data.json')
+  son = json.load(test)
+  print son[2]["description"] 
+
+
  def getJSONData(self):
-  with open('data.txt' , 'w') as outfile:
+  with open('data.json' , 'w') as outfile:
 	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
