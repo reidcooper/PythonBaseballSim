@@ -181,7 +181,11 @@
                 {
                     "code": "OUT-4B",
                     "description": "Out! (Baserunner) was thrown out at Home Plate! Out (out_count)!"
-                }
+                },
+		{
+	    	    "code": "DIAMOND", // ***SHOULD APPEAR IMMEDIATELY BEFORE NEW-BATTER***
+	    	    "description": "empty" or "first" or "second" or "third" or "firstandsecond" or "firstandthird" or "secondandthird" or "loaded"
+		}
             ], // ***END EVENTS***
 
 	    "home_score": "0", // ***HOME TEAM SCORE AT END OF HALF-INNING***
@@ -283,7 +287,11 @@
                 {
                     "code": "OUT-4B",
                     "description": "Out! (Baserunner) was thrown out at Home Plate! Out (out_count)!"
-                }
+                },
+		{
+	    	    "code": "DIAMOND", // ***SHOULD APPEAR IMMEDIATELY BEFORE NEW-BATTER***
+	    	    "description": "empty" or "first" or "second" or "third" or "firstandsecond" or "firstandthird" or "secondandthird" or "loaded"
+		}
             ], // ***END EVENTS***
 
 	    "home_score": "0", // ***HOME TEAM SCORE AT END OF HALF-INNING***
