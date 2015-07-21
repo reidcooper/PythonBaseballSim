@@ -189,9 +189,10 @@ class Field(object):
             pass
         else:
             try:
+                self.currentField.three.movePlayerOneBase()
                 test = self.isPlayerOutOnBase(4, self.checkIfPlayerIsOnSameBaseAsBall(4))
                 if not test:
-                    self.currentField.three.movePlayerOneBase()
+                    
                     self.currentField.addScore()
                     print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
                     self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
