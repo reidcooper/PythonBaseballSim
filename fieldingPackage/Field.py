@@ -200,20 +200,16 @@ class Field(object):
 
     def newPlayerOnBasesWalk(self, p):
         print "amount of bases to move is 1, walk "
-        if not self.currentField.three.getPlayerOnBase() is None:
-            if self.currentField.three.getPlayerOnBase() is None:
-                pass
-            else:
-                self.currentField.three.movePlayerOneBase()
-                self.currentField.addScore()
-                print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
-                self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
-
-        if not self.currentField.two.getPlayerOnBase() is None:
-            self.currentField.two.movePlayerOneBase()
-
+       
         if not self.currentField.one.getPlayerOnBase() is None:
-            self.currentField.one.movePlayerOneBase()
+         self.currentField.one.movePlayerOneBase()
+         if not self.currentField.two.getPlayerOnBase() is None:
+          self.currentField.two.movePlayerOneBase()
+          if not self.currentField.three.getPlayerOnBase() is None:
+           self.currentField.three.movePlayerOneBase()
+           self.currentField.addScore()
+           print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
+           self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
 
         else:
             self.currentField.one.addPlayerToBase(p)
