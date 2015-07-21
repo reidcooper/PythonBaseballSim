@@ -91,6 +91,14 @@ class Game(object):
  def addGameEvents(self, aList):
   self.gameEventList.extend(aList) 
 
+ def createJSON(self):
+  with open('data.json' , 'w') as outfile:
+	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
+  test = open('data.json')
+  son = json.load(test)
+  print son[2]["description"] 
+
+
  def getJSONData(self):
   with open('data.txt' , 'w') as outfile:
 	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)

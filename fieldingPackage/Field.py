@@ -17,6 +17,7 @@ class Field(object):
 
     def newPlayerOnBases(self, n, p, currentAmountOfOuts, walkOrHomeRun):
         self.gameString[:] = []
+        
         self.currentField.resetOuts()
         self.currentAmountOfOuts = currentAmountOfOuts
         if walkOrHomeRun == "walk":
@@ -75,6 +76,7 @@ class Field(object):
             else:
                 self.currentField.addOneToOuts()
                 self.gameString.append({"code" : "OUT-BH", "description" : "Out!" + p.to_String() + " made contact, but the fielding team caught the ball! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+        self.gameString.append({"code" : "DIAMOND", "description" : self.currentField.printFieldInfo()})
         return self.currentField.getOuts()
 
     def moveOneBase(self, p):
