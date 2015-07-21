@@ -100,5 +100,5 @@ class Game(object):
 
 
  def getJSONData(self):
-  with open('data.txt' , 'w') as outfile:
+  with open('data.json' , 'w') as outfile:
 	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
