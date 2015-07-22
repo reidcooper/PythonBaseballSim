@@ -11,9 +11,9 @@
   $.getJSON('testdata.json', function(data) {
         var output="<ul>";
  
-        for (var i in data.events) {
+        for (var i in data) {
 
-            switch(data.events[i].code){
+            switch(data[i].code){
               case "START-HALF-INNING":
                 output+="<p>**************************************************</p>";
                 break;
