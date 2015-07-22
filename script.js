@@ -1,6 +1,14 @@
 $(document).ready(function(){
-	var text = jquery.parseJson("description":"empty" || "first" || "second" || "third"|| "firstandsecond" || "secondandthird" || "firstandthird" || "loaded");
+	$(":1.jpeg").hide();
+	$(":2.jpeg").hide();
+	$(":3.jpeg").hide();
+	$(":1and2.jpeg").hide();
+	$(":1and3.jpeg").hide();
+	$(":2and3.jpeg").hide();
+	$(":loaded.jpeg").hide();
 	$('input').click(function(){
+	var text = jquery.parseJson("description":"empty" || "first" || "second" || "third"|| "firstandsecond" || "secondandthird" || "firstandthird" || "loaded");
+	
 		if (text.description == "first") {
 			$(":1.jpeg").show();
 		};
@@ -25,6 +33,8 @@ $(document).ready(function(){
 		else if(text.description == "loaded"){
 			$.(":loaded.jpeg").show();
 		}
-	});
 	
+
 });
+});
+	

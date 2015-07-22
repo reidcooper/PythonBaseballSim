@@ -363,6 +363,9 @@
         break;
         case "DIAMOND":
         break;
+        case "END-INNING-SCORE":
+        output="<center>" + data[k].description + "</center>";
+		break;
         default:
         output="<center>------------------------------default-----------------------------</center>";
       }

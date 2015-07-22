@@ -5,6 +5,7 @@ var = os.path.abspath(os.path.dirname(__file__)+'../..')
 sys.path.append(var)
 
 from random import random
+from random import randint
 from teamPackage import Player
 
 class Field(object):
@@ -47,17 +48,17 @@ class Field(object):
                                 #break
                             elif n == 2:
                                 self.currentField.one.movePlayerOneBase()
-                                self.isPlayerOutOnBase(2, self.checkIfPlayerIsOnSameBaseAsBall(2))
-                                self.currentField.two.movePlayerOneBase()
-                                self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3))
+                                if not self.isPlayerOutOnBase(2, self.checkIfPlayerIsOnSameBaseAsBall(2)):
+                                 self.currentField.two.movePlayerOneBase()
+                                 self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3))
                                 self.moveTwoBases(p)
                                 #break
                             elif n == 3:
                                 self.currentField.one.movePlayerOneBase()
-                                self.isPlayerOutOnBase(2, self.checkIfPlayerIsOnSameBaseAsBall(2))
-                                self.currentField.two.movePlayerOneBase()
-                                self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3))
-                                self.playerOnThird()
+                                if not self.isPlayerOutOnBase(2, self.checkIfPlayerIsOnSameBaseAsBall(2)):
+                                 self.currentField.two.movePlayerOneBase()
+                                 if not self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3)):
+                                  self.playerOnThird()
                                 self.movePlayerThreeBases(p)
                                 #break
                         else:
@@ -155,6 +156,12 @@ class Field(object):
     def isPlayerOutOnBase(self, baseNum, b):
         if self.currentAmountOfOuts + self.currentField.getOuts() >= 3:
             raise ThreeOuts("3 outs have happened")
+        
+        if not b:
+			a = randint(0,10)
+			if a > 5:
+				b = True
+        
         if b:
             print "Player may get out on base"
             if baseNum == 1:
