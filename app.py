@@ -10,7 +10,7 @@ import datetime
 from baseballGamePackage.Game import Game
 
 ''' Global Settings '''
-historical_games_location = "teams/"
+historical_games_location = "simulations/"
 debug = True # Change for production to false
 port = 8888 # Typically 80 for websites
 
@@ -45,16 +45,13 @@ def submitHistoricGame():
         home_team = "HomeTeam"
         away_team = "AwayTeam"
 
-        ts = time.time()
-        st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M-%S')
-        temp_file_name = st + "_" + home_team + "_" + away_team + "_"
-
-        home_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(2)
-        away_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(3)
-
         json_game = request.forms.get('gameFile')
         print "Game Selected: " + json_game
-        return template('displayGame', home_team=home_team, away_team=away_team)
+
+        home_team = re.search('([^_]*)_([^_]*)_([^_]*)', json_game).group(2)
+        away_team = re.search('([^_]*)_([^_]*)_([^_]*)', json_game).group(3)
+
+        return template('displayGame', home_team=home_team, away_team=away_team, game_file=json_game)
 
     # If the User wants to upload a JSON game file
     elif request.forms.get('upload_btn'):
@@ -69,18 +66,13 @@ def submitHistoricGame():
                 file_path = "{path}/{file}".format(path=var, file=upload.filename)
                 upload.save(file_path, overwrite=True)
 
-                # Temp Until We Read File Now
                 home_team = "HomeTeam"
                 away_team = "AwayTeam"
 
-                ts = time.time()
-                st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M-%S')
-                temp_file_name = st + "_" + home_team + "_" + away_team + "_"
+                home_team = re.search('([^_]*)_([^_]*)_([^_]*)', upload.filename).group(2)
+                away_team = re.search('([^_]*)_([^_]*)_([^_]*)', upload.filename).group(3)
 
-                home_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(2)
-                away_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(3)
-
-                return template('displayGame', home_team=home_team, away_team=away_team)
+                return template('displayGame', home_team=home_team, away_team=away_team, game_file=upload.filename)
 
             else:
                 print "Error - Not a JSON file"
@@ -107,19 +99,21 @@ def submitTeams():
 
     # Run Simulation ======
     g = Game(str(home_team), str(away_team))
-    game = g.playGame()
-    print game
+    g.playGame()
+    game_file = g.getJSONData()
+
+    print game_file
 
     # For A Dynamic Page
     # <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
-    return template('displayGame', home_team=home_team, away_team=away_team)
+    return template('displayGame', home_team=home_team, away_team=away_team, game_file=game_file)
     # return template('displayGame')
 
 @route('/download/<filename>')
 def static(filename):
     '''Download Simulation Files'''
     print "DOWNLOAD FROM "+historical_games_location
-    return static_file(filename, root='static/teams/', download=filename)
+    return static_file(filename, root='static/' + historical_games_location + '/', download=filename)
 
 @route('/static/<directory>/<filename>')
 def static(filename, directory):

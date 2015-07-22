@@ -54,6 +54,8 @@ B.A.S.E.S. development team members, without us, this whole thing wouldn't have 
 *   Philip DiMarco
 *   Mary Menges
 *   Nicholas-Jason Roache
+*   Chenqi Zhu
+*   Swethana Gopisetti
 *   Our Research Mentor and Professor, Gil Eckert
 
 #### Funding

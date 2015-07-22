@@ -90,8 +90,7 @@
 
               <script>
                 // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
-                // In time the location of this data file should be dynamic
-                file_location = '/static/simulations/data.json'
+                file_location = '/static/simulations/{{ game_file }}'
 
                 $.getJSON(file_location, function(data) {
                   var output="<ul>";

@@ -5,8 +5,8 @@ $(function () {
       'data' : {
         'url' : function (data) {
           return data.id === '#' ?
-          '/static/teams/file_tree.json' :
-          '/static/teams/file_tree_children.json';
+          '/static/simulations/file_tree.json' :
+          '/static/simulations/file_tree_children.json';
         },
         'data' : function (data) {
           return { "id" : data.id };
