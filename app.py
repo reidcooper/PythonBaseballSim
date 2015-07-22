@@ -1,10 +1,12 @@
 #!/usr/bin/python
 
 from bottle import *
-import teamtxt
 import json
+import re
 import sys
 import os
+import time
+import datetime
 from baseballGamePackage.Game import Game
 
 ''' Global Settings '''
@@ -38,9 +40,21 @@ def submitHistoricGame():
 
     # Play Ball with a selected JSON game file
     if request.forms.get('play_ball_btn'):
+
+        # Temp Until We Read File Now
+        home_team = "HomeTeam"
+        away_team = "AwayTeam"
+
+        ts = time.time()
+        st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M-%S')
+        temp_file_name = st + "_" + home_team + "_" + away_team + "_"
+
+        home_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(2)
+        away_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(3)
+
         json_game = request.forms.get('gameFile')
         print "Game Selected: " + json_game
-        return template('displayGame')
+        return template('displayGame', home_team=home_team, away_team=away_team)
 
     # If the User wants to upload a JSON game file
     elif request.forms.get('upload_btn'):
@@ -54,7 +68,20 @@ def submitHistoricGame():
 
                 file_path = "{path}/{file}".format(path=var, file=upload.filename)
                 upload.save(file_path, overwrite=True)
-                return template('displayGame')
+
+                # Temp Until We Read File Now
+                home_team = "HomeTeam"
+                away_team = "AwayTeam"
+
+                ts = time.time()
+                st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M-%S')
+                temp_file_name = st + "_" + home_team + "_" + away_team + "_"
+
+                home_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(2)
+                away_team = re.search('([^_]*)_([^_]*)_([^_]*)', temp_file_name).group(3)
+
+                return template('displayGame', home_team=home_team, away_team=away_team)
+
             else:
                 print "Error - Not a JSON file"
                 return template('historicGame')
@@ -85,8 +112,8 @@ def submitTeams():
 
     # For A Dynamic Page
     # <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
-    # return template('displayGame', home_team=home_team, away_team=away_team)
-    return template('displayGame')
+    return template('displayGame', home_team=home_team, away_team=away_team)
+    # return template('displayGame')
 
 @route('/download/<filename>')
 def static(filename):
@@ -153,5 +180,6 @@ def error405(error):
 # Set debug to false for production
 if __name__ == '__main__':
     print "\nServinging Up PythonBaseballSimulator...\n"
+
     port = int(os.environ.get('PORT', port))
     run(host='0.0.0.0', port=port, debug=debug)

@@ -47,7 +47,7 @@
       <div class="gameOutput" id="game1">
 
         <div id="game1-row1">
-          <center><h3>Game 1</h3></center>
+          <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
 
           <div class="col-md-6" id="scoreboard">
             <div id="scoreboard-content">
