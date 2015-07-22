@@ -56,10 +56,10 @@
 			  <table style="float: left">
 				<tr><td><b>Team</b></td></tr>
 				<tr><td>Away Team</td></tr>
-				<tr><td>Home Team</td></tr>					
-			  </table>				
-			<table class="table table-condensed table-bordered">					
-			  <tr class="warning">                                       					
+				<tr><td>Home Team</td></tr>
+			  </table>
+			<table class="table table-condensed table-bordered">
+			  <tr class="warning">
 				<td width='50px'><center><b>1</b></center></td>
 				<td width='50px'><center><b>2</b></center></td>
 				<td width='50px'><center><b>3</b></center></td>
@@ -68,7 +68,7 @@
 				<td width='50px'><center><b>6</b></center></td>
 				<td width='50px'><center><b>7</b></center></td>
 				<td width='50px'><center><b>8</b></center></td>
-				<td width='50px'><center><b>9</b></center></td>                    
+				<td width='50px'><center><b>9</b></center></td>
 				<td width='50px'><center><b>R</b></center></td>
 				<td width='50px'><center><b>H</b></center></td>
 			  </tr>
@@ -83,9 +83,9 @@
 			    	<td width='50px' id = "a8"></td>
 			    	<td width='50px' id = "a9"></td>
 			    	<td width='50px' id = "ar"></td>
-			    	<td width='50px' id = "ah"></td>			
+			    	<td width='50px' id = "ah"></td>
 			  </tr>
-			  <tr class="success"> 
+			  <tr class="success">
 			    	<td width='50px' id = "h1"></td>
 			    	<td width='50px' id = "h2"></td>
 			    	<td width='50px' id = "h3"></td>
@@ -96,8 +96,8 @@
 			    	<td width='50px' id = "h8"></td>
 			    	<td width='50px' id = "h9"></td>
 			    	<td width='50px' id = "hr"></td>
-			    	<td width='50px' id = "hh"></td>				
-			  </tr>				  
+			    	<td width='50px' id = "hh"></td>
+			  </tr>
 			</table>
 			<table class="table table-condensed table-bordered">
 				<tr>
@@ -120,17 +120,17 @@
               <h4>Game Events</h4>
             </center>
             <div class="scroll-box gameEvents-json" id="game1-row1-json">
-			
+
 				<script>
   $.getJSON('testdata.json', function(data) {
         var output="<ul>";
-                	
+
 		var i = -1;
 		var k = 0;
-		
+
 		var home = [0,0,0,0,0,0,0,0,0];
 		var away = [0,0,0,0,0,0,0,0,0];
-		
+
 		var awayRuns = 0;
 		document.getElementById("ar").innerHTML = "<center>"+awayRuns+"</center>";
 		var homeRuns = 0;
@@ -140,7 +140,7 @@
 		var homeHits = 0;
 		document.getElementById("hh").innerHTML = "<center>"+homeHits+"</center>";
 
-		
+
 		var balls = 0;
 		document.getElementById("b").innerHTML = "<center>"+balls+"</center>";
 		var strikes = 0;
@@ -148,9 +148,9 @@
 		var outs = 0;
 		document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
 		/*var away="";
-		var home="";*/				
+		var home="";*/
 		setInterval(function(){ eventFunction()}, 100);
-		
+
 		function scoreFunction() {
 			if(i%2 === 0){
               away[Math.floor(i/2 + 1)-1]++;
@@ -162,9 +162,9 @@
               document.getElementById("h"+ Math.floor(i/2 + 1)).innerHTML = "<center>"+home[Math.floor(i/2 + 1)-1]+"</center>";
               homeRuns++;
               document.getElementById("hr").innerHTML = "<center>"+homeRuns+"</center>";
-            }	 					
+            }
 		}
-		
+
 		function hitFunction() {
 			if(i%2 === 0){
               awayHits++;
@@ -172,14 +172,14 @@
             } else {
               homeHits++;
               document.getElementById("hh").innerHTML = "<center>"+homeHits+"</center>";
-            }	 					
-		}				               
-		
-		function eventFunction() { 
-			
+            }
+		}
+
+		function eventFunction() {
+
 			switch(data[k].code){
               case "START-HALF-INNING":
-				output="<center>" + data[k].description + "</center>";	
+				output="<center>" + data[k].description + "</center>";
 				outs = 0;
 				document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
 				i++;
@@ -187,7 +187,7 @@
               		document.getElementById("a"+ Math.floor(i/2 + 1)).innerHTML = "<center>"+away[Math.floor(i/2 + 1)-1]+"</center>";
             	} else {
               	document.getElementById("h"+ Math.floor(i/2 + 1)).innerHTML = "<center>"+home[Math.floor(i/2 + 1)-1]+"</center>";
-            	}	
+            	}
                 break;
               case "NEW-BATTER":
 				output="<center>" + data[k].description + "</center>";
@@ -264,11 +264,11 @@
 				outs++;
 				document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
                 break;
-              case "OUT-4BH":
+              /*case "OUT-4BH":
 				output="<center>" + data[k].description + "</center>";
 				outs++;
 				document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
-                break;
+                break;*/
               case "OUT-1B":
 				output="<center>" + data[k].description + "</center>";
 				outs++;
@@ -284,7 +284,7 @@
 				outs++;
 				document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
                 break;
-              case "OUT-4B":
+              case "OUT-HP":
 				output="<center>" + data[k].description + "</center>";
 				outs++;
 				document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
@@ -296,28 +296,28 @@
             }
             document.getElementById("game1-row1-json").innerHTML = output;
             k++;
-			
-			
-			/*if (events[k].code=="OUT-1BH" || events[k].code=="OUT-3B") { 
-				j=-1; 
+
+
+			/*if (events[k].code=="OUT-1BH" || events[k].code=="OUT-3B") {
+				j=-1;
 				k++;
-				if (k%2==0) { 
-					scoreFunction(); 
-				} 				
-			}								
-			j++;										
-			if (k==18) {				
+				if (k%2==0) {
+					scoreFunction();
+				}
+			}
+			j++;
+			if (k==18) {
 				output="<center>***** Final Score -- " + data.home_team + ": " + data.final_home_score + " -- " + data.away_team + ": " + data.final_away_score + " *****</center>";
-				document.getElementById("game1-row1-json").innerHTML = output;	
-				home+="<td width='50px'><center>"+data.final_home_score+"</td></center>"; 
-				away+="<td width='50px'><center>"+data.final_away_score+"</td></center>";								   
-				document.getElementById("away").innerHTML=away;			
-				document.getElementById("home").innerHTML=home;		
+				document.getElementById("game1-row1-json").innerHTML = output;
+				home+="<td width='50px'><center>"+data.final_home_score+"</td></center>";
+				away+="<td width='50px'><center>"+data.final_away_score+"</td></center>";
+				document.getElementById("away").innerHTML=away;
+				document.getElementById("home").innerHTML=home;
 			}*/
-        }        
-        output+="</ul>";  		
+        }
+        output+="</ul>";
   });
-    </script>              
+    </script>
             </div>
           </div>
         </div> <!-- End Game1 Row1 -->
