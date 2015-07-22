@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="B.A.S.E.S." content="">
-  <meta name="" content="">
+   <meta name="author" content="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert">
   <link rel="icon" href="/static/icons/favicon.ico">
 
   <title>B.A.S.E.S.</title>
@@ -47,7 +47,7 @@
       <div class="gameOutput" id="game1">
 
         <div id="game1-row1">
-          <center><h3>Game 1</h3></center>
+          <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
 
           <div class="col-md-6" id="scoreboard">
             <div id="scoreboard-content">
@@ -122,7 +122,9 @@
             <div class="scroll-box gameEvents-json" id="game1-row1-json">
 
 				<script>
-  $.getJSON('testdata.json', function(data) {
+                // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
+                file_location = '/static/simulations/{{ game_file }}'
+  $.getJSON(file_location, function(data) {
         var output="<ul>";
 
 		var i = -1;
@@ -325,11 +327,11 @@
 
       <footer class="footer">
         <center>
-          <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, and Professor Gil Eckert</p>
-          <p>&copy; Monmouth University
-            2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
-          </p>
-        </center>
+            <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert</p>
+            <p>&copy; Monmouth University
+            2015<script>new Date().getFullYear()>2015&&document.write(" - "+new Date().getFullYear());</script>
+    </p>
+  </center>
       </footer>
 
     </div> <!-- /container -->

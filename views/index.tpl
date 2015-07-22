@@ -65,8 +65,8 @@
                 <option value="Diamondbacks">Arizona Diamondbacks</option>
                 <option value="Braves">Atlanta Braves</option>
                 <option value="Orioles">Baltimore Orioles</option>
-                <option value="Red_Sox">Boston Red Sox</option>
-                <option value="White_Sox">Chicago White Sox</option>
+                <option value="Red-Sox">Boston Red Sox</option>
+                <option value="White-Sox">Chicago White Sox</option>
                 <option value="Cubs">Chicago Cubs</option>
                 <option value="Reds">Cincinnati Reds</option>
                 <option value="Indians">Cleveland Indians</option>
@@ -90,7 +90,7 @@
                 <option value="Cardinals">St. Louis Cardinals</option>
                 <option value="Rays">Tampa Bay Rays</option>
                 <option value="Rangers">Texas Rangers</option>
-                <option value="Blue_Jays">Toronto Blue Jays</option>
+                <option value="Blue-Jays">Toronto Blue Jays</option>
                 <option value="Nationals">Washington Nationals</option>
               </select>
             </div>
@@ -101,8 +101,8 @@
                 <option value="Diamondbacks">Arizona Diamondbacks</option>
                 <option value="Braves">Atlanta Braves</option>
                 <option value="Orioles">Baltimore Orioles</option>
-                <option value="Red_Sox">Boston Red Sox</option>
-                <option value="White_Sox">Chicago White Sox</option>
+                <option value="Red-Sox">Boston Red Sox</option>
+                <option value="White-Sox">Chicago White Sox</option>
                 <option value="Cubs">Chicago Cubs</option>
                 <option value="Reds">Cincinnati Reds</option>
                 <option value="Indians">Cleveland Indians</option>
@@ -126,7 +126,7 @@
                 <option value="Cardinals">St. Louis Cardinals</option>
                 <option value="Rays">Tampa Bay Rays</option>
                 <option value="Rangers">Texas Rangers</option>
-                <option value="Blue_Jays">Toronto Blue Jays</option>
+                <option value="Blue-Jays">Toronto Blue Jays</option>
                 <option value="Nationals">Washington Nationals</option>
               </select>
             </div>

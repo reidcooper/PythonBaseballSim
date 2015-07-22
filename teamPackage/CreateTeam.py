@@ -45,15 +45,15 @@ class CreateTeam(object):
         elif teamName == "Phillies":
             self.teamBatting = "static/teams/Phillies_batting.txt"
             self.teamPitching = "static/teams/Phillies_pitchers.txt"
-        elif teamName == "Red_Sox":
-            self.teamBatting = "static/teams/Red_Sox_batting.txt"
-            self.teamPitching = "static/teams/Red_Sox_pitchers.txt"
+        elif teamName == "Red-Sox":
+            self.teamBatting = "static/teams/Red-Sox_batting.txt"
+            self.teamPitching = "static/teams/Red-Sox_pitchers.txt"
         elif teamName == "Angels":
             self.teamBatting = "static/teams/Angels_batting.txt"
             self.teamPitching = "static/teams/Angels_pitchers.txt"
-        elif teamName == "White_Sox":
-            self.teamBatting = "static/teams/White_Sox_batting.txt"
-            self.teamPitching = "static/teams/White_Sox_pitchers.txt"
+        elif teamName == "White-Sox":
+            self.teamBatting = "static/teams/White-Sox_batting.txt"
+            self.teamPitching = "static/teams/White-Sox_pitchers.txt"
         elif teamName == "Cubs":
             self.teamBatting = "static/teams/Cubs_batting.txt"
             self.teamPitching = "static/teams/Cubs_pitchers.txt"
@@ -105,9 +105,9 @@ class CreateTeam(object):
         elif teamName == "Nationals":
             self.teamBatting = "static/teams/Nationals_batting.txt"
             self.teamPitching = "static/teams/Nationals_pitchers.txt"
-        elif teamName == "Blue_Jays":
-            self.teamBatting = "static/teams/Blue_Jays_batting.txt"
-            self.teamPitching = "static/teams/Blue_Jays_pitchers.txt"
+        elif teamName == "Blue-Jays":
+            self.teamBatting = "static/teams/Blue-Jays_batting.txt"
+            self.teamPitching = "static/teams/Blue-Jays_pitchers.txt"
         elif teamName == "Marlins":
             self.teamBatting = "static/teams/Marlins_batting.txt"
             self.teamPitching = "static/teams/Marlins_pitchers.txt"
@@ -135,7 +135,7 @@ class CreateTeam(object):
         try:
             scanner = open(var + "/"+ self.teamBatting, "r")
             scanner2 = open(var + "/" + self.teamPitching, "r")
-          
+
 
             for line in scanner:
                 playerData = line.split()
@@ -152,13 +152,13 @@ class CreateTeam(object):
 
             team.config_Batting_Roster()
             team.config_Fielding_Roster()
-            
+
             scanner.close()
             scanner2.close()
 
         except:
             print "Unexpected error"
 
-        
+
 
         return team
