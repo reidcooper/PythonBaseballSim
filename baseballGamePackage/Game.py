@@ -93,7 +93,6 @@ class Game(object):
     return temp
  
  def addGameEvents(self):
-  print self.inningEventList
   self.gameEventList.append(self.inningEventList) 
   self.inningEventList = [] 
 
@@ -113,3 +112,4 @@ class Game(object):
   ts = datetime.datetime.fromtimestamp(ts).strftime("%Y-%m-%d-%H-%M-%S")
   with open(ts+ "_" + self.teams[0].get_Team_Name() + "_" + self.teams[1].get_Team_Name() +'_.json' , 'w') as outfile:
 	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
+  return ts+ "_" + self.teams[0].get_Team_Name() + "_" + self.teams[1].get_Team_Name() +'_.json'
