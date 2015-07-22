@@ -146,7 +146,7 @@
       <center>
         <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert</p>
         <p>&copy; Monmouth University
-        2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>
+        2015<script>new Date().getFullYear()>2015&&document.write(" - "+new Date().getFullYear());</script>
         </p>
       </center>
     </footer>
