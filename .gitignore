@@ -1,4 +1,4 @@
-data.json
+*.json
 data.txt
 test.py
 .DS_Store

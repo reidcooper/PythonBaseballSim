@@ -4,6 +4,8 @@
 import os
 import sys
 import json
+import time
+import datetime
 var = os.path.abspath(os.path.dirname(__file__)+'../..')
 sys.path.append(var)
 
@@ -107,5 +109,7 @@ class Game(object):
 
 
  def getJSONData(self):
-  with open('data.json' , 'w') as outfile:
+  ts = time.time()
+  ts = datetime.datetime.fromtimestamp(ts).strftime("%Y-%m-%d-%H-%M-%S")
+  with open(ts+ "_" + self.teams[0].get_Team_Name() + "_" + self.teams[1].get_Team_Name() +'_.json' , 'w') as outfile:
 	  json.dump(self.gameEventList, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
