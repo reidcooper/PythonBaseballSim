@@ -106,9 +106,9 @@
                     <td width='50px'><center><b>Outs</b></center></td>
                   </tr>
                   <tr>
-                    <td width='50px' id = "b"></td>
-                    <td width='50px' id = "s"></td>
-                    <td width='50px' id = "o"></td>
+                    <td width='50px' id = "b"><center><img id="ball1" src="/static/images/clear.png" alt="empty"> <img id="ball2" src="/static/images/clear.png" alt="empty"> <img id="ball3" src="/static/images/clear.png" alt="empty"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center></td>
+                    <td width='50px' id = "s"><center><img id="strike1" src="/static/images/clear.png" alt="empty"> <img id="strike2" src="/static/images/clear.png" alt="empty"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center></td>
+                    <td width='50px' id = "o"><center><img id="out1" src="/static/images/clear.png" alt="empty"> <img id="out2" src="/static/images/clear.png" alt="empty"> <img id="out3" src="/static/images/clear.png" alt="empty"></center></td>
                   </tr>
                 </table>
               </div>
@@ -144,11 +144,11 @@
 
 
                   var balls = 0;
-                  document.getElementById("b").innerHTML = "<center>"+balls+"</center>";
+                  document.getElementById("b").innerHTML = '<center><img id="ball1" src="/static/images/clear.png" alt="empty"> <img id="ball2" src="/static/images/clear.png" alt="empty"> <img id="ball3" src="/static/images/clear.png" alt="empty"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center>';
                   var strikes = 0;
-                  document.getElementById("s").innerHTML = "<center>"+strikes+"</center>";
+                  document.getElementById("s").innerHTML = '<center><img id="strike1" src="/static/images/clear.png" alt="empty"> <img id="strike2" src="/static/images/clear.png" alt="empty"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center>';
                   var outs = 0;
-                  document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+                  document.getElementById("o").innerHTML = '<center><img id="out1" src="/static/images/clear.png" alt="empty"> <img id="out2" src="/static/images/clear.png" alt="empty"> <img id="out3" src="/static/images/clear.png" alt="empty"></center>';
     /*var away="";
     var home="";*/
     setInterval(function(){ eventFunction()}, 100);
@@ -177,13 +177,83 @@
       }
     }
 
+    function pictureCount(type, count){
+
+      ballCountPics = "";
+      switch(type) {
+        case "ball":
+        switch(count){
+          case 0:
+          ballCountPics = '<center><img id="ball1" src="/static/images/clear.png" alt="empty"> <img id="ball2" src="/static/images/clear.png" alt="empty"> <img id="ball3" src="/static/images/clear.png" alt="empty"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 1:
+          ballCountPics = '<center><img id="ball1" src="/static/images/ball.png" alt="ball"> <img id="ball2" src="/static/images/clear.png" alt="empty"> <img id="ball3" src="/static/images/clear.png" alt="empty"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 2:
+          ballCountPics = '<center><img id="ball1" src="/static/images/ball.png" alt="ball"> <img id="ball2" src="/static/images/ball.png" alt="ball"> <img id="ball3" src="/static/images/clear.png" alt="empty"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 3:
+          ballCountPics = '<center><img id="ball1" src="/static/images/ball.png" alt="ball"> <img id="ball2" src="/static/images/ball.png" alt="ball"> <img id="ball3" src="/static/images/ball.png" alt="ball"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 4:
+          ballCountPics = '<center><img id="ball1" src="/static/images/ball.png" alt="ball"> <img id="ball2" src="/static/images/ball.png" alt="ball"> <img id="ball3" src="/static/images/ball.png" alt="ball"> <img id="ball4" src="/static/images/ball.png" alt="ball"></center>';
+          break;
+          default:
+        }
+        document.getElementById("b").innerHTML = ballCountPics;
+        break;
+
+        case "strike":
+        ballCountPics = "";
+        switch(count){
+          case 0:
+          ballCountPics = '<center><img id="strike1" src="/static/images/clear.png" alt="empty"> <img id="strike2" src="/static/images/clear.png" alt="empty"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 1:
+          ballCountPics = '<center><img id="strike1" src="/static/images/foul.png" alt="strike"> <img id="strike2" src="/static/images/clear.png" alt="empty"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 2:
+          ballCountPics = '<center><img id="strike1" src="/static/images/foul.png" alt="strike"> <img id="strike2" src="/static/images/foul.png" alt="strike"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 3:
+          ballCountPics = '<center><img id="strike1" src="/static/images/foul.png" alt="strike"> <img id="strike2" src="/static/images/foul.png" alt="strike"> <img id="strike3" src="/static/images/foul.png" alt="strike"></center>';
+          break;
+          default:
+        }
+        document.getElementById("s").innerHTML = ballCountPics;
+        break;
+
+        case "out":
+        ballCountPics = "";
+        switch(count){
+          case 0:
+          ballCountPics = '<center><img id="out1" src="/static/images/clear.png" alt="empty"> <img id="out2" src="/static/images/clear.png" alt="empty"> <img id="out3" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 1:
+          ballCountPics = '<center><img id="out1" src="/static/images/out.png" alt="out"> <img id="out2" src="/static/images/clear.png" alt="empty"> <img id="out3" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 2:
+          ballCountPics = '<center><img id="out1" src="/static/images/out.png" alt="out"> <img id="out2" src="/static/images/out.png" alt="out"> <img id="out3" src="/static/images/clear.png" alt="empty"></center>';
+          break;
+          case 3:
+          ballCountPics = '<center><img id="out1" src="/static/images/out.png" alt="out"> <img id="out2" src="/static/images/out.png" alt="out"> <img id="out3" src="/static/images/out.png" alt="out"></center>';
+          break;
+          default:
+        }
+        document.getElementById("o").innerHTML = ballCountPics;
+        break;
+
+        default:
+      }
+    }
+
     function eventFunction() {
 
       switch(data[k].code){
         case "START-HALF-INNING":
         output="<center>" + data[k].description + "</center>";
         outs = 0;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs);
         i++;
         if(i%2 === 0){
           document.getElementById("a"+ Math.floor(i/2 + 1)).innerHTML = "<center>"+away[Math.floor(i/2 + 1)-1]+"</center>";
@@ -194,9 +264,9 @@
         case "NEW-BATTER":
         output="<center>" + data[k].description + "</center>";
         balls = 0;
-        document.getElementById("b").innerHTML = "<center>"+balls+"</center>";
+        pictureCount("ball", balls);
         strikes = 0;
-        document.getElementById("s").innerHTML = "<center>"+strikes+"</center>";
+        pictureCount("strike", strikes);
         break;
         case "NEW-PITCHER":
         output="<center>" + data[k].description + "</center>";
@@ -204,17 +274,17 @@
         case "BALL":
         output="<center>" + data[k].description + "</center>";
         balls++;
-        document.getElementById("b").innerHTML = "<center>"+balls+"</center>";
+        pictureCount("ball", balls);
         break;
         case "STRIKE":
         output="<center>" + data[k].description + "</center>";
         strikes++;
-        document.getElementById("s").innerHTML = "<center>"+strikes+"</center>";
+        pictureCount("strike", strikes);
         break;
         case "FOUL-STRIKE":
         output="<center>" + data[k].description + "</center>";
         strikes++;
-        document.getElementById("s").innerHTML = "<center>"+strikes+"</center>";
+        pictureCount("strike", strikes);
         break;
         case "FOUL":
         output="<center>" + data[k].description + "</center>";
@@ -225,7 +295,7 @@
         case "KO":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "1B":
         output="<center>" + data[k].description + "</center>";
@@ -249,47 +319,47 @@
         case "OUT-BH":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "OUT-1BH":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "OUT-2BH":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "OUT-3BH":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
               /*case "OUT-4BH":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;*/
         case "OUT-1B":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "OUT-2B":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "OUT-3B":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "OUT-HP":
         output="<center>" + data[k].description + "</center>";
         outs++;
-        document.getElementById("o").innerHTML = "<center>"+outs+"</center>";
+        pictureCount("out", outs)
         break;
         case "DIAMOND":
         break;

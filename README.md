@@ -74,3 +74,4 @@ Items used on our website and in our simulation are given credit below.
 *   [Baseball Photo on main page was provided by Wikipedia](https://en.wikipedia.org/wiki/File:Baseball_(crop).jpg)
 *   [Fangraphs, for their data and statistical glossaries](http://www.fangraphs.com/)
 *   [Major League Baseball](http://www.mlb.com/)
+*   Backyard Baseball for Ball Count Graphics (edited)
