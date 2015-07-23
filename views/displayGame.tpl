@@ -72,7 +72,7 @@
                     <td width='50px'><center><b>H</b></center></td>
                   </tr>
                   <tr class="info">
-                    <td width='50px'>{{away_team}}</td>
+                    <td width='50px'>{{home_team}}</td>
                     <td width='50px' id = "a0"></td>
                     <td width='50px' id = "a1"></td>
                     <td width='50px' id = "a2"></td>
@@ -87,7 +87,7 @@
                     <td width='50px' id = "ah"></td>
                   </tr>
                   <tr class="success">
-                    <td width='50px'>{{home_team}}</td>
+                    <td width='50px'>{{away_team}}</td>
                     <td width='50px' id = "h0"></td>
                     <td width='50px' id = "h1"></td>
                     <td width='50px' id = "h2"></td>
@@ -153,7 +153,7 @@
                   document.getElementById("s").innerHTML = '<center><img id="strike1" src="/static/images/clear.png" alt="empty"> <img id="strike2" src="/static/images/clear.png" alt="empty"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center>';
                   var outs = 0;
                   document.getElementById("o").innerHTML = '<center><img id="out1" src="/static/images/clear.png" alt="empty"> <img id="out2" src="/static/images/clear.png" alt="empty"> <img id="out3" src="/static/images/clear.png" alt="empty"></center>';
-    
+
     setInterval(function(){ eventFunction()}, 100);
 
     function scoreFunction() {
@@ -261,7 +261,7 @@
         }
         output="<center>" + data[i][k].description + "</center>";
         outs = 0;
-		pictureCount("out", outs);        
+		pictureCount("out", outs);
 		if(top){
         	document.getElementById("a" + i).innerHTML = "<center>"+away[i]+"</center>";
         } else {
@@ -271,7 +271,7 @@
         case "NEW-BATTER":
         output="<center>" + data[i][k].description + "</center>";
         balls = 0;
-		pictureCount("ball", balls);        
+		pictureCount("ball", balls);
 		strikes = 0;
         pictureCount("strike", strikes);
         break;
@@ -380,7 +380,7 @@
         case "DIAMOND":
         break;
         case "END-INNING-SCORE":
-        output="<center>" + data[i][k].description + "</center>";   
+        output="<center>" + data[i][k].description + "</center>";
         	k = -1;
         	i++;
 		break;
@@ -456,7 +456,7 @@
         default:
       }
     }
-    
+
     output+="</ul>";
   });
 </script>
