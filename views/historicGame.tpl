@@ -5,10 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="B.A.S.E.S." content="">
+  <meta name="BASES" content="">
   <meta name="author" content="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert">
 
-  <title>B.A.S.E.S.</title>
+  <title>BASES</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
           <li role="presentation"><a href="/about">About</a></li>
         </ul>
       </nav>
-      <h3 class="text-muted main-title">B.A.S.E.S.</h3>
+      <h3 class="text-muted main-title">BASES</h3>
     </div>
 
     <div class="jumbotron">

@@ -1,7 +1,7 @@
 # PythonBaseballSim (B.A.S.E.S.)
 #### Installation and Usage
 
-B.A.S.E.S. is a python application with a website front-end interface. The website was developed with the python web framework Bottle.
+BASES is a python application with a website front-end interface. The website was developed with the python web framework Bottle.
 
 Run Website:
 
@@ -16,7 +16,7 @@ Run Website:
 
 # About the Project
 
-The B.A.S.E.S. project was developed by a group of summer research students and professors at Monmouth University during the university's annual School of Science Summer Research Program.
+The BASES project was developed by a group of summer research students and professors at Monmouth University during the university's annual School of Science Summer Research Program.
 
 This program intends to accurately simulate a baseball game from first pitch to last. The simulation will be based on real data obtained from the 2014 MLB season. The simulation will model a game pitch-by-pitch and use batting and pitching statistics as well as fielding statistics to best predict the outcome of a game.
 
@@ -32,7 +32,7 @@ Major Features/Goals:
 
 #### Development
 
-The B.A.S.E.S. project was developed using these following tools and frameworks
+The BASES project was developed using these following tools and frameworks
 
 *   Google Drive
 *   Github
@@ -48,7 +48,7 @@ The B.A.S.E.S. project was developed using these following tools and frameworks
 
 #### Members
 
-B.A.S.E.S. development team members, without us, this whole thing wouldn't have happened.
+BASES development team members, without us, this whole thing wouldn't have happened.
 
 *   Reid Cooper
 *   Philip DiMarco

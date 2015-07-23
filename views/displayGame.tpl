@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="B.A.S.E.S." content="">
+  <meta name="BASES" content="">
   <meta name="author" content="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert">
 
-  <title>B.A.S.E.S.</title>
+  <title>BASES</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
           <li role="presentation"><a href="/about">About</a></li>
         </ul>
       </nav>
-      <h3 class="text-muted main-title">B.A.S.E.S.</h3>
+      <h3 class="text-muted main-title">BASES</h3>
     </div>
 
     <div class="row marketing">
@@ -101,26 +101,24 @@
                     <td width='50px' id = "hh"></td>
                   </tr>
                 </table>
-                <table class="table table-condensed table-bordered">
+                <table class="table table-condensed table-no-border">
                   <tr>
-                    <td width='50px'><center><b>Balls</b></center></td>
-                    <td width='50px'><center><b>Strikes</b></center></td>
-                    <td width='50px'><center><b>Outs</b></center></td>
+                    <td width='50px'><center><h4>Balls</h4></center></td>
+                    <td width='50px'><center><h4>Strikes</h4></center></td>
+                    <td width='50px'><center><h4>Outs</h4></center></td>
                   </tr>
                   <tr>
-                    <td width='50px' id = "b"><center><img id="ball1" src="/static/images/clear.png" alt="empty"> <img id="ball2" src="/static/images/clear.png" alt="empty"> <img id="ball3" src="/static/images/clear.png" alt="empty"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center></td>
-                    <td width='50px' id = "s"><center><img id="strike1" src="/static/images/clear.png" alt="empty"> <img id="strike2" src="/static/images/clear.png" alt="empty"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center></td>
-                    <td width='50px' id = "o"><center><img id="out1" src="/static/images/clear.png" alt="empty"> <img id="out2" src="/static/images/clear.png" alt="empty"> <img id="out3" src="/static/images/clear.png" alt="empty"></center></td>
+                    <td width='50px' id = "b"><center><img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"></center></td>
+                    <td width='50px' id = "s"><center><img id="strike0" src="/static/images/clear.png" alt="empty"> <img id="strike0" src="/static/images/clear.png" alt="empty"> <img id="strike0" src="/static/images/clear.png" alt="empty"></center></td>
+                    <td width='50px' id = "o"><center><img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"></center></td>
                   </tr>
                 </table>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6" id="gameEvents">
-            <center>
-              <h4>Game Events</h4>
-            </center>
+          <div class="col-md-6" id="gameEvents" align="left">
+            <h4>Game Events</h4>
             <div class="scroll-box gameEvents-json" id="game1-row1-json">
               <script>
                 // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
@@ -132,6 +130,9 @@
           </div>
           <div class="col-md-6" id="diamond-div">
             <div class="scroll-box diamond" id="diamond">
+              <center>
+                <h4>Diamond</h4>
+              </center>
               <script>
               </script>
             </div>

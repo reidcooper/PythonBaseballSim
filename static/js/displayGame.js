@@ -7,8 +7,11 @@ function displayGameWeb(file_location){
   $.getJSON(file_location, function(data) {
     var output="<ul>";
 
+    var objDiv = document.getElementById("game1-row1-json");
+
     var i = 0;
     var k = 0;
+    var playNumber = 1;
     var top = false;
 
     var home = [0,0,0,0,0,0,0,0,0,0];
@@ -25,13 +28,13 @@ function displayGameWeb(file_location){
 
 
     var balls = 0;
-    document.getElementById("b").innerHTML = '<center><img id="ball1" src="/static/images/clear.png" alt="empty"> <img id="ball2" src="/static/images/clear.png" alt="empty"> <img id="ball3" src="/static/images/clear.png" alt="empty"> <img id="ball4" src="/static/images/clear.png" alt="empty"></center>';
+    document.getElementById("b").innerHTML = '<center><img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"></center>';
     var strikes = 0;
-    document.getElementById("s").innerHTML = '<center><img id="strike1" src="/static/images/clear.png" alt="empty"> <img id="strike2" src="/static/images/clear.png" alt="empty"> <img id="strike3" src="/static/images/clear.png" alt="empty"></center>';
+    document.getElementById("s").innerHTML = '<center><img id="strike0" src="/static/images/clear.png" alt="empty"> <img id="strike0" src="/static/images/clear.png" alt="empty"> <img id="strike0" src="/static/images/clear.png" alt="empty"></center>';
     var outs = 0;
-    document.getElementById("o").innerHTML = '<center><img id="out1" src="/static/images/clear.png" alt="empty"> <img id="out2" src="/static/images/clear.png" alt="empty"> <img id="out3" src="/static/images/clear.png" alt="empty"></center>';
+    document.getElementById("o").innerHTML = '<center><img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"></center>';
 
-    var myTimer = setInterval(function(){ eventFunction()}, 100);
+    var myTimer = setInterval(function(){ eventFunction()}, 1);
 
 
     function scoreFunction() {
@@ -67,7 +70,7 @@ function displayGameWeb(file_location){
         } else {
           top = true;
         }
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs = 0;
         pictureCount("out", outs);
         if(top){
@@ -77,133 +80,135 @@ function displayGameWeb(file_location){
         }
         break;
         case "NEW-BATTER":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         balls = 0;
         pictureCount("ball", balls);
         strikes = 0;
         pictureCount("strike", strikes);
         break;
         case "NEW-PITCHER":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         break;
         case "BALL":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         balls++;
         pictureCount("ball", balls);
         break;
         case "STRIKE":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         strikes++;
         pictureCount("strike", strikes);
         break;
         case "FOUL-STRIKE":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         strikes++;
         pictureCount("strike", strikes);
         break;
         case "FOUL":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         break;
         case "BB":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         break;
         case "KO":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "1B":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         if(data[i][k+1].code !== "OUT-BH" && data[i][k+1].code !== "OUT-1BH" && data[i][k+1].code !== "OUT-2BH" && data[i][k+1].code !== "OUT-3BH" && data[i][k+1].code !== "OUT-4BH"){
           hitFunction();
         }
         break;
         case "2B":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         if(data[i][k+1].code !== "OUT-BH" && data[i][k+1].code !== "OUT-1BH" && data[i][k+1].code !== "OUT-2BH" && data[i][k+1].code !== "OUT-3BH" && data[i][k+1].code !== "OUT-4BH"){
           hitFunction();
         }
         break;
         case "3B":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         if(data[i][k+1].code !== "OUT-BH" && data[i][k+1].code !== "OUT-1BH" && data[i][k+1].code !== "OUT-2BH" && data[i][k+1].code !== "OUT-3BH" && data[i][k+1].code !== "OUT-4BH"){
           hitFunction();
         }
         break;
         case "HR":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         if(data[i][k+1].code !== "OUT-BH" && data[i][k+1].code !== "OUT-1BH" && data[i][k+1].code !== "OUT-2BH" && data[i][k+1].code !== "OUT-3BH" && data[i][k+1].code !== "OUT-4BH"){
           hitFunction();
         }
         break;
         case "RUN-SCORES":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         scoreFunction();
         break;
         case "OUT-BH":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "OUT-1BH":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "OUT-2BH":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "OUT-3BH":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         /*case "OUT-4BH":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;*/
         case "OUT-1B":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "OUT-2B":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "OUT-3B":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "OUT-HP":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
         break;
         case "DIAMOND":
         break;
         case "END-INNING-SCORE":
-        output="<center>" + data[i][k].description + "</center>";
+        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         k = -1;
         i++;
         if(i == data.length) {
           clearInterval(myTimer);
-          window.alert("END OF GAME");
+          // window.alert("END OF GAME");
+          output+="------------------------------END OF GAME-----------------------------";
           console.log("END OF GAME");
         }
         break;
         default:
         clearInterval(myTimer);
-        output="<center>------------------------------default-----------------------------</center>";
+        output+="<center>------------------------------default-----------------------------</center>";
       }
+      playNumber++;
       document.getElementById("game1-row1-json").innerHTML = output;
+      objDiv.scrollTop = objDiv.scrollHeight;
       k++;
-
     }
 
     // Creates the string of pitchType to be returned to HTML
@@ -212,7 +217,7 @@ function displayGameWeb(file_location){
 
         // Adds number of balls to array
         for(pitch = 0; pitch < count; pitch++){
-          array[pitch] = '<img id="'+type+'"'+ (pitch+1) + ' src="/static/images/'+type+'.png" alt="'+type+'"> ';
+          array[pitch] = '<img id="'+ type + (pitch+1) + '" src="/static/images/'+type+'.png" alt="'+type+'"> ';
         }
 
         // Outputs array to countPics string which is then displayed on HTML page
@@ -228,7 +233,7 @@ function displayGameWeb(file_location){
       // Handles adding the Count Pictures to the HTML, calls makePictureCount() to create the string of pictures
       function pictureCount(type, count){
 
-        var clearPic = '<img id="ball1" src="/static/images/clear.png" alt="empty"> ';
+        var clearPic = '<img id="'+type+'0" src="/static/images/clear.png" alt="empty"> ';
 
         switch(type) {
           case "ball":

@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="B.A.S.E.S." content="">
+  <meta name="BASES" content="">
   <meta name="author" content="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert">
 
-  <title>B.A.S.E.S.</title>
+  <title>BASES</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -38,13 +38,13 @@
           <li role="presentation" class="active"><a href="/about">About</a></li>
         </ul>
       </nav>
-      <h3 class="text-muted">B.A.S.E.S.</h3>
+      <h3 class="text-muted">BASES</h3>
     </div>
 
     <div class="row marketing">
       <div class="col-md-12">
         <h4>About the Project</h4>
-        <p>The B.A.S.E.S. project was developed by a group of summer research students and professors at Monmouth University during the university's annual School of Science Summer Research Program.</p>
+        <p>The BASES project was developed by a group of summer research students and professors at Monmouth University during the university's annual School of Science Summer Research Program.</p>
         <p>This program intends to accurately simulate a baseball game from first pitch to last. The simulation will be based on real data obtained from the 2014 MLB season. The simulation will model a game pitch-by-pitch and use batting and pitching statistics as well as fielding statistics to best predict the outcome of a game.</p>
         <p>Major Features/Goals:</p>
         <ul>
@@ -58,7 +58,7 @@
         </ul>
 
         <h4>Development</h4>
-        <p>The B.A.S.E.S. project was developed using these following tools and frameworks</p>
+        <p>The BASES project was developed using these following tools and frameworks</p>
         <ul>
           <li>Google Drive</li>
           <li>Github</li>
@@ -74,7 +74,7 @@
         </ul>
 
         <h4>Members</h4>
-        <p>B.A.S.E.S. development team members, without us, this whole thing wouldn't of happened.</p>
+        <p>BASES development team members, without us, this whole thing wouldn't of happened.</p>
         <ul>
           <li>Reid Cooper</li>
           <li>Philip DiMarco</li>

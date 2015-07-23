@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="B.A.S.E.S." content="">
+  <meta name="BASES" content="">
   <meta name="author" content="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert">
 
-  <title>B.A.S.E.S.</title>
+  <title>BASES</title>
 
   <!-- Bootstrap core CSS -->
   <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -38,15 +38,16 @@
           <li role="presentation"><a href="/about">About</a></li>
         </ul>
       </nav>
-      <h3 class="text-muted main-title">B.A.S.E.S.</h3>
+      <h3 class="text-muted main-title">BASES</h3>
     </div>
 
     <div class="jumbotron">
-      <h1>Baseball's Accurate Statistical Engine Simulator</h1>
+      <h1><span style="color: LimeGreen">B</span>aseball's <span style="color: blue">A</span>ccurate <span style="color: DarkOrchid">S</span>tatistical <span style="color: red">E</span>ngine <span style="color: Gold">S</span>imulator</h1>
       <p class="lead">Just provide two selected teams below and simulate a real life baseball game!</p>
     </div>
 
     <div class="row marketing center-content">
+      <p>BASES is able to simulate a baseball game for your viewing pleasure! Down below, you can select two Major League Baseball teams to go head-to-head against each other or you can pick a historical game (no two games are alike) in the tab above!</p>
       <div class="col-md-6">
         <h4>Python's Baseball Simulator</h4>
         <p>Pick Two Teams!</p>
@@ -130,7 +131,7 @@
               </select>
             </div>
             <div id="createTeams" class="createTeams">
-<!--               <a class="btn btn-success" id="btnCreateTeams" type="button">Play Ball!</a> -->
+              <!--               <a class="btn btn-success" id="btnCreateTeams" type="button">Play Ball!</a> -->
               <input class="btn btn-success" value="Play Ball!" type="submit" />
             </div>
           </form>
@@ -145,7 +146,7 @@
       <center>
         <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert</p>
         <p>&copy; Monmouth University
-        2015<script>new Date().getFullYear()>2015&&document.write(" - "+new Date().getFullYear());</script>
+          2015<script>new Date().getFullYear()>2015&&document.write(" - "+new Date().getFullYear());</script>
         </p>
       </center>
     </footer>

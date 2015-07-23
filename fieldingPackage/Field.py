@@ -18,7 +18,7 @@ class Field(object):
 
     def newPlayerOnBases(self, n, p, currentAmountOfOuts, walkOrHomeRun):
         self.gameString[:] = []
-        
+
         self.currentField.resetOuts()
         self.currentAmountOfOuts = currentAmountOfOuts
         if walkOrHomeRun == "walk":
@@ -76,7 +76,7 @@ class Field(object):
                     print "three outs have happened! ending fielding"
             else:
                 self.currentField.addOneToOuts()
-                self.gameString.append({"code" : "OUT-BH", "description" : "Out!" + p.to_String() + " made contact, but the fielding team caught the ball! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                self.gameString.append({"code" : "OUT-BH", "description" : "Out! " + p.to_String() + " made contact, but the fielding team caught the ball! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
         self.gameString.append({"code" : "DIAMOND", "description" : self.currentField.printFieldInfo()})
         return self.currentField.getOuts()
 
@@ -156,12 +156,12 @@ class Field(object):
     def isPlayerOutOnBase(self, baseNum, b):
         if self.currentAmountOfOuts + self.currentField.getOuts() >= 3:
             raise ThreeOuts("3 outs have happened")
-        
+
         if not b:
 			a = randint(0,10)
 			if a > 5:
 				b = True
-        
+
         if b:
             print "Player may get out on base"
             if baseNum == 1:
@@ -201,7 +201,7 @@ class Field(object):
                 self.currentField.three.movePlayerOneBase()
                 test = self.isPlayerOutOnBase(4, self.checkIfPlayerIsOnSameBaseAsBall(4))
                 if not test:
-                    
+
                     self.currentField.addScore()
                     print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
                     self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
@@ -210,7 +210,7 @@ class Field(object):
 
     def newPlayerOnBasesWalk(self, p):
         print "amount of bases to move is 1, walk "
-       
+
         if not self.currentField.one.getPlayerOnBase() is None:
          self.currentField.one.movePlayerOneBase()
          if not self.currentField.two.getPlayerOnBase() is None:
@@ -254,7 +254,7 @@ class Field(object):
         self.currentField.addScore()
         print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
         self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
-    
+
     def getGameString(self):
      return self.gameString
 
