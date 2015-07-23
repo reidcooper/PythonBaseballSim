@@ -79,14 +79,14 @@ class Game(object):
  def playGame(self):
     while self.innings < 10:
         self.inning()
-        print "score at end of inning " + str(self.innings) + " is: " + "\n" + "Home Team: " + str(self.teams[0].getScore()) + "\n" + "Away Team: " + str(self.teams[1].getScore())
-        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[0].getScore()) + "  " + "Away Team: " + str(self.teams[1].getScore())}])
+        print "score at end of inning " + str(self.innings) + " is: " + "\n" + "Home Team: " + str(self.teams[1].getScore()) + "\n" + "Away Team: " + str(self.teams[0].getScore())
+        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[1].getScore()) + "  " + "Away Team: " + str(self.teams[0].getScore())}])
         self.addGameEvents()
 
     while self.teams[0].getScore() == self.teams[1].getScore():
         self.inning()
-        print "score at end of inning " + str(self.innings) + " is: " + "\n" + "Home Team: " + str(self.teams[0].getScore()) + "\n" + "Away Team: " + str(self.teams[1].getScore())
-        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[0].getScore()) + "  " + "Away Team: " + str(self.teams[1].getScore())}])
+        print "score at end of inning " + str(self.innings) + " is: " + "\n" + "Home Team: " + str(self.teams[1].getScore()) + "\n" + "Away Team: " + str(self.teams[0].getScore())
+        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[1].getScore()) + "  " + "Away Team: " + str(self.teams[0].getScore())}])
         self.addGameEvents()
 
     temp = [self.teams[0].getScore(), self.teams[1].getScore()]
