@@ -8,7 +8,6 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="B.A.S.E.S." content="">
   <meta name="author" content="Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert">
-  <link rel="icon" href="/static/icons/favicon.ico">
 
   <title>B.A.S.E.S.</title>
 
