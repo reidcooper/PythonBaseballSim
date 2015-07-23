@@ -106,7 +106,7 @@ def submitTeams():
 
     # For A Dynamic Page
     # <center><h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
-    return template('displayGame', home_team=home_team, away_team=away_team, game_file=game_file)
+    return template('displayGame', home_team=home_team, away_team=away_team, game_file="testdata.json")
     # return template('displayGame')
 
 @route('/download/<filename>')
