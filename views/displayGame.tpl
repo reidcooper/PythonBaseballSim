@@ -117,7 +117,7 @@
             </div>
           </div>
 
-          <div class="col-md-6" id="gameEvents" align="left">
+          <div class="col-md-4" id="gameEvents" align="left">
             <h4>Game Events</h4>
             <div class="scroll-box gameEvents-json" id="game1-row1-json">
               <script>
@@ -128,10 +128,21 @@
               </script>
             </div>
           </div>
-          <div class="col-md-6" id="diamond-div">
+          <div class="col-md-4" id="diamond-div">
             <div class="scroll-box diamond" id="diamond">
               <center>
                 <h4>Diamond</h4>
+                <img id="baseball-img" class="baseball" src="/static/DiamondGraphics/empty.jpeg" alt="baseball" style="width:400px;height:400px;">
+              </center>
+              <script>
+              </script>
+            </div>
+          </div>
+          <div class="col-md-4" id="diamond-div">
+            <div class="scroll-box action" id="action">
+              <center>
+                <h4><p id="action-img-title">Play Ball!</p></h4>
+                <img id="action-img" class="baseball" src="/static/images/play_ball.jpg" alt="action-img" style="width:400px;height:400px;">
               </center>
               <script>
               </script>
@@ -139,16 +150,14 @@
           </div>
         </div> <!-- End Game1 Row1 -->
       </div> <!-- End GameOutput -->
-
-      <footer class="footer">
-        <center>
-          <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert</p>
-          <p>&copy; Monmouth University
-            2015<script>new Date().getFullYear()>2015&&document.write(" - "+new Date().getFullYear());</script>
-          </p>
-        </center>
-      </footer>
-
     </div> <!-- /container -->
+    <footer class="footer">
+      <center>
+        <p>Created By Reid Cooper, Philip DiMarco, Mary Menges, and Nicholas-Jason Roache, Chenqi Zhu, Swethana Gopisetti, and Professor Gil Eckert</p>
+        <p>&copy; Monmouth University
+          2015<script>new Date().getFullYear()>2015&&document.write(" - "+new Date().getFullYear());</script>
+        </p>
+      </center>
+    </footer>
   </body>
   </html>

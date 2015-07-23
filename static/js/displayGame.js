@@ -34,7 +34,7 @@ function displayGameWeb(file_location){
     var outs = 0;
     document.getElementById("o").innerHTML = '<center><img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"></center>';
 
-    var myTimer = setInterval(function(){ eventFunction()}, 1);
+    var myTimer = setInterval(function(){ eventFunction()}, 100);
 
 
     function scoreFunction() {
@@ -58,6 +58,28 @@ function displayGameWeb(file_location){
       } else {
         homeHits++;
         document.getElementById("hh").innerHTML = "<center>"+homeHits+"</center>";
+      }
+    }
+
+    function baseRunning(diamond){
+      // 000
+      // [First][Second][Third]
+      if (diamond == "100") {
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/1.jpeg");
+      } else if (diamond == "010") {
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/2.jpeg");
+      } else if (diamond == "001") {
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/3.jpeg");
+      } else if(diamond == "000"){
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/empty.jpeg");
+      } else if(diamond == "110"){
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/1and2.jpeg");
+      } else if(diamond == "011"){
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/2and3.jpeg");
+      } else if(diamond == "101"){
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/1and3.jpeg");
+      } else if(diamond == "111"){
+        $("#baseball-img").attr('src',"/static/DiamondGraphics/loaded.jpeg");
       }
     }
 
@@ -109,9 +131,13 @@ function displayGameWeb(file_location){
         break;
         case "BB":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
+        $("#action-img").attr('src',"/static/images/walk.png");
+        document.getElementById("action-img-title").innerHTML = "Walk!";
         break;
         case "KO":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
+        $("#action-img").attr('src',"/static/images/strike_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Strike Out!";
         outs++;
         pictureCount("out", outs);
         break;
@@ -138,6 +164,8 @@ function displayGameWeb(file_location){
         if(data[i][k+1].code !== "OUT-BH" && data[i][k+1].code !== "OUT-1BH" && data[i][k+1].code !== "OUT-2BH" && data[i][k+1].code !== "OUT-3BH" && data[i][k+1].code !== "OUT-4BH"){
           hitFunction();
         }
+        $("#action-img").attr('src',"/static/images/homerun.jpeg");
+        document.getElementById("action-img-title").innerHTML = "Home Run!";
         break;
         case "RUN-SCORES":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
@@ -147,21 +175,29 @@ function displayGameWeb(file_location){
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         case "OUT-1BH":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         case "OUT-2BH":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         case "OUT-3BH":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         /*case "OUT-4BH":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
@@ -172,23 +208,32 @@ function displayGameWeb(file_location){
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         case "OUT-2B":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         case "OUT-3B":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         case "OUT-HP":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
         outs++;
         pictureCount("out", outs);
+        $("#action-img").attr('src',"/static/images/you_out.jpg");
+        document.getElementById("action-img-title").innerHTML = "Out!";
         break;
         case "DIAMOND":
+        baseRunning(data[i][k].description);
         break;
         case "END-INNING-SCORE":
         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";

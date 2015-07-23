@@ -24,7 +24,7 @@
     width:auto;
     height: 305px;
 /*    border:2px solid black;*/
-    overflow:hidden;
+    overflow:scroll;
     position:relative;
 }
 
