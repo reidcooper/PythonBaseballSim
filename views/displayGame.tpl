@@ -45,7 +45,7 @@
                                 <table style="float: left">
                                 </table>
                                 <table class="table table-condensed table-bordered">
-                                    <tr class="warning">
+                                    <tr class="warning" id="scoreboard-header">
                                         <td width='50px'>
                                             <center><b>Teams</b></center>
                                         </td>
@@ -79,14 +79,14 @@
                                         <td width='50px'>
                                             <center><b>10</b></center>
                                         </td>
-                                        <td width='50px'>
+                                        <td width='50px' id="runs">
                                             <center><b>R</b></center>
                                         </td>
                                         <td width='50px'>
                                             <center><b>H</b></center>
                                         </td>
                                     </tr>
-                                    <tr class="info">
+                                    <tr class="info" id="away-scoreboard">
                                         <td width='50px'>{{away_team}}</td>
                                         <td width='50px' id="a0"></td>
                                         <td width='50px' id="a1"></td>
@@ -101,7 +101,7 @@
                                         <td width='50px' id="ar"></td>
                                         <td width='50px' id="ah"></td>
                                     </tr>
-                                    <tr class="success">
+                                    <tr class="success" id="home-scoreboard">
                                         <td width='50px'>{{home_team}}</td>
                                         <td width='50px' id="h0"></td>
                                         <td width='50px' id="h1"></td>
@@ -161,7 +161,7 @@
                     <div class="col-md-4" id="diamond-div">
                         <div class="diamond-container-div">
                             <center>
-                                <h4>Diamond</h4>
+                                <!-- <h4>Diamond</h4> -->
                                 <img id="baseball-img" class="diamond-img" src="/static/DiamondGraphics/empty.jpeg" alt="baseball-img">
                             </center>
                             <script>
@@ -171,7 +171,7 @@
                     <div class="col-md-4" id="action-div">
                         <div class="action-container-div">
                             <center>
-                                <h4><p id="action-img-title">Play Ball!</p></h4>
+                                <h4>Last Event: <p id="action-img-title">Play Ball!</p></h4>
                                 <img id="action-img" class="action-img" src="/static/images/play_ball.jpg" alt="action-img">
                             </center>
                             <script>
