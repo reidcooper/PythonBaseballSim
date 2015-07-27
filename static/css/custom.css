@@ -31,7 +31,8 @@
 .historicGameFiles {
     width: auto;
     height: 305px;
-    border: 2px solid black;
+    border: 1px solid black;
+    border-style: dotted;
     overflow: scroll;
     position: relative;
 }
