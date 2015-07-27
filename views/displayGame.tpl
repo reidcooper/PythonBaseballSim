@@ -159,20 +159,20 @@
                         </div>
                     </div>
                     <div class="col-md-4" id="diamond-div">
-                        <div class="scroll-box diamond" id="diamond">
+                        <div class="diamond-container-div">
                             <center>
                                 <h4>Diamond</h4>
-                                <img id="baseball-img" class="baseball" src="/static/DiamondGraphics/empty.jpeg" alt="baseball" style="width:400px;height:400px;">
+                                <img id="baseball-img" class="diamond-img" src="/static/DiamondGraphics/empty.jpeg" alt="baseball-img">
                             </center>
                             <script>
                             </script>
                         </div>
                     </div>
-                    <div class="col-md-4" id="diamond-div">
-                        <div class="scroll-box action" id="action">
+                    <div class="col-md-4" id="action-div">
+                        <div class="action-container-div">
                             <center>
                                 <h4><p id="action-img-title">Play Ball!</p></h4>
-                                <img id="action-img" class="baseball" src="/static/images/play_ball.jpg" alt="action-img" style="width:400px;height:400px;">
+                                <img id="action-img" class="action-img" src="/static/images/play_ball.jpg" alt="action-img">
                             </center>
                             <script>
                             </script>

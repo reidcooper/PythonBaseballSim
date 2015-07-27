@@ -16,33 +16,31 @@
 .table-no-border>thead>tr>td,
 .table-no-border>tbody>tr>td,
 .table-no-border>tfoot>tr>td {
-  border-top: none;
-  padding: 10px;
+    border-top: none;
+    padding: 10px;
 }
 
 .gameEvents-json {
-    width:auto;
+    width: auto;
     height: 305px;
-/*    border:2px solid black;*/
-    overflow:scroll;
-    position:relative;
+    /*    border:2px solid black;*/
+    overflow: scroll;
+    position: relative;
 }
 
 .historicGameFiles {
-    width:auto;
+    width: auto;
     height: 305px;
-    border:2px solid black;
-    overflow:scroll;
-    position:relative;
+    border: 2px solid black;
+    overflow: scroll;
+    position: relative;
 }
 
-.footer {
-
-}
+.footer {}
 
 #scoreboard-content {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scoreboard-bgd {
@@ -74,27 +72,56 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 991px) {
+.action-img {
+    width: 400px;
+    height: 400px;
+}
 
+.diamond-img {
+    width: 400px;
+    height: 400px;
+}
+
+@media screen and (max-width: 991px) {
     .center-content {
         margin: 0;
         padding: 0;
         text-align: center;
     }
-
     .baseball {
         margin-top: 25px;
         margin-left: auto;
         margin-right: auto;
         display: block;
     }
-
-    .gameOutput {
-
+    .gameOutput {}
+    .main-title {
+        font-size: 15px;
     }
-
+    .header {
+        font-size: 12px;
+    }
     .createTeams {
         margin: 1em;
     }
-
+    .game-browser {
+        overflow: hidden;
+        width: 100%;
+    }
+    .diamond-img {
+        width: 300px;
+        height: 300px;
+        margin-top: 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .action-img {
+        width: 300px;
+        height: 300px;
+        margin-top: 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

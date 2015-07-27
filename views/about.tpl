@@ -30,7 +30,7 @@
                     <li role="presentation" class="active"><a href="/about">About</a></li>
                 </ul>
             </nav>
-            <h3 class="text-muted">BASES</h3>
+            <h3 class="text-muted main-title">BASES</h3>
         </div>
         <div class="row marketing">
             <div class="col-md-12">
