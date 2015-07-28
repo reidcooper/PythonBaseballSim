@@ -36,7 +36,7 @@ class CreateTeam(object):
     def createTeam(self, teamName):
         #batting_players.append(([row["Name"].replace(" ", ""), row["Position"], float(row["H"]), float(row["IPR"]), float(row["O-Swing%"]), float(row["Z-Swing%"]), float(row["O-Contact%"]), float(row["Z-Contact%"]), float(row["1B%"]), float(row["2B%"]), float(row["3B%"]), float(row["HR%"]), float(row["FP"])]))
         team = Team()
-        team.set_Team_Name(teamName)
+        team.setTeamName(teamName)
         temp2 = 0
 
         if teamName == "Yankees":
@@ -132,33 +132,28 @@ class CreateTeam(object):
         else:
             print "enter a valid team, capitalize"
 
-        try:
-            scanner = open(var + "/"+ self.teamBatting, "r")
-            scanner2 = open(var + "/" + self.teamPitching, "r")
+
+        scanner = open(var + "/"+ self.teamBatting, "r")
+        scanner2 = open(var + "/" + self.teamPitching, "r")
 
 
-            for line in scanner:
+        for line in scanner:
                 playerData = line.split()
                 player = Player(playerData)
-                team.add_Player(player)
+                team.addPlayer(player)
 
-            for line in scanner2:# find a better way!
+        for line in scanner2:# find a better way!
                 if temp2 < self.pitcherCount:
                     playerData = ["0"] * 13
                     pitcherData = line.split()
                     pitcher = Pitcher(playerData, pitcherData)
-                    team.add_Player(pitcher)
+                    team.addPlayer(pitcher)
                     temp2 = temp2 + 1
 
-            team.config_Batting_Roster()
-            team.config_Fielding_Roster()
+        team.configBattingRoster()
+        team.configFieldingRoster()
 
-            scanner.close()
-            scanner2.close()
-
-        except:
-            print "Unexpected error"
-
-
+        scanner.close()
+        scanner2.close()
 
         return team

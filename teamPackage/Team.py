@@ -5,78 +5,78 @@
 class Team(object):
 
     def __init__(self):
-     self.player_At_Bat = -1
-     self.full_Team = []
+     self.playerAtBat = -1
+     self.fullTeam = []
      self.players = []
-     self.fielding_Roster = []
-     self.missing_Positions = []
-     self.team_Name = "temp"
+     self.fieldingRoster = []
+     self.missingPositions = []
+     self.teamName = "temp"
      self.score = 0
      self.outs = 0
      self.found = False
      self.count = 0
 
-    def config_Fielding_Roster(self):
-        self.fielding_Roster.append(self.get_Player_From_Array("LF"))
-        self.fielding_Roster.append(self.get_Player_From_Array("CF"))
-        self.fielding_Roster.append(self.get_Player_From_Array("RF"))
-        self.fielding_Roster.append(self.get_Player_From_Array("3B"))
-        self.fielding_Roster.append(self.get_Player_From_Array("SS"))
-        self.fielding_Roster.append(self.get_Player_From_Array("2B"))
-        self.fielding_Roster.append(self.get_Player_From_Array("1B"))
-        self.fielding_Roster.append(self.get_Player_From_Array("C"))
-        self.fielding_Roster.append(self.get_Player_From_Array("P"))
+    def configFieldingRoster(self):
+        self.fieldingRoster.append(self.getPlayerFromArray("LF"))
+        self.fieldingRoster.append(self.getPlayerFromArray("CF"))
+        self.fieldingRoster.append(self.getPlayerFromArray("RF"))
+        self.fieldingRoster.append(self.getPlayerFromArray("3B"))
+        self.fieldingRoster.append(self.getPlayerFromArray("SS"))
+        self.fieldingRoster.append(self.getPlayerFromArray("2B"))
+        self.fieldingRoster.append(self.getPlayerFromArray("1B"))
+        self.fieldingRoster.append(self.getPlayerFromArray("C"))
+        self.fieldingRoster.append(self.getPlayerFromArray("P"))
 
-        for x in range(0, len(self.fielding_Roster)):
-            if self.fielding_Roster[x] == False:
-                temp = self.fill_Player_Spot()
-                temp2 = temp.duplicate_Player()
-                self.fielding_Roster[x]= temp2
-                self.fielding_Roster[x].set_Position(self.missing_Positions[0]);
-                self.missing_Positions.pop(0)
+        for x in range(0, len(self.fieldingRoster)):
+            if self.fieldingRoster[x] == False:
+                temp = self.fillPlayerSpot()
+                temp2 = temp.duplicatePlayer()
+                self.fieldingRoster[x]= temp2
+                self.fieldingRoster[x].setPosition(self.missingPositions[0]);
+                self.missingPositions.pop(0)
                 #self.missing_Positions.remove(0)
 
-        for h in range (0, len(self.fielding_Roster)):
-            print self.fielding_Roster[h].to_String()
+        for h in range (0, len(self.fieldingRoster)):
+            print self.fieldingRoster[h].toString()
 
 
     def getPlayerInFieldingPostion(self,pos):
-     for x in range(0, len(self.fielding_Roster)):
-        if self.fielding_Roster[x].get_Position() == pos:
-                return self.fielding_Roster[x]
+     for x in range(0, len(self.fieldingRoster)):
+        if self.fieldingRoster[x].getPosition() == pos:
+                return self.fieldingRoster[x]
 
      print "null player found this is very bad " + pos
      return None
 
 
-    def fill_Player_Spot(self):
-     player_On_List = False
-     for x in range (0, len(self.full_Team)):
-        for y in range(0, len(self.fielding_Roster)):
-            if self.fielding_Roster[y] != False:
-                if self.full_Team[x].to_String() == self.fielding_Roster[y].to_String():
+    def fillPlayerSpot(self):
+     playerOnList = False
+     for x in range (0, len(self.fullTeam)):
+        for y in range(0, len(self.fieldingRoster)):
+            if self.fieldingRoster[y] != False:
+                if self.fullTeam[x].toString() == self.fieldingRoster[y].toString():
                     playerOnList = True
-            if not player_On_List:
-                return self.full_Team[x]
+            if not playerOnList:
+                return self.fullTeam[x]
 
      return none
 
 
-    def get_Player_From_Array(self, position):
+    def getPlayerFromArray(self, position):
         self.count = 0;
         self.found = False;
-        while not self.found and self.count < len(self.full_Team):
-            if self.full_Team[self.count].get_Position() == position:
-                return self.full_Team[self.count]
+        while not self.found and self.count < len(self.fullTeam):
+            if self.fullTeam[self.count].getPosition() == position:
+                return self.fullTeam[self.count]
             else:
                 self.count = self.count + 1
-        self.missing_Positions.append(position)
+        self.missingPositions.append(position)
         return False
 
-    def config_Batting_Roster(self):
+    def configBattingRoster(self):
      for x in range(0,8):
-        self.players.append(self.full_Team[x])
-     self.players.append(self.full_Team[(len(self.full_Team)-1)])
+        self.players.append(self.fullTeam[x])
+     self.players.append(self.fullTeam[(len(self.fullTeam)-1)])
 
 
     def addOneToScore(self):
@@ -100,21 +100,21 @@ class Team(object):
     def getScore(self):
      return self.score
 
-    def add_Player(self, p):
-     self.full_Team.append(p)
+    def addPlayer(self, p):
+     self.fullTeam.append(p)
 
-    def get_Player(self, index):
+    def getPlayer(self, index):
      return self.players.get(index)
 
     def getNextPlayerAtBat(self):
-     self.player_At_Bat = self.player_At_Bat + 1
-     return self.players[self.player_At_Bat % 7]
+     self.playerAtBat = self.playerAtBat + 1
+     return self.players[self.playerAtBat % 7]
 
-    def get_Pitcher(self):
+    def getPitcher(self):
      return self.players[8]
 
-    def get_Team_Name(self):
-     return self.team_Name
+    def getTeamName(self):
+     return self.teamName
 
-    def set_Team_Name(self, Team_Name):
-     self.team_Name = Team_Name
+    def setTeamName(self, TeamName):
+     self.teamName = TeamName

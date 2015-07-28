@@ -5,16 +5,16 @@
 class Player(object):
 
     name = ""
-    chance_Single = 0
-    chance_Double = 0
-    chance_Triple = 0
-    chance_Homerun = 0
+    chanceSingle = 0
+    chanceDouble = 0
+    chanceTriple = 0
+    chanceHomerun = 0
     IPR = 0
     hits = 0
-    o_Swing = 0
-    z_Swing = 0
-    o_Contact = 0
-    z_Contact = 0
+    oSwing = 0
+    zSwing = 0
+    oContact = 0
+    zContact = 0
     FP = 0
     position = ""
     clonedData = []
@@ -22,95 +22,95 @@ class Player(object):
     def __init__(self, playerData):
         #batting_players.append(([row["Name"].replace(" ", ""), row["Position"], float(row["H"]), float(row["IPR"]), float(row["O-Swing%"]), float(row["Z-Swing%"]), float(row["O-Contact%"]), float(row["Z-Contact%"]), float(row["1B%"]), float(row["2B%"]), float(row["3B%"]), float(row["HR%"]), float(row["FP"])]))
         self.name = playerData[0]
-        self.set_Position(playerData[1])
-        self.set_Hits((playerData[2]))
-        self.set_IPR((playerData[3]))
-        self.set_o_Swing((playerData[4]))
-        self.set_z_Swing((playerData[5]))
-        self.set_o_Contact((playerData[6]))
-        self.set_z_Contact((playerData[7]))
-        self.set_Chance_Single((playerData[8]))
-        self.set_Chance_Double((playerData[9]))
-        self.set_Chance_Triple((playerData[10]))
-        self.set_Chance_Homerun((playerData[11]))
-        self.set_FP((playerData[12]))
+        self.setPosition(playerData[1])
+        self.setHits((playerData[2]))
+        self.setIPR((playerData[3]))
+        self.setOSwing((playerData[4]))
+        self.setZSwing((playerData[5]))
+        self.setOContact((playerData[6]))
+        self.setZContact((playerData[7]))
+        self.setChanceSingle((playerData[8]))
+        self.setChanceDouble((playerData[9]))
+        self.setChanceTriple((playerData[10]))
+        self.setChanceHomerun((playerData[11]))
+        self.setFP((playerData[12]))
 
         self.clonedData = playerData
 
-    def to_String(self):
+    def toString(self):
         return self.name
 
-    def get_Chance_Single(self):
-        return float(self.chance_Single)
+    def getChanceSingle(self):
+        return float(self.chanceSingle)
 
-    def set_Chance_Single(self,Chance_Single):
-        self.chance_Single = Chance_Single
+    def setChanceSingle(self,chanceSingle):
+        self.chanceSingle = chanceSingle
 
-    def get_Chance_Double(self):
-        return float(self.chance_Double)
+    def getChanceDouble(self):
+        return float(self.chanceDouble)
 
-    def set_Chance_Double(self,Chance_Double):
-        self.chance_Double = Chance_Double
+    def setChanceDouble(self,chanceDouble):
+        self.chanceDouble = chanceDouble
 
-    def get_Chance_Triple(self):
-        return float(self.chance_Triple)
+    def getChanceTriple(self):
+        return float(self.chanceTriple)
 
-    def set_Chance_Triple(self,Chance_Triple):
-        self.chance_Triple = Chance_Triple
+    def setChanceTriple(self, chanceTriple):
+        self.chanceTriple = chanceTriple
 
-    def get_Chance_Homerun(self):
-        return float(self.chance_Homerun)
+    def getChanceHomerun(self):
+        return float(self.chanceHomerun)
 
-    def set_Chance_Homerun(self, Chance_Homerun):
-        self.chance_Homerun = Chance_Homerun
+    def setChanceHomerun(self, chanceHomerun):
+        self.chanceHomerun = chanceHomerun
 
-    def get_IPR(self):
+    def getIPR(self):
         return float(self.IPR)
 
-    def set_IPR(self, iPR):
-        self.IPR = iPR
+    def setIPR(self, IPR):
+        self.IPR = IPR
 
-    def get_Hits(self):
+    def getHits(self):
         return float(self.hits)
 
-    def set_Hits(self, Hits):
+    def setHits(self, Hits):
         self.hits = Hits
 
-    def get_o_Swing(self):
-        return float(self.o_Swing)
+    def getOSwing(self):
+        return float(self.oSwing)
 
-    def set_o_Swing(self, O_Swing):
-        self.o_Swing = O_Swing
+    def setOSwing(self, oSwing):
+        self.oSwing = oSwing
 
-    def get_z_Swing(self):
-        return float(self.z_Swing)
+    def getZSwing(self):
+        return float(self.zSwing)
 
-    def set_z_Swing(self, Z_Swing):
-        self.z_Swing = Z_Swing
+    def setZSwing(self, zSwing):
+        self.z_Swing = zSwing
 
-    def get_o_Contact(self):
-        return float(self.o_Contact)
+    def getOContact(self):
+        return float(self.oContact)
 
-    def set_o_Contact(self, O_Contact):
-        self.o_Contact = O_Contact
+    def setOContact(self, oContact):
+        self.oContact = oContact
 
-    def get_z_Contact(self):
-        return float(self.z_Contact)
+    def getZContact(self):
+        return float(self.zContact)
 
-    def set_z_Contact(self, Z_Contact):
-        self.z_Contact = Z_Contact
+    def setZContact(self, zContact):
+        self.zContact = zContact
 
     def getFP(self):
         return float(self.FP)
 
-    def set_FP(self, fP):
+    def setFP(self, fP):
         self.FP = fP
 
-    def get_Position(self):
+    def getPosition(self):
         return self.position
 
-    def set_Position(self, Position):
-        self.position = Position
+    def setPosition(self, position):
+        self.position = position
 
-    def duplicate_Player(self):
+    def duplicatePlayer(self):
         return Player(self.clonedData)

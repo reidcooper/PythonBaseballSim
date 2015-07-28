@@ -92,7 +92,7 @@ class CurrentField (object):
 
 
  def putBallIntoRandomSquare(self):
-     self.ball.setPostion(0, randint(0, 5))
+     self.ball.setPostion(randint(0, 2), randint(0, 5))
 	#ball.setPostion(0, 0);
 
 

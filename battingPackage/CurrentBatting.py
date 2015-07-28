@@ -19,37 +19,37 @@ class CurrentBatting(object):
         self.pitcher = pitcher
         self.player = player
 
-    def add_Strike(self):
+    def addStrike(self):
         self.strikes = self.strikes + 1
 
-    def add_Ball(self):
+    def addBall(self):
         self.balls = self.balls + 1
 
-    def add_Foul(self):
+    def addFoul(self):
         self.fouls = self.fouls + 1
 
-    def get_Strikes(self):
+    def getStrikes(self):
         return self.strikes
 
-    def set_Strikes(self, strikes):
+    def setStrikes(self, strikes):
         self.strikes = strikes
 
-    def get_Balls(self):
+    def getBalls(self):
         return self.balls
 
-    def set_Balls(self, balls):
+    def setBalls(self, balls):
         self.balls = balls;
 
-    def get_Fouls(self):
+    def getFouls(self):
         return self.fouls;
 
-    def set_Fouls(self, fouls):
+    def setFouls(self, fouls):
         self.fouls = fouls
 
-    def get_Player(self):
+    def getPlayer(self):
         return self.player
 
-    def get_Pitcher(self):
+    def getPitcher(self):
         return self.pitcher
 
     def getHomerunOrWalk(self):

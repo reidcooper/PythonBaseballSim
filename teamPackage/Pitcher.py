@@ -58,7 +58,7 @@ class Pitcher(Player):
         else:
             return baseSpeed + temp
 
-    def get_Zone_Per(self):
+    def getZonePer(self):
         return self.zonePer
     def getFb(self):
         return self.fb

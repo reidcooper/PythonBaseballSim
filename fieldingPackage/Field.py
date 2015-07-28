@@ -76,7 +76,7 @@ class Field(object):
                     print "three outs have happened! ending fielding"
             else:
                 self.currentField.addOneToOuts()
-                self.gameString.append({"code" : "OUT-BH", "description" : "Out! " + p.to_String() + " made contact, but the fielding team caught the ball! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                self.gameString.append({"code" : "OUT-BH", "description" : "Out! " + p.toString() + " made contact, but the fielding team caught the ball! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
         self.gameString.append({"code" : "DIAMOND", "description" : self.currentField.printFieldInfo()})
         return self.currentField.getOuts()
 
@@ -157,35 +157,35 @@ class Field(object):
         if self.currentAmountOfOuts + self.currentField.getOuts() >= 3:
             raise ThreeOuts("3 outs have happened")
 
-        if not b:
-			a = randint(0,10)
-			if a > 5:
-				b = True
+        #if not b:
+			#a = randint(0,10)
+			#if a > 5:
+				#b = True
 
         if b:
             print "Player may get out on base"
             if baseNum == 1:
                 self.currentField.addOneToOuts()
                 print "Player got out on 1st base!"
-                self.gameString.append({"code" : "OUT-1B", "description" : "Out! " + self.currentField.one.getPlayerOnBase().to_String() + " was thrown out at First Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                self.gameString.append({"code" : "OUT-1B", "description" : "Out! " + self.currentField.one.getPlayerOnBase().toString() + " was thrown out at First Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
                 self.currentField.one.removePlayerFromBase()
                 return True
             elif baseNum == 2:
                 self.currentField.addOneToOuts()
                 print "Player got out on 2nd base!"
-                self.gameString.append({"code" : "OUT-2B", "description" : "Out! " + self.currentField.two.getPlayerOnBase().to_String() + " was thrown out at Second Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                self.gameString.append({"code" : "OUT-2B", "description" : "Out! " + self.currentField.two.getPlayerOnBase().toString() + " was thrown out at Second Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
                 self.currentField.two.removePlayerFromBase()
                 return True
             elif baseNum ==3 :
                 self.currentField.addOneToOuts()
                 print "Player got out on 3rd base!"
-                self.gameString.append({"code" : "OUT-3B", "description" : "Out! " + self.currentField.three.getPlayerOnBase().to_String() + " was thrown out at Third Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                self.gameString.append({"code" : "OUT-3B", "description" : "Out! " + self.currentField.three.getPlayerOnBase().toString() + " was thrown out at Third Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
                 self.currentField.three.removePlayerFromBase()
                 return True
             elif baseNum == 4:
                 self.currentField.addOneToOuts()
                 print  "Player got out on home plate!"
-                self.gameString.append({"code" : "OUT-HP", "description" : "Out! " + self.currentField.home.getPlayerOnBase().to_String() + " was thrown out at Home! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                self.gameString.append({"code" : "OUT-HP", "description" : "Out! " + self.currentField.home.getPlayerOnBase().toString() + " was thrown out at Home! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
                 return True
             else:
                 print "SOMETHING WENT WRONG"
@@ -203,8 +203,8 @@ class Field(object):
                 if not test:
 
                     self.currentField.addScore()
-                    print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
-                    self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
+                    print self.currentField.home.getPlayerOnBase().toString() + " has scored"
+                    self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
             except ThreeOuts, args:
                 print "3 outs have happened on the field"
 
@@ -218,8 +218,8 @@ class Field(object):
           if not self.currentField.three.getPlayerOnBase() is None:
            self.currentField.three.movePlayerOneBase()
            self.currentField.addScore()
-           print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
-           self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
+           print self.currentField.home.getPlayerOnBase().toString() + " has scored"
+           self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
 
         else:
             self.currentField.one.addPlayerToBase(p)
@@ -229,31 +229,31 @@ class Field(object):
         if not self.currentField.three.getPlayerOnBase() is None:
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore()
-            print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
-            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
+            print self.currentField.home.getPlayerOnBase().toString() + " has scored"
+            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
 
         if not self.currentField.two.getPlayerOnBase() is None:
             self.currentField.two.movePlayerOneBase()
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore();
-            print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
-            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
+            print self.currentField.home.getPlayerOnBase().toString() + " has scored"
+            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
 
         if not self.currentField.one.getPlayerOnBase() is None:
             self.currentField.one.movePlayerOneBase()
             self.currentField.two.movePlayerOneBase()
             self.currentField.three.movePlayerOneBase()
             self.currentField.addScore();
-            print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
-            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
+            print self.currentField.home.getPlayerOnBase().toString() + " has scored"
+            self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
 
         self.currentField.one.addPlayerToBase(p)
         self.currentField.one.movePlayerOneBase()
         self.currentField.two.movePlayerOneBase()
         self.currentField.three.movePlayerOneBase()
         self.currentField.addScore()
-        print self.currentField.home.getPlayerOnBase().to_String() + " has scored"
-        self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().to_String() + " has scored"})
+        print self.currentField.home.getPlayerOnBase().toString() + " has scored"
+        self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
 
     def getGameString(self):
      return self.gameString
