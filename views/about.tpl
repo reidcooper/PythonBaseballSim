@@ -59,7 +59,7 @@
                     <li>Python 2.7.x</li>
                     <li>Java 1.7</li>
                     <li>Bottle: Python Web Framework 0.12</li>
-                    <li>Javascript, HTML, and CSS</li>
+                    <li>Javascript, jQuery, HTML, and CSS</li>
                     <li>Bootstrap CSS Framework</li>
                 </ul>
                 <h4>Members</h4>

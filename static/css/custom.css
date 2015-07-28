@@ -74,13 +74,17 @@ body {
 }
 
 .action-img {
+    width: 300px;
+    height: 300px;
+}
+
+.diamond-img {
     width: 350px;
     height: 350px;
 }
 
-.diamond-img {
-    width: 400px;
-    height: 400px;
+.pitch-count-pics {
+    table-layout: fixed;
 }
 
 @media screen and (max-width: 991px) {
@@ -94,6 +98,13 @@ body {
         margin-left: auto;
         margin-right: auto;
         display: block;
+    }
+    .scoreboard-teams {
+        /*    background: url("../images/scoreboard.jpg") no-repeat;*/
+        min-height: 100%;
+        min-width: 100%;
+        max-height: 100%;
+        max-width: 100%;
     }
     .gameOutput {}
     .main-title {
@@ -124,5 +135,8 @@ body {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    .pitch-count-pics {
+        table-layout: auto;
     }
 }

@@ -43,7 +43,7 @@ The BASES project was developed using these following tools and frameworks
 *   Python 2.7.x
 *   Java 1.7
 *   Bottle: Python Web Framework 0.12
-*   Javascript, HTML, and CSS
+*   Javascript, jQuery, HTML, and CSS
 *   Bootstrap CSS Framework
 
 #### Members

@@ -38,13 +38,18 @@
                 <div id="game1-row1">
                     <center>
                         <h3>Game 1: {{ home_team }} vs. {{away_team}}</h3></center>
+                    <div class="col-md-2 col-md-offset-5">
+                        <label for="displaySpeed">Game Speed - </label>
+                        <input name="displaySpeed" type="range" min="100" max="1500" value="1000" step="100" onchange="showValue(this.value)" />
+                        <span id="range">1000</span>
+                    </div>
                     <div class="col-md-12" id="scoreboard">
                         <div id="scoreboard-content">
                             <h4>Scoreboard</h4>
                             <div class="scoreboard-bgd">
                                 <table style="float: left">
                                 </table>
-                                <table class="table table-condensed table-bordered">
+                                <table class="table table-condensed table-bordered scoreboard-teams">
                                     <tr class="warning" id="scoreboard-header">
                                         <td width='50px'>
                                             <center><b>Teams</b></center>
@@ -117,29 +122,61 @@
                                         <td width='50px' id="hh"></td>
                                     </tr>
                                 </table>
-                                <table class="table table-condensed table-no-border">
+                                <table class="table table-condensed table-no-border pitch-count-pics">
                                     <tr>
-                                        <td width='50px'>
+                                        <td width='100px' style="padding: 0px">
+                                            <center>
+                                                <h4><p>Current Event:</p></h4>
+                                            </center>
+                                        </td>
+                                        <td width='100px' style="padding: 0px">
+                                            <center>
+                                                <h4>Current Batter:</h4>
+                                            </center>
+                                        </td>
+                                        <td width='20px' style="padding: 0px">
+                                        </td>
+                                        <td width='20px' style="padding: 0px">
+                                        </td>
+                                        <td width='20px' style="padding: 0px">
+                                        </td>
+                                        <td width='50px' style="padding: 0px">
                                             <center>
                                                 <h4>Balls</h4></center>
                                         </td>
-                                        <td width='50px'>
+                                        <td width='50px' style="padding: 0px">
                                             <center>
                                                 <h4>Strikes</h4></center>
                                         </td>
-                                        <td width='50px'>
+                                        <td width='50px' style="padding: 0px">
                                             <center>
                                                 <h4>Outs</h4></center>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td width='50px' id="b">
+                                        <td width='100px' style="padding: 0px">
+                                            <center>
+                                                <h4><p id="current-event">Current Event:</p></h4>
+                                            </center>
+                                        </td>
+                                        <td width='100px' id='up-to-bat' style="padding: 0px">
+                                            <center>
+                                                <h4><p id="current-batter">Play Ball!</p></h4>
+                                            </center>
+                                        </td>
+                                        <td width='20px' style="padding: 0px">
+                                        </td>
+                                        <td width='20px' style="padding: 0px">
+                                        </td>
+                                        <td width='20px' style="padding: 0px">
+                                        </td>
+                                        <td width='50px' id="b" style="padding: 0px">
                                             <center><img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"> <img id="ball0" src="/static/images/clear.png" alt="empty"></center>
                                         </td>
-                                        <td width='50px' id="s">
+                                        <td width='50px' id="s" style="padding: 0px">
                                             <center><img id="strike0" src="/static/images/clear.png" alt="empty"> <img id="strike0" src="/static/images/clear.png" alt="empty"> <img id="strike0" src="/static/images/clear.png" alt="empty"></center>
                                         </td>
-                                        <td width='50px' id="o">
+                                        <td width='50px' id="o" style="padding: 0px">
                                             <center><img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"></center>
                                         </td>
                                     </tr>
@@ -147,14 +184,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4" id="gameEvents" align="left">
-                        <h4>Game Events</h4>
-                        <div class="scroll-box gameEvents-json" id="game1-row1-json">
+                    <div class="col-md-4" id="action-div">
+                        <div class="action-container-div">
+                            <center>
+                                <h4>Last Event: <p id="action-img-title">Play Ball!</p></h4>
+                                <img id="action-img" class="action-img" src="/static/images/play_ball.jpg" alt="action-img">
+                            </center>
                             <script>
-                            // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
-                            // Script has been moved to /static/js/displayGame.js
-                            file_location = '/static/simulations/{{ game_file }}'
-                            displayGameWeb(file_location);
                             </script>
                         </div>
                     </div>
@@ -168,13 +204,14 @@
                             </script>
                         </div>
                     </div>
-                    <div class="col-md-4" id="action-div">
-                        <div class="action-container-div">
-                            <center>
-                                <h4>Last Event: <p id="action-img-title">Play Ball!</p></h4>
-                                <img id="action-img" class="action-img" src="/static/images/play_ball.jpg" alt="action-img">
-                            </center>
+                    <div class="col-md-4" id="gameEvents" align="left">
+                        <h4>Game Events</h4>
+                        <div class="scroll-box gameEvents-json" id="game1-row1-json">
                             <script>
+                            // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
+                            // Script has been moved to /static/js/displayGame.js
+                            file_location = '/static/simulations/{{ game_file }}'
+                            displayGameWeb(file_location);
                             </script>
                         </div>
                     </div>

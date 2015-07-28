@@ -6,6 +6,7 @@ function displayGameWeb(file_location) {
 
     $.getJSON(file_location, function(data) {
         var output = "<ul>";
+        var current_event = "";
 
         var objDiv = document.getElementById("game1-row1-json");
 
@@ -44,6 +45,7 @@ function displayGameWeb(file_location) {
                 document.getElementById("a" + i).innerHTML = "<center>" + away[i] + "</center>";
                 awayRuns++;
                 document.getElementById("ar").innerHTML = "<center>" + awayRuns + "</center>";
+                $("#baseball-img").attr('src', "/static/images/score.png");
                 $("#action-img").attr('src', "/static/images/score.png");
                 document.getElementById("action-img-title").innerHTML = "SCORE!";
             } else {
@@ -51,6 +53,7 @@ function displayGameWeb(file_location) {
                 document.getElementById("h" + i).innerHTML = "<center>" + home[i] + "</center>";
                 homeRuns++;
                 document.getElementById("hr").innerHTML = "<center>" + homeRuns + "</center>";
+                $("#baseball-img").attr('src', "/static/images/score.png");
                 $("#action-img").attr('src', "/static/images/score.png");
                 document.getElementById("action-img-title").innerHTML = "SCORE!";
             }
@@ -98,6 +101,7 @@ function displayGameWeb(file_location) {
                         top = true;
                     }
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs = 0;
                     pictureCount("out", outs);
                     if (top) {
@@ -108,6 +112,9 @@ function displayGameWeb(file_location) {
                     break;
                 case "NEW-BATTER":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
+                    var n = data[i][k].description.match(/^([^\s]+)/g);
+                    document.getElementById("current-batter").innerHTML = "<center>" + n + " is up to bat!</center>";
                     balls = 0;
                     pictureCount("ball", balls);
                     strikes = 0;
@@ -115,32 +122,39 @@ function displayGameWeb(file_location) {
                     break;
                 case "NEW-PITCHER":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     break;
                 case "BALL":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     balls++;
                     pictureCount("ball", balls);
                     break;
                 case "STRIKE":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     strikes++;
                     pictureCount("strike", strikes);
                     break;
                 case "FOUL-STRIKE":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     strikes++;
                     pictureCount("strike", strikes);
                     break;
                 case "FOUL":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     break;
                 case "BB":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     $("#action-img").attr('src', "/static/images/walk.png");
                     document.getElementById("action-img-title").innerHTML = "Walk!";
                     break;
                 case "KO":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     $("#action-img").attr('src', "/static/images/strike_out.jpg");
                     document.getElementById("action-img-title").innerHTML = "Strike Out!";
                     outs++;
@@ -148,24 +162,28 @@ function displayGameWeb(file_location) {
                     break;
                 case "1B":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                         hitFunction();
                     }
                     break;
                 case "2B":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                         hitFunction();
                     }
                     break;
                 case "3B":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                         hitFunction();
                     }
                     break;
                 case "HR":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                         hitFunction();
                     }
@@ -174,10 +192,12 @@ function displayGameWeb(file_location) {
                     break;
                 case "RUN-SCORES":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     scoreFunction();
                     break;
                 case "OUT-BH":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -185,6 +205,7 @@ function displayGameWeb(file_location) {
                     break;
                 case "OUT-1BH":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -192,6 +213,7 @@ function displayGameWeb(file_location) {
                     break;
                 case "OUT-2BH":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -199,6 +221,7 @@ function displayGameWeb(file_location) {
                     break;
                 case "OUT-3BH":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -211,6 +234,7 @@ function displayGameWeb(file_location) {
                     break;*/
                 case "OUT-1B":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -218,6 +242,7 @@ function displayGameWeb(file_location) {
                     break;
                 case "OUT-2B":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -225,6 +250,7 @@ function displayGameWeb(file_location) {
                     break;
                 case "OUT-3B":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -232,6 +258,7 @@ function displayGameWeb(file_location) {
                     break;
                 case "OUT-HP":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     outs++;
                     pictureCount("out", outs);
                     $("#action-img").attr('src', "/static/images/you_out.jpg");
@@ -242,6 +269,7 @@ function displayGameWeb(file_location) {
                     break;
                 case "END-INNING-SCORE":
                     output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
+                    current_event = "<center><p>" + data[i][k].description + "</p></center>";
                     k = -1;
                     i++;
                     if (i == data.length) {
@@ -257,6 +285,7 @@ function displayGameWeb(file_location) {
             }
             playNumber++;
             document.getElementById("game1-row1-json").innerHTML = output;
+            document.getElementById("current-event").innerHTML = current_event;
             objDiv.scrollTop = objDiv.scrollHeight;
             k++;
         }
