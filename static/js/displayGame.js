@@ -4,9 +4,14 @@
 
 function displayGameWeb(file_location) {
 
+
     $.getJSON(file_location, function(data) {
         var output = "<ul>";
         var current_event = "";
+
+        var playing = "true";
+        var x = "";
+        var myVar;
 
         var objDiv = document.getElementById("game1-row1-json");
 
@@ -35,9 +40,35 @@ function displayGameWeb(file_location) {
         var outs = 0;
         document.getElementById("o").innerHTML = '<center><img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"> <img id="out0" src="/static/images/clear.png" alt="empty"></center>';
 
-        var myTimer = setInterval(function() {
-            eventFunction()
-        }, 1);
+        document.getElementById("speedDisplay").innerHTML = "<input name='displaySpeed' id='range' type='range' min='100' max='2000' value='100' step='100' onchange='showValue(this.value)'/><span id='range'>100</span>";
+
+        function showValue(newValue) {
+            document.getElementById("range").innerHTML = newValue;
+            clearInterval(myVar);
+            displaySpeed = newValue;
+            myVar = setInterval(function() {
+                eventFunction(x)
+            }, displaySpeed);
+        }
+
+        function playPauseDisplay() {
+            if (playing == "true") {
+                clearInterval(myVar);
+                document.getElementById("playPause").src = "/static/images/play.jpg";
+                playing = "false";
+            } else {
+                myVar = setInterval(function() {
+                    eventFunction(x)
+                }, displaySpeed);
+                document.getElementById("playPause").src = "/static/images/pause.png";
+                playing = "true";
+            }
+        }
+
+        var displaySpeed = 100;
+        myVar = setInterval(function() {
+            eventFunction(x)
+        }, displaySpeed);
 
         function scoreFunction() {
             if (top) {
