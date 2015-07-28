@@ -33,7 +33,7 @@
             <h3 class="text-muted main-title">BASES</h3>
         </div>
         <div class="jumbotron">
-            <h1><span style="color: blue">B</span>aseball's <span style="color: blue">A</span>ccurate <span style="color: blue">S</span>tatistical <span style="color: blue">E</span>ngine <span style="color: blue">S</span>imulator</h1>
+            <h1><span style="color: black">B</span>aseball's <span style="color: black">A</span>ccurate <span style="color: black">S</span>tatistical <span style="color: black">E</span>ngine <span style="color: black">S</span>imulator</h1>
             <p class="lead">Just provide two selected teams below and simulate a real life baseball game!</p>
         </div>
         <div class="row marketing center-content">

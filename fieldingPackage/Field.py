@@ -211,17 +211,22 @@ class Field(object):
     def newPlayerOnBasesWalk(self, p):
         print "amount of bases to move is 1, walk "
 
-        if not self.currentField.one.getPlayerOnBase() is None:
-         self.currentField.one.movePlayerOneBase()
-         if not self.currentField.two.getPlayerOnBase() is None:
-          self.currentField.two.movePlayerOneBase()
-          if not self.currentField.three.getPlayerOnBase() is None:
-           self.currentField.three.movePlayerOneBase()
-           self.currentField.addScore()
-           print self.currentField.home.getPlayerOnBase().toString() + " has scored"
-           self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
-
+        if self.currentField.one.getPlayerOnBase(): # If someone is on FIRST
+            if self.currentField.two.getPlayerOnBase(): # If someone is on SECOND
+                if self.currentField.three.getPlayerOnBase(): # If someone is on THIRD
+                    # Score, move player home
+                    self.currentField.three.movePlayerOneBase()
+                    self.currentField.addScore()
+                    print self.currentField.home.getPlayerOnBase().toString() + " has scored"
+                    self.gameString.append({"code" : "RUN-SCORES", "description" : self.currentField.home.getPlayerOnBase().toString() + " has scored"})
+                # Move SECOND to THIRD
+                self.currentField.two.movePlayerOneBase()
+            # MOVE FIRST to SECOND
+            self.currentField.one.movePlayerOneBase()
+            # PLACE BATTER on FIRST
+            self.currentField.one.addPlayerToBase(p)
         else:
+            # PLACE BATTER on FIRST
             self.currentField.one.addPlayerToBase(p)
 
     def newPlayerOnBasesHomerun(self, p):
