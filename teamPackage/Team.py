@@ -59,7 +59,7 @@ class Team(object):
             if not playerOnList:
                 return self.fullTeam[x]
 
-     return None
+     return self.fullTeam[0]
 
 
     def getPlayerFromArray(self, position):
