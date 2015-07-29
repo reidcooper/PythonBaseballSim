@@ -218,6 +218,8 @@
                             var x = "";
                             var myVar;
 
+                            var firstHalf = true;
+
                             var objDiv = document.getElementById("game1-row1-json");
 
                             var i = 0;
@@ -344,7 +346,12 @@
 
                                 switch (data[i][k].code) {
                                     case "START-HALF-INNING":
-                                        $("#action-img").attr('src', "/static/images/inningover.png");
+                                        if (i == 0 && firstHalf) {
+                                            firstHalf = false;
+                                        } else {
+                                            $("#action-img").attr('src', "/static/images/inningover.png");
+                                        }
+
                                         if (top_inning) {
                                             top_inning = false;
                                         } else {
