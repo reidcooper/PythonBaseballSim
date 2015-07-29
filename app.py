@@ -11,8 +11,8 @@ from baseballGamePackage.Game import Game
 
 ''' Global Settings '''
 historical_games_location = "simulations/"
-debug = True # Change for production to false
-port = 8888 # Typically 80 for websites
+debug = False # Change for production to false
+port = 9999 # Typically 80 for websites
 
 @route('/')
 @route('/index.html')
@@ -118,24 +118,24 @@ def static(filename):
 @route('/static/<directory>/<filename>')
 def static(filename, directory):
     '''Serve Directory Files from the Static Directory <> are wildcards'''
-    print "SERVE STATIC DIRECTORY"
+
+    if filename == 'inningover.png':
+        print "FOUND INNING FILE\n"
+
     return static_file(filename, root='static/'+directory+'/')
 
 ''' ====== FILE TREE ======= '''
 ''' These next four methods serve the purpose of creating the jQuery File Tree shown on the historical game page'''
 @route('/static/js/dist/<filename>')
 def static(filename):
-    print "SERVE JQUERY JS DIRECTORY"
     return static_file(filename, root='static/js/dist/')
 
 @route('/static/js/dist/themes/default/style.min.css')
 def static():
-    print "SERVE JQUERY CSS DIRECTORY"
     return static_file('style.min.css', root='static/js/dist/themes/default/')
 
 @route('/static/js/dist/themes/default/<filename>')
 def static(filename):
-    print "SERVE JQUERY PICTURE/ICONS DIRECTORY"
     return static_file(filename, root='static/js/dist/themes/default/')
 
 # Creates JSON file of all the historical games simulated
@@ -162,13 +162,11 @@ def obtainDirectoryListing():
 ''' 404 returns index page'''
 @error(404)
 def error404(error):
-    print "404 Error"
     return template('index')
 
 ''' 405 returns index page'''
 @error(405)
 def error405(error):
-    print "404 Error"
     return template('index')
 
 # Set debug to false for production

@@ -79,7 +79,7 @@
                                         <td width='50px'>
                                             <center><b>9</b></center>
                                         </td>
-                                        <td width='50px'>
+                                        <td width='50px' id='s10'>
                                             <center><b>10</b></center>
                                         </td>
                                         <td width='50px' id="runs">
@@ -225,8 +225,9 @@
                             var playNumber = 1;
                             var top_inning = false;
 
-                            var home = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-                            var away = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                            // 0 .. 9 (10)
+                            var home = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+                            var away = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
                             var awayRuns = 0;
                             document.getElementById("ar").innerHTML = "<center>" + awayRuns + "</center>";
@@ -277,16 +278,29 @@
 
                             function scoreFunction() {
                                 if (top_inning) {
-                                    away[i]++;
-                                    console.error(top);
-                                    document.getElementById("a" + i).innerHTML = "<center>" + away[i] + "</center>";
+
+                                    if (i > 9) {
+                                        away[9]++;
+                                        document.getElementById("a" + 9).innerHTML = "<center>" + away[9] + "</center>";
+                                    } else {
+                                        away[i]++;
+                                        document.getElementById("a" + i).innerHTML = "<center>" + away[i] + "</center>";
+                                    }
+
                                     awayRuns++;
                                     document.getElementById("ar").innerHTML = "<center>" + awayRuns + "</center>";
                                     $("#baseball-img").attr('src', "/static/images/score.png");
                                     document.getElementById("action-img-title").innerHTML = "SCORE!";
                                 } else {
-                                    home[i]++;
-                                    document.getElementById("h" + i).innerHTML = "<center>" + home[i] + "</center>";
+
+                                    if (i > 9) {
+                                        home[9]++;
+                                        document.getElementById("h" + 9).innerHTML = "<center>" + home[9] + "</center>";
+                                    } else {
+                                        home[i]++;
+                                        document.getElementById("h" + i).innerHTML = "<center>" + home[i] + "</center>";
+                                    }
+
                                     homeRuns++;
                                     document.getElementById("hr").innerHTML = "<center>" + homeRuns + "</center>";
                                     $("#baseball-img").attr('src', "/static/images/score.png");
@@ -330,7 +344,7 @@
 
                                 switch (data[i][k].code) {
                                     case "START-HALF-INNING":
-                                        $("#baseball-img").attr('src', "/static/DiamondGraphics/empty.jpeg");
+                                        $("#action-img").attr('src', "/static/images/inningover.png");
                                         if (top_inning) {
                                             top_inning = false;
                                         } else {
@@ -341,10 +355,20 @@
                                         outs = 0;
                                         pictureCount("out", outs);
                                         if (top_inning) {
-                                            document.getElementById("a" + i).innerHTML = "<center>" + away[i] + "</center>";
+                                            if (i > 9) {
+                                                document.getElementById("s10").innerHTML = "<center><b>" + (i + 1) + "</b></center>";
+                                                document.getElementById("a" + 9).innerHTML = "<center>" + away[9] + "</center>";
+                                            } else {
+                                                document.getElementById("a" + i).innerHTML = "<center>" + away[i] + "</center>";
+                                            }
                                         } else {
-                                            document.getElementById("h" + i).innerHTML = "<center>" + home[i] + "</center>";
+                                            if (i > 9) {
+                                                document.getElementById("h" + 9).innerHTML = "<center>" + home[9] + "</center>";
+                                            } else {
+                                                document.getElementById("h" + i).innerHTML = "<center>" + home[i] + "</center>";
+                                            }
                                         }
+                                        $("#baseball-img").attr('src', "/static/DiamondGraphics/empty.jpeg");
                                         break;
                                     case "NEW-BATTER":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";

@@ -36,8 +36,8 @@ class Field(object):
 
                         if not(self.currentField.two.getPlayerOnBase() is None):
                             self.currentField.two.movePlayerOneBase()
-                            self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3))
-                            if n >= 2:
+                            outOn3 = self.isPlayerOutOnBase(3, self.checkIfPlayerIsOnSameBaseAsBall(3))
+                            if n >= 2 and not(outOn3):
                                 self.playerOnThird()
 
                         if not (self.currentField.one.getPlayerOnBase() is None):
