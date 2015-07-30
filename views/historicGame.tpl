@@ -41,7 +41,7 @@
         <div class="row marketing center-content">
             <div class="col-md-12">
                 <h4>Here you can select a previously simulated game and view the results!</h4>
-                <p>Since we are able to simulate baseball games, provided two teams, wouldn't it be nice to revisit a game already simulated? That's why we provided this tool to allow the user to select a previously simulate game and either: view the results of the game, download the game file, or upload a game file!</p>
+                <p>Replay the Game!</p>
                 <p>Just make sure the Game File is the correct format!</p>
             </div>
             <div class="col-md-12 game-browser">

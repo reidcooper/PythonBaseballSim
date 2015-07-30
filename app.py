@@ -118,10 +118,6 @@ def static(filename):
 @route('/static/<directory>/<filename>')
 def static(filename, directory):
     '''Serve Directory Files from the Static Directory <> are wildcards'''
-
-    if filename == 'inningover.png':
-        print "FOUND INNING FILE\n"
-
     return static_file(filename, root='static/'+directory+'/')
 
 ''' ====== FILE TREE ======= '''
