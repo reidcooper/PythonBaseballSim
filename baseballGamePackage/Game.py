@@ -27,9 +27,9 @@ class Game(object):
     self.f = Field(self.cf)
     self.amountOfBasesToMove = 0
     self.currentBattingPlayer = None
-    self.battingTeam = 0
-    self.pitchingTeam = 1
-    self.initOrder = True
+    self.battingTeam = 1
+    self.pitchingTeam = 0
+    self.initOrder = False
     self.innings = 1
     self.inningEventList = []
     self.gameEventList = []
@@ -70,24 +70,25 @@ class Game(object):
     self.teamAtBat()
     print "NEW TEAM AT BAT"
     print
-    self.switchTeams()
-    self.teamAtBat()
-    self.switchTeams()
-    print "NEW TEAM AT BAT"
-    print
+    if self.innings < 9 or self.teams[0].getScore() <= self.teams[1].getScore():
+    	self.switchTeams()
+    	self.teamAtBat()
+    	self.switchTeams()
+    	print "NEW TEAM AT BAT"
+    	print
     self.innings = self.innings + 1
 
  def playGame(self):
     while self.innings < 10:
         self.inning()
-        print "score at end of inning " + str(self.innings-1) + " is: " + "\n" + "Home Team: " + str(self.teams[1].getScore()) + "\n" + "Away Team: " + str(self.teams[0].getScore())
-        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[1].getScore()) + "  " + "Away Team: " + str(self.teams[0].getScore())}])
+        print "score at end of inning " + str(self.innings-1) + " is: " + "\n" + "Home Team: " + str(self.teams[0].getScore()) + "\n" + "Away Team: " + str(self.teams[1].getScore())
+        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[0].getScore()) + "  " + "Away Team: " + str(self.teams[1].getScore())}])
         self.addGameEvents()
 
     while self.teams[0].getScore() == self.teams[1].getScore():
         self.inning()
-        print "score at end of inning " + str(self.innings - 1) + " is: " + "\n" + "Home Team: " + str(self.teams[1].getScore()) + "\n" + "Away Team: " + str(self.teams[0].getScore())
-        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[1].getScore()) + "  " + "Away Team: " + str(self.teams[0].getScore())}])
+        print "score at end of inning " + str(self.innings - 1) + " is: " + "\n" + "Home Team: " + str(self.teams[0].getScore()) + "\n" + "Away Team: " + str(self.teams[1].getScore())
+        self.createInningData([{"code" : "END-INNING-SCORE", "description" : "Home Team: " + str(self.teams[0].getScore()) + "  " + "Away Team: " + str(self.teams[1].getScore())}])
         self.addGameEvents()
 
     temp = [self.teams[0].getScore(), self.teams[1].getScore()]
