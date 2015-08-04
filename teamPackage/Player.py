@@ -20,16 +20,13 @@ class Player(object):
     clonedData = []
 
     def __init__(self, playerData):
-        #batting_players.append(([row["Name"].replace(" ", ""), row["Position"], float(row["H"]), float(row["IPR"]), float(row["O-Swing%"]), float(row["Z-Swing%"]), float(row["O-Contact%"]), float(row["Z-Contact%"]), float(row["1B%"]), float(row["2B%"]), float(row["3B%"]), float(row["HR%"]), float(row["FP"])]))
+        #batting_players.append(([row["Name"].replace(" ", ""), row["Position"], float(row["H"]), float(row["IPR"]), float(row["O-Swing%"]), float(row["Z-Swing%"]), float(row["O-Contact%"]), float(row["Z-Contact%"]), float(row["1B%"]), float(row["2B%"]), float(row["3B%"]), float(row["HR%"]), float(row["FP"]), int(row["G"])]))
         self.name = playerData[0]
         self.setPosition(playerData[1])
         self.setHits((playerData[2]))
         self.setIPR((playerData[3]))
         self.setOSwing((playerData[4]))
         self.setZSwing((playerData[5]))
-        print
-        print playerData[5]
-        print
         self.setOContact((playerData[6]))
         self.setZContact((playerData[7]))
         self.setChanceSingle((playerData[8]))
