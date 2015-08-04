@@ -226,6 +226,7 @@
                             var k = 0;
                             var playNumber = 1;
                             var top_inning = false;
+                            var validHit = true;
 
                             // 0 .. 9 (10)
                             var home = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -319,11 +320,19 @@
 
                             function hitFunction() {
                                 if (top_inning) {
-                                    awayHits++;
-                                    document.getElementById("ah").innerHTML = "<center>" + awayHits + "</center>";
+                                	if (validHit){
+                                		awayHits++;
+                                    	document.getElementById("ah").innerHTML = "<center>" + awayHits + "</center>";
+                                	} else {
+                                		validHit = true;
+                                	}
                                 } else {
-                                    homeHits++;
-                                    document.getElementById("hh").innerHTML = "<center>" + homeHits + "</center>";
+                                	if (validHit){
+                                		homeHits++;
+                                    	document.getElementById("hh").innerHTML = "<center>" + homeHits + "</center>";
+                                	} else {
+                                		validHit = true;
+                                	}
                                 }
                             }
 
@@ -353,6 +362,7 @@
 
                                 switch (data[i][k].code) {
                                     case "START-HALF-INNING":
+                                    	validHit = true;
                                         if (i == 0 && firstHalf) {
                                             firstHalf = false;
                                         } else {
@@ -385,6 +395,7 @@
                                         $("#baseball-img").attr('src', "/static/DiamondGraphics/empty.jpeg");
                                         break;
                                     case "NEW-BATTER":
+                                    	hitFunction();
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
                                         var n = data[i][k].description.match(/^([^\s]+)/g);
@@ -428,6 +439,7 @@
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
                                         $("#action-img").attr('src', "/static/images/walk.png");
                                         document.getElementById("action-img-title").innerHTML = "Walk!";
+                                        validHit = false;
                                         break;
                                     case "KO":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -436,38 +448,39 @@
                                         document.getElementById("action-img-title").innerHTML = "Strike Out!";
                                         outs++;
                                         pictureCount("out", outs);
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
+                                        validHit = false;                                        
                                         break;
                                     case "1B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
-                                        if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
+                                        /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
-                                        }
+                                        }*/
                                         playAudio(new Audio('/static/sounds/hit.mp3'));                                        
                                         break;
                                     case "2B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
-                                        if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
+                                        /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
-                                        }
+                                        }*/
                                         playAudio(new Audio('/static/sounds/hit.mp3'));                                        
                                         break;
                                     case "3B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
-                                        if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
+                                        /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
-                                        }
+                                        }*/
                                         playAudio(new Audio('/static/sounds/hit.mp3'));                                        
                                         break;
                                     case "HR":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
-                                        if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
+                                        /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
-                                        }
+                                        }*/
                                         playAudio(new Audio('/static/sounds/hit.mp3'));                                        
                                         playAudio(new Audio('/static/sounds/cheering.mp3'));                                        
                                         $("#action-img").attr('src', "/static/images/homerun.jpeg");
@@ -486,7 +499,8 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
+                                        validHit = false;                                        
                                         break;
                                     case "OUT-1BH":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -495,7 +509,8 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
+                                        validHit = false;                                        
                                         break;
                                     case "OUT-2BH":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -504,7 +519,8 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
+                                        validHit = false;                                        
                                         break;
                                     case "OUT-3BH":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -513,12 +529,14 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
+                                        validHit = false;                                        
                                         break;
-                                        /*case "OUT-4BH":
+                                    /*case "OUT-4BH":
                                         output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
                                         outs++;
                                         pictureCount("out", outs);
+                                        validHit = false;
                                         break;*/
                                     case "OUT-1B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
