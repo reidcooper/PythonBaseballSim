@@ -15,8 +15,11 @@ class Field(object):
         self.temp = []
         self.currentAmountOfOuts = 0
         self.gameString = []
+        self.currentBatter = ""
 
     def newPlayerOnBases(self, n, p, currentAmountOfOuts, walkOrHomeRun):
+        self.currentBatter = p
+
         self.gameString[:] = []
 
         self.currentField.resetOuts()
@@ -154,6 +157,7 @@ class Field(object):
         return False
 
     def isPlayerOutOnBase(self, baseNum, b):
+
         if self.currentAmountOfOuts + self.currentField.getOuts() >= 3:
             raise ThreeOuts("3 outs have happened")
 
@@ -167,25 +171,45 @@ class Field(object):
             if baseNum == 1:
                 self.currentField.addOneToOuts()
                 print "Player got out on 1st base!"
-                self.gameString.append({"code" : "OUT-1B", "description" : "Out! " + self.currentField.one.getPlayerOnBase().toString() + " was thrown out at First Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
+                if (self.currentBatter.toString() == self.currentField.one.getPlayerOnBase().toString()):
+                    self.gameString.append({"code" : "OUT-1BH", "description" : "Out! " + self.currentField.one.getPlayerOnBase().toString() + " was thrown out at First Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                else:
+                    self.gameString.append({"code" : "OUT-1B", "description" : "Out! " + self.currentField.one.getPlayerOnBase().toString() + " was thrown out at First Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
                 self.currentField.one.removePlayerFromBase()
                 return True
             elif baseNum == 2:
                 self.currentField.addOneToOuts()
                 print "Player got out on 2nd base!"
-                self.gameString.append({"code" : "OUT-2B", "description" : "Out! " + self.currentField.two.getPlayerOnBase().toString() + " was thrown out at Second Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
+                if (self.currentBatter.toString() == self.currentField.two.getPlayerOnBase().toString()):
+                    self.gameString.append({"code" : "OUT-2BH", "description" : "Out! " + self.currentField.two.getPlayerOnBase().toString() + " was thrown out at Second Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                else:
+                    self.gameString.append({"code" : "OUT-2B", "description" : "Out! " + self.currentField.two.getPlayerOnBase().toString() + " was thrown out at Second Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
                 self.currentField.two.removePlayerFromBase()
                 return True
             elif baseNum ==3 :
                 self.currentField.addOneToOuts()
                 print "Player got out on 3rd base!"
-                self.gameString.append({"code" : "OUT-3B", "description" : "Out! " + self.currentField.three.getPlayerOnBase().toString() + " was thrown out at Third Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
+                if (self.currentBatter.toString() == self.currentField.three.getPlayerOnBase().toString()):
+                    self.gameString.append({"code" : "OUT-3BH", "description" : "Out! " + self.currentField.three.getPlayerOnBase().toString() + " was thrown out at Third Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                else:
+                    self.gameString.append({"code" : "OUT-3B", "description" : "Out! " + self.currentField.three.getPlayerOnBase().toString() + " was thrown out at Third Base! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
                 self.currentField.three.removePlayerFromBase()
                 return True
             elif baseNum == 4:
                 self.currentField.addOneToOuts()
                 print  "Player got out on home plate!"
-                self.gameString.append({"code" : "OUT-HP", "description" : "Out! " + self.currentField.home.getPlayerOnBase().toString() + " was thrown out at Home! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
+                if (self.currentBatter.toString() == self.currentField.home.getPlayerOnBase().toString()):
+                    self.gameString.append({"code" : "OUT-HPH", "description" : "Out! " + self.currentField.home.getPlayerOnBase().toString() + " was thrown out at Home! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+                else:
+                    self.gameString.append({"code" : "OUT-HP", "description" : "Out! " + self.currentField.home.getPlayerOnBase().toString() + " was thrown out at Home! Out " + str(self.currentAmountOfOuts + self.currentField.getOuts())})
+
                 return True
             else:
                 print "SOMETHING WENT WRONG"
