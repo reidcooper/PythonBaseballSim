@@ -27,6 +27,9 @@ class Player(object):
         self.setIPR((playerData[3]))
         self.setOSwing((playerData[4]))
         self.setZSwing((playerData[5]))
+        print
+        print playerData[5]
+        print
         self.setOContact((playerData[6]))
         self.setZContact((playerData[7]))
         self.setChanceSingle((playerData[8]))
@@ -86,7 +89,7 @@ class Player(object):
         return float(self.zSwing)
 
     def setZSwing(self, zSwing):
-        self.z_Swing = zSwing
+        self.zSwing = zSwing
 
     def getOContact(self):
         return float(self.oContact)
