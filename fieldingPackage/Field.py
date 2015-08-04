@@ -122,11 +122,11 @@ class Field(object):
         #gridFieldArray[3][0].setKey("3B", 8);
         #gridFieldArray[3][4].setKey("1B", 5);
         #gridFieldArray[3][2].setKey("C", 8);
-        #rand = (rand.randint()*100)
-        #if rand > 60:
-        #return True
-        #else:
-        #return False
+        a = (random()*100)
+        if a > 60:
+         return True
+        else:
+          return False
 
         self.currentField.putBallIntoRandomInFieldSquare()
         basePos = [None] * 2
