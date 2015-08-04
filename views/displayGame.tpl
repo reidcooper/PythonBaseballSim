@@ -206,8 +206,8 @@
                         <h4>Game Events</h4>
                         <div class="scroll-box gameEvents-json" id="game1-row1-json">
                             <script>
-                            playAudio(new Audio('/static/sounds/playball.mp3'));						
-                            
+                            playAudio(new Audio('/static/sounds/playball.mp3'));
+
 
                             // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
                             file_location = '/static/simulations/{{ game_file }}'
@@ -226,7 +226,7 @@
                             var k = 0;
                             var playNumber = 1;
                             var top_inning = false;
-                            var validHit = true;
+                            var validHit = false;
 
                             // 0 .. 9 (10)
                             var home = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -255,11 +255,11 @@
                                 // document.getElementById("range").innerHTML = (1006 - newValue);
                                 clearInterval(myVar);
                                 displaySpeed = (1006 - newValue);
-								if (playing=="true") {
-                                myVar = setInterval(function() {
-                                    eventFunction(x)
-                                }, displaySpeed);
-								}
+                                if (playing == "true") {
+                                    myVar = setInterval(function() {
+                                        eventFunction(x)
+                                    }, displaySpeed);
+                                }
                             }
 
                             function playPauseDisplay() {
@@ -275,11 +275,12 @@
                                     playing = "true";
                                 }
                             }
-							function playAudio (audio) {
-								if (displaySpeed>=503) {
-									audio.play();
-								}
-							}
+
+                            function playAudio(audio) {
+                                if (displaySpeed >= 503) {
+                                    audio.play();
+                                }
+                            }
 
                             var displaySpeed = 900;
                             myVar = setInterval(function() {
@@ -320,19 +321,19 @@
 
                             function hitFunction() {
                                 if (top_inning) {
-                                	if (validHit){
-                                		awayHits++;
-                                    	document.getElementById("ah").innerHTML = "<center>" + awayHits + "</center>";
-                                	} else {
-                                		validHit = true;
-                                	}
+                                    if (validHit) {
+                                        awayHits++;
+                                        document.getElementById("ah").innerHTML = "<center>" + awayHits + "</center>";
+                                    } else {
+                                        validHit = true;
+                                    }
                                 } else {
-                                	if (validHit){
-                                		homeHits++;
-                                    	document.getElementById("hh").innerHTML = "<center>" + homeHits + "</center>";
-                                	} else {
-                                		validHit = true;
-                                	}
+                                    if (validHit) {
+                                        homeHits++;
+                                        document.getElementById("hh").innerHTML = "<center>" + homeHits + "</center>";
+                                    } else {
+                                        validHit = true;
+                                    }
                                 }
                             }
 
@@ -362,7 +363,7 @@
 
                                 switch (data[i][k].code) {
                                     case "START-HALF-INNING":
-                                    	validHit = true;
+                                        validHit = false;
                                         if (i == 0 && firstHalf) {
                                             firstHalf = false;
                                         } else {
@@ -395,7 +396,7 @@
                                         $("#baseball-img").attr('src', "/static/DiamondGraphics/empty.jpeg");
                                         break;
                                     case "NEW-BATTER":
-                                    	hitFunction();
+                                        hitFunction();
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
                                         var n = data[i][k].description.match(/^([^\s]+)/g);
@@ -414,21 +415,21 @@
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
                                         balls++;
                                         pictureCount("ball", balls);
-                                        playAudio(new Audio('/static/sounds/ball.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/ball.mp3'));
                                         break;
                                     case "STRIKE":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
                                         strikes++;
                                         pictureCount("strike", strikes);
-                                        playAudio(new Audio('/static/sounds/strike.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/strike.mp3'));
                                         break;
                                     case "FOUL-STRIKE":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
                                         strikes++;
                                         pictureCount("strike", strikes);
-                                        playAudio(new Audio('/static/sounds/strike.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/strike.mp3'));
                                         break;
                                     case "FOUL":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -449,7 +450,7 @@
                                         outs++;
                                         pictureCount("out", outs);
                                         playAudio(new Audio('/static/sounds/out.mp3'));
-                                        validHit = false;                                        
+                                        validHit = false;
                                         break;
                                     case "1B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -457,7 +458,8 @@
                                         /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
                                         }*/
-                                        playAudio(new Audio('/static/sounds/hit.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/hit.mp3'));
+                                        validHit = true;
                                         break;
                                     case "2B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -465,7 +467,8 @@
                                         /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
                                         }*/
-                                        playAudio(new Audio('/static/sounds/hit.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/hit.mp3'));
+                                        validHit = true;
                                         break;
                                     case "3B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -473,7 +476,8 @@
                                         /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
                                         }*/
-                                        playAudio(new Audio('/static/sounds/hit.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/hit.mp3'));
+                                        validHit = true;
                                         break;
                                     case "HR":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -481,16 +485,17 @@
                                         /*if (data[i][k + 1].code !== "OUT-BH" && data[i][k + 1].code !== "OUT-1BH" && data[i][k + 1].code !== "OUT-2BH" && data[i][k + 1].code !== "OUT-3BH" && data[i][k + 1].code !== "OUT-4BH") {
                                             hitFunction();
                                         }*/
-                                        playAudio(new Audio('/static/sounds/hit.mp3'));                                        
-                                        playAudio(new Audio('/static/sounds/cheering.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/hit.mp3'));
+                                        playAudio(new Audio('/static/sounds/cheering.mp3'));
                                         $("#action-img").attr('src', "/static/images/homerun.jpeg");
                                         document.getElementById("action-img-title").innerHTML = "Home Run!";
+                                        validHit = true;
                                         break;
                                     case "RUN-SCORES":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
                                         scoreFunction();
-                                        playAudio(new Audio('/static/sounds/cheering.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/cheering.mp3'));
                                         break;
                                     case "OUT-BH":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -500,7 +505,7 @@
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
                                         playAudio(new Audio('/static/sounds/out.mp3'));
-                                        validHit = false;                                        
+                                        validHit = false;
                                         break;
                                     case "OUT-1BH":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -510,7 +515,7 @@
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
                                         playAudio(new Audio('/static/sounds/out.mp3'));
-                                        validHit = false;                                        
+                                        validHit = false;
                                         break;
                                     case "OUT-2BH":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -520,7 +525,7 @@
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
                                         playAudio(new Audio('/static/sounds/out.mp3'));
-                                        validHit = false;                                        
+                                        validHit = false;
                                         break;
                                     case "OUT-3BH":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -530,14 +535,14 @@
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
                                         playAudio(new Audio('/static/sounds/out.mp3'));
-                                        validHit = false;                                        
-                                        break;
-                                    /*case "OUT-4BH":
-                                        output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
-                                        outs++;
-                                        pictureCount("out", outs);
                                         validHit = false;
-                                        break;*/
+                                        break;
+                                        /*case "OUT-4BH":
+                                            output+="<p>"+ playNumber + '. ' + data[i][k].description + "</p>";
+                                            outs++;
+                                            pictureCount("out", outs);
+                                            validHit = false;
+                                            break;*/
                                     case "OUT-1B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
                                         current_event = "<center><p>" + data[i][k].description + "</p></center>";
@@ -545,7 +550,7 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
                                         break;
                                     case "OUT-2B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -554,7 +559,7 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
                                         break;
                                     case "OUT-3B":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -563,7 +568,7 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
                                         break;
                                     case "OUT-HP":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
@@ -572,7 +577,7 @@
                                         pictureCount("out", outs);
                                         $("#action-img").attr('src', "/static/images/you_out.jpg");
                                         document.getElementById("action-img-title").innerHTML = "Out!";
-                                        playAudio(new Audio('/static/sounds/out.mp3'));                                        
+                                        playAudio(new Audio('/static/sounds/out.mp3'));
                                         break;
                                     case "DIAMOND":
                                         baseRunning(data[i][k].description);
@@ -585,7 +590,7 @@
                                         if (i == data.length) {
                                             clearInterval(myVar);
                                             $("#baseball-img").attr('src', "/static/images/gameover.png");
-                                            playAudio(new Audio('/static/sounds/cheering.mp3'));                                            
+                                            playAudio(new Audio('/static/sounds/cheering.mp3'));
                                             window.alert("Game Over! Final Score: {{home_team}} " + homeRuns + " {{away_team}} " + awayRuns);
                                             output += "------------------END OF GAME-----------------";
                                         }
