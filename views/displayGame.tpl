@@ -604,6 +604,15 @@
                                 document.getElementById("current-event").innerHTML = current_event;
                                 objDiv.scrollTop = objDiv.scrollHeight;
                                 k++;
+								if(i==6 && top_inning && data[i][k].code=="START-HALF-INNING" && displaySpeed >= 503) {									
+                                    clearInterval(myVar);
+                                    document.getElementById("playPause").src = "/static/images/play.jpg";  
+									new Audio('/static/sounds/TakeMeOut.mp3').play();						
+									setTimeout(function() { 
+										myVar = setInterval(function() { eventFunction(x)}, displaySpeed);
+										document.getElementById("playPause").src = "/static/images/pause.png";			
+									}, 29000);									                                   
+								}								
                             }
 
                             // Creates the string of pitchType to be returned to HTML
