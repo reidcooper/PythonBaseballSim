@@ -87,6 +87,10 @@ body {
     table-layout: fixed;
 }
 
+.js-example-basic-single {
+    width: 220px;
+}
+
 @media screen and (max-width: 991px) {
     .center-content {
         margin: 0;

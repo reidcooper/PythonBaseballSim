@@ -51,95 +51,95 @@
                             </script>
                             <h4>Home Team:</h4>
                             <select class="js-example-basic-single" id="selectHomeTeam" name="selectHomeTeam">
-                            	<optgroup label = "AL - East">
-                            		<option value="Orioles">Baltimore Orioles</option>
-                            		<option value="Red-Sox">Boston Red Sox</option>
-                            		<option value="Yankees">New York Yankees</option>
-                            		<option value="Rays">Tampa Bay Rays</option>
-                            		<option value="Blue-Jays">Toronto Blue Jays</option>                           		
-                            	</optgroup>
-                            	<optgroup label = "AL - Central">
-                            		<option value="White-Sox">Chicago White Sox</option>
-                            		<option value="Indians">Cleveland Indians</option>
-                            		<option value="Tigers">Detroit Tigers</option>
-                            		<option value="Royals">Kansas City Royals</option>
-                            		<option value="Twins">Minnesota Twins</option>
-                            	</optgroup>
-                            	<optgroup label = "AL - West">
-                            		<option value="Astros">Houston Astros</option>
-                            		<option value="Angels">Los Angeles Angels</option>
-                            		<option value="Athletics">Oakland Athletics</option>
-                            		<option value="Mariners">Seattle Mariners</option>
-                            		<option value="Rangers">Texas Rangers</option>
-                            	</optgroup>
-                            	<optgroup label = "NL - East">
-                            		<option value="Braves">Atlanta Braves</option>
-                            		<option value="Marlins">Florida Marlins</option>
-                            		<option value="Mets">New York Mets (NLE)</option>
-                            		<option value="Phillies">Philadelphia Phillies</option>
-                            		<option value="Nationals">Washington Nationals</option>
-                            	</optgroup>
-                            	<optgroup label = "NL - Central">
-                            		<option value="Cubs">Chicago Cubs</option>
-                                	<option value="Reds">Cincinnati Reds</option>
-                                	<option value="Brewers">Milwaukee Brewers</option> 
-                                	<option value="Pirates">Pittsburgh Pirates</option>
-                                	<option value="Cardinals">St. Louis Cardinals</option>
-                            	</optgroup>
-                            	<optgroup label = "NL - West">
-                            		<option value="Diamondbacks">Arizona Diamondbacks</option>   
-                                	<option value="Rockies">Colorado Rockies</option>    
-                                	<option value="Dodgers">Los Angeles Dodgers</option>
-                                	<option value="Padres">San Diego Padres</option>
-                                	<option value="Giants">San Francisco Giants</option>
-                            	</optgroup>
+                                <optgroup label="AL - East">
+                                    <option value="Orioles">Baltimore Orioles</option>
+                                    <option value="Red-Sox">Boston Red Sox</option>
+                                    <option value="Yankees">New York Yankees</option>
+                                    <option value="Rays">Tampa Bay Rays</option>
+                                    <option value="Blue-Jays">Toronto Blue Jays</option>
+                                </optgroup>
+                                <optgroup label="AL - Central">
+                                    <option value="White-Sox">Chicago White Sox</option>
+                                    <option value="Indians">Cleveland Indians</option>
+                                    <option value="Tigers">Detroit Tigers</option>
+                                    <option value="Royals">Kansas City Royals</option>
+                                    <option value="Twins">Minnesota Twins</option>
+                                </optgroup>
+                                <optgroup label="AL - West">
+                                    <option value="Astros">Houston Astros</option>
+                                    <option value="Angels">Los Angeles Angels</option>
+                                    <option value="Athletics">Oakland Athletics</option>
+                                    <option value="Mariners">Seattle Mariners</option>
+                                    <option value="Rangers">Texas Rangers</option>
+                                </optgroup>
+                                <optgroup label="NL - East">
+                                    <option value="Braves">Atlanta Braves</option>
+                                    <option value="Marlins">Florida Marlins</option>
+                                    <option value="Mets">New York Mets</option>
+                                    <option value="Phillies">Philadelphia Phillies</option>
+                                    <option value="Nationals">Washington Nationals</option>
+                                </optgroup>
+                                <optgroup label="NL - Central">
+                                    <option value="Cubs">Chicago Cubs</option>
+                                    <option value="Reds">Cincinnati Reds</option>
+                                    <option value="Brewers">Milwaukee Brewers</option>
+                                    <option value="Pirates">Pittsburgh Pirates</option>
+                                    <option value="Cardinals">St. Louis Cardinals</option>
+                                </optgroup>
+                                <optgroup label="NL - West">
+                                    <option value="Diamondbacks">Arizona Diamondbacks</option>
+                                    <option value="Rockies">Colorado Rockies</option>
+                                    <option value="Dodgers">Los Angeles Dodgers</option>
+                                    <option value="Padres">San Diego Padres</option>
+                                    <option value="Giants">San Francisco Giants</option>
+                                </optgroup>
                             </select>
                         </div>
                         <div id="awayTeam">
                             <h4>Away Team:</h4>
                             <select class="js-example-basic-single" id="selectAwayTeam" name="selectAwayTeam">
-                                <optgroup label = "AL - East">
-                            		<option value="Orioles">Baltimore Orioles</option>
-                            		<option value="Red-Sox">Boston Red Sox</option>
-                            		<option value="Yankees">New York Yankees</option>
-                            		<option value="Rays">Tampa Bay Rays</option>
-                            		<option value="Blue-Jays">Toronto Blue Jays</option>                           		
-                            	</optgroup>
-                            	<optgroup label = "AL - Central">
-                            		<option value="White-Sox">Chicago White Sox</option>
-                            		<option value="Indians">Cleveland Indians</option>
-                            		<option value="Tigers">Detroit Tigers</option>
-                            		<option value="Royals">Kansas City Royals</option>
-                            		<option value="Twins">Minnesota Twins</option>
-                            	</optgroup>
-                            	<optgroup label = "AL - West">
-                            		<option value="Astros">Houston Astros</option>
-                            		<option value="Angels">Los Angeles Angels</option>
-                            		<option value="Athletics">Oakland Athletics</option>
-                            		<option value="Mariners">Seattle Mariners</option>
-                            		<option value="Rangers">Texas Rangers</option>
-                            	</optgroup>
-                            	<optgroup label = "NL - East">
-                            		<option value="Braves">Atlanta Braves</option>
-                            		<option value="Marlins">Florida Marlins</option>
-                            		<option value="Mets">New York Mets (NLE)</option>
-                            		<option value="Phillies">Philadelphia Phillies</option>
-                            		<option value="Nationals">Washington Nationals</option>
-                            	</optgroup>
-                            	<optgroup label = "NL - Central">
-                            		<option value="Cubs">Chicago Cubs</option>
-                                	<option value="Reds">Cincinnati Reds</option>
-                                	<option value="Brewers">Milwaukee Brewers</option> 
-                                	<option value="Pirates">Pittsburgh Pirates</option>
-                                	<option value="Cardinals">St. Louis Cardinals</option>
-                            	</optgroup>
-                            	<optgroup label = "NL - West">
-                            		<option value="Diamondbacks">Arizona Diamondbacks</option>   
-                                	<option value="Rockies">Colorado Rockies</option>    
-                                	<option value="Dodgers">Los Angeles Dodgers</option>
-                                	<option value="Padres">San Diego Padres</option>
-                                	<option value="Giants">San Francisco Giants</option>
-                            	</optgroup>
+                                <optgroup label="AL - East">
+                                    <option value="Orioles">Baltimore Orioles</option>
+                                    <option value="Red-Sox">Boston Red Sox</option>
+                                    <option value="Yankees">New York Yankees</option>
+                                    <option value="Rays">Tampa Bay Rays</option>
+                                    <option value="Blue-Jays">Toronto Blue Jays</option>
+                                </optgroup>
+                                <optgroup label="AL - Central">
+                                    <option value="White-Sox">Chicago White Sox</option>
+                                    <option value="Indians">Cleveland Indians</option>
+                                    <option value="Tigers">Detroit Tigers</option>
+                                    <option value="Royals">Kansas City Royals</option>
+                                    <option value="Twins">Minnesota Twins</option>
+                                </optgroup>
+                                <optgroup label="AL - West">
+                                    <option value="Astros">Houston Astros</option>
+                                    <option value="Angels">Los Angeles Angels</option>
+                                    <option value="Athletics">Oakland Athletics</option>
+                                    <option value="Mariners">Seattle Mariners</option>
+                                    <option value="Rangers">Texas Rangers</option>
+                                </optgroup>
+                                <optgroup label="NL - East">
+                                    <option value="Braves">Atlanta Braves</option>
+                                    <option value="Marlins">Florida Marlins</option>
+                                    <option value="Mets">New York Mets</option>
+                                    <option value="Phillies">Philadelphia Phillies</option>
+                                    <option value="Nationals">Washington Nationals</option>
+                                </optgroup>
+                                <optgroup label="NL - Central">
+                                    <option value="Cubs">Chicago Cubs</option>
+                                    <option value="Reds">Cincinnati Reds</option>
+                                    <option value="Brewers">Milwaukee Brewers</option>
+                                    <option value="Pirates">Pittsburgh Pirates</option>
+                                    <option value="Cardinals">St. Louis Cardinals</option>
+                                </optgroup>
+                                <optgroup label="NL - West">
+                                    <option value="Diamondbacks">Arizona Diamondbacks</option>
+                                    <option value="Rockies">Colorado Rockies</option>
+                                    <option value="Dodgers">Los Angeles Dodgers</option>
+                                    <option value="Padres">San Diego Padres</option>
+                                    <option value="Giants">San Francisco Giants</option>
+                                </optgroup>
                             </select>
                         </div>
                         <div id="createTeams" class="createTeams">
