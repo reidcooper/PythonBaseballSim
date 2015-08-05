@@ -606,6 +606,7 @@
                                 k++;
 								if(i==6 && top_inning && data[i][k].code=="START-HALF-INNING" && displaySpeed >= 503) {									
                                     clearInterval(myVar);
+                                    $("#baseball-img").attr('src', "/static/images/Stretch.png");
                                     document.getElementById("playPause").src = "/static/images/play.jpg";  
 									new Audio('/static/sounds/TakeMeOut.mp3').play();						
 									setTimeout(function() { 
