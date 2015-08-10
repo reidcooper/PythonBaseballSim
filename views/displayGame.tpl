@@ -393,7 +393,7 @@
                                             if (i > 9) {
                                                 document.getElementById("s10").innerHTML = "<center><b>" + (i + 1) + "</b></center>";
                                                 if (home[9] == 0 && away[9] == 0) {
-                                                    document.getElementById("a" + 9).innerHTML = "<center>0</center>";
+                                                    document.getElementById("a" + 9).innerHTML = "<center></center>";
                                                     document.getElementById("h" + 9).innerHTML = "<center></center>";
                                                 } else {
                                                     document.getElementById("a" + 9).innerHTML = "<center>" + away[9] + "</center>";
@@ -405,7 +405,6 @@
                                             if (i > 9) {
                                                 if (home[9] == 0 && away[9] == 0) {
                                                     document.getElementById("a" + 9).innerHTML = "<center>0</center>";
-                                                    document.getElementById("h" + 9).innerHTML = "<center>0</center>";
                                                 } else {
                                                     document.getElementById("h" + 9).innerHTML = "<center>" + home[9] + "</center>";
                                                 }
@@ -511,6 +510,9 @@
                                         $("#action-img").attr('src', "/static/images/homerun.jpeg");
                                         document.getElementById("action-img-title").innerHTML = "Home Run!";
                                         validHit = true;
+                                        pictureCount("out", 0);
+                                        pictureCount("strike", 0);
+                                        pictureCount("ball", 0);
                                         break;
                                     case "RUN-SCORES":
                                         output += "<p>" + playNumber + '. ' + data[i][k].description + "</p>";
