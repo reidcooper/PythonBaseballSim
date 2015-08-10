@@ -206,9 +206,6 @@
                         <h4>Game Events</h4>
                         <div class="scroll-box gameEvents-json" id="game1-row1-json">
                             <script>
-                            playAudio(new Audio('/static/sounds/playball.mp3'));
-
-
                             // LOCATION OF FILE SHOULD BE LOCATED IN /static/simulations/
                             file_location = '/static/simulations/{{ game_file }}'
                             var output = "<ul>";
@@ -366,6 +363,7 @@
                                         validHit = false;
                                         if (i == 0 && firstHalf) {
                                             firstHalf = false;
+                                            playAudio(new Audio('/static/sounds/playball.mp3'));
                                         } else {
                                             $("#action-img").attr('src', "/static/images/inningover.png");
                                         }
@@ -604,16 +602,18 @@
                                 document.getElementById("current-event").innerHTML = current_event;
                                 objDiv.scrollTop = objDiv.scrollHeight;
                                 k++;
-								if(i==6 && top_inning && data[i][k].code=="START-HALF-INNING" && displaySpeed >= 503) {									
+                                if (i == 6 && top_inning && data[i][k].code == "START-HALF-INNING" && displaySpeed >= 503) {
                                     clearInterval(myVar);
                                     $("#baseball-img").attr('src', "/static/images/Stretch.png");
-                                    document.getElementById("playPause").src = "/static/images/play.jpg";  
-									new Audio('/static/sounds/TakeMeOut.mp3').play();						
-									setTimeout(function() { 
-										myVar = setInterval(function() { eventFunction(x)}, displaySpeed);
-										document.getElementById("playPause").src = "/static/images/pause.png";			
-									}, 29000);									                                   
-								}								
+                                    document.getElementById("playPause").src = "/static/images/play.jpg";
+                                    new Audio('/static/sounds/TakeMeOut.mp3').play();
+                                    setTimeout(function() {
+                                        myVar = setInterval(function() {
+                                            eventFunction(x)
+                                        }, displaySpeed);
+                                        document.getElementById("playPause").src = "/static/images/pause.png";
+                                    }, 29000);
+                                }
                             }
 
                             // Creates the string of pitchType to be returned to HTML
